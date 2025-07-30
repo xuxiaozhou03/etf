@@ -2,6 +2,7 @@
 import { Strategy } from "../strategy/types";
 import { PerformanceStats } from "../analysis/types";
 import { Trade } from "../trade/types";
+
 export interface BacktestEngine {
   run(
     strategies: Strategy[],
