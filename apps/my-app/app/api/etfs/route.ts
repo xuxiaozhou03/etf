@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { fetchAllEtfList } from "@etf/data";
+import { fetchScaleChange } from "@etf/data";
 
 export const GET = async () => {
-  const list = await fetchAllEtfList();
-  return NextResponse.json(list);
+  const scaleChange = await fetchScaleChange("159322");
+  return NextResponse.json({ scaleChange });
 };
