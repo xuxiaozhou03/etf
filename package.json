@@ -1,0 +1,17 @@
+{
+  "name": "etf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@etf/data": "workspace:^",
+    "@etf/type": "workspace:^",
+    "@etf/utils": "workspace:^"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
