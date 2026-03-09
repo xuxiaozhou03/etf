@@ -3,6 +3,7 @@ import Router from "@koa/router";
 import { fetchEtfs } from "./services/stock-data/etfs";
 import { fetchEtfInfo } from "./services/stock-data/etf/info";
 import { reptileEtfAndInfo } from "./services/task/etfs";
+import { pickEtfs } from "./services/task/pick";
 
 const app = new Koa();
 const router = new Router();
@@ -23,6 +24,11 @@ router.get("/etf/:code", async (ctx: Koa.Context) => {
 router.get("/task", async (ctx: Koa.Context) => {
   const result = await reptileEtfAndInfo();
   ctx.body = result;
+});
+
+router.get("/pick", async (ctx: Koa.Context) => {
+  await pickEtfs();
+  ctx.body = { status: "ok" };
 });
 
 app.use(router.routes()).use(router.allowedMethods());
