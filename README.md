@@ -1,41 +1,77 @@
-# etf
+# ETF量化回测系统 - 后端
 
-这是一个最小的 Node.js + TypeScript 项目模板（示例）。
+A股ETF量化回测系统后端服务
 
-快速开始：
+## 技术栈
 
-```bash
-# 在项目根目录下
-npm install
+- Python 3.11+
+- FastAPI
+- Pandas / NumPy
+- efinance / akshare (数据获取)
 
-# 开发模式（自动重启）
-npm run dev
-
-# 构建到 dist/
-npm run build
-
-# 运行构建产物
-npm start
-```
-
-说明：
-
-- 源码放在 `src/`，后端服务器入口为 `src/server.ts`（Koa）。
-- 编译产物放在 `dist/`
-
-运行：
+## 安装
 
 ```bash
-# 使用开发模式（会使用 ts-node-dev 监测并重启）
-PORT=3001 npm run dev
+# 使用 pip
+pip install -e .
 
-# 或者构建后运行生产代码
-npm run build
-PORT=3001 npm start
+# 或使用 poetry
+poetry install
 ```
 
-下一步建议：
+## 运行
 
-- 添加 ESLint + Prettier
-- 添加单元测试（Jest / Vitest）
-- 添加 CI（GitHub Actions）
+```bash
+# 开发模式
+uvicorn etf_backtest.interfaces.api.main:app --reload --port 8000
+
+# 或
+python -m etf_backtest.interfaces.api.main
+```
+
+## API文档
+
+启动后访问：
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+
+## 项目结构
+
+```
+backend/
+├── config/                 # 配置
+├── src/
+│   └── etf_backtest/
+│       ├── domain/         # 领域层
+│       │   ├── backtest/   # 回测引擎
+│       │   ├── strategy/   # 策略引擎
+│       │   └── analysis/   # 分析引擎
+│       ├── application/    # 应用层
+│       ├── infrastructure/ # 基础设施层
+│       │   ├── data/       # 数据获取
+│       │   └── storage/    # 存储
+│       ├── interfaces/     # 接口层
+│       │   └── api/        # REST API
+│       └── shared/         # 共享模块
+├── tests/                  # 测试
+└── data/                   # 数据文件
+```
+
+## API接口
+
+### ETF相关
+
+- `GET /api/etfs` - 获取ETF列表
+- `GET /api/etfs/{code}` - 获取ETF详情
+- `GET /api/etfs/{code}/klines` - 获取K线数据
+
+### 策略相关
+
+- `GET /api/strategies` - 获取策略列表
+- `GET /api/strategies/{name}` - 获取策略详情
+
+### 回测相关
+
+- `POST /api/backtest` - 创建回测任务
+- `GET /api/backtest/{id}` - 查询回测状态
+- `GET /api/backtest/{id}/result` - 获取回测结果

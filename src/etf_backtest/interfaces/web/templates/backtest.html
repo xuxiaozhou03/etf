@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{% block title %}新建回测 - ETF量化回测系统{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>新建回测</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <form id="backtestForm">
+            <!-- 基本信息 -->
+            <div class="card mb-4">
+                <div class="card-header">基本信息</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">回测名称</label>
+                        <input type="text" class="form-control" name="name" required
+                               placeholder="例如：双均线策略-沪深300">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">选择策略</label>
+                        <select class="form-select" name="strategy" required onchange="loadStrategyParams()">
+                            <option value="">请选择策略</option>
+                            {% for s in strategies %}
+                            <option value="{{ s.name }}">{{ s.display_name }} - {{ s.description }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div id="strategyParams" class="border-top pt-3 mt-3" style="display: none;">
+                        <h6 class="mb-3">策略参数</h6>
+                        <div id="paramsContainer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ETF选择 -->
+            <div class="card mb-4">
+                <div class="card-header">选择ETF</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">ETF代码（多个用逗号分隔）</label>
+                        <input type="text" class="form-control" name="etfs" id="etfsInput" required
+                               placeholder="例如：510300,510500" value="{{ default_code or '' }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">快速选择</label>
+                        <div class="d-flex flex-wrap gap-2">
+                            {% for etf in popular_etfs %}
+                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    onclick="addEtf('{{ etf.code }}')">
+                                {{ etf.code }} {{ etf.name }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间和资金 -->
+            <div class="card mb-4">
+                <div class="card-header">回测设置</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">起始日期</label>
+                            <input type="date" class="form-control" name="start_date" required
+                                   value="{{ default_start or '2023-01-01' }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">结束日期</label>
+                            <input type="date" class="form-control" name="end_date" required
+                                   value="{{ default_end or '2024-12-31' }}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">初始资金</label>
+                            <input type="number" class="form-control" name="initial_capital"
+                                   value="1000000" step="10000">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">佣金率</label>
+                            <input type="number" class="form-control" name="commission"
+                                   value="0.0003" step="0.0001">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">滑点率</label>
+                            <input type="number" class="form-control" name="slippage"
+                                   value="0.001" step="0.001">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">基准指数</label>
+                        <select class="form-select" name="benchmark">
+                            <option value="000300">沪深300</option>
+                            <option value="000905">中证500</option>
+                            <option value="000852">中证1000</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-play-circle me-2"></i>开始回测
+                </button>
+                <button type="button" class="btn btn-outline-secondary btn-lg" onclick="resetForm()">
+                    重置
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 右侧说明 -->
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">策略说明</div>
+            <div class="card-body">
+                <div id="strategyDescription">
+                    <p class="text-muted">请选择策略查看详细说明</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">注意事项</div>
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>回测结果仅供参考</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>历史表现不代表未来</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>请关注最大回撤风险</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>建议进行参数敏感性分析</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const strategies = {{ strategies | tojson }};
+
+function loadStrategyParams() {
+    const select = document.querySelector('select[name="strategy"]');
+    const strategyName = select.value;
+    const strategy = strategies.find(s => s.name === strategyName);
+
+    const paramsContainer = document.getElementById('paramsContainer');
+    const paramsSection = document.getElementById('strategyParams');
+    const descDiv = document.getElementById('strategyDescription');
+
+    if (!strategy) {
+        paramsSection.style.display = 'none';
+        descDiv.innerHTML = '<p class="text-muted">请选择策略查看详细说明</p>';
+        return;
+    }
+
+    paramsSection.style.display = 'block';
+
+    // 显示策略描述
+    descDiv.innerHTML = `
+        <h5>${strategy.display_name}</h5>
+        <p>${strategy.description}</p>
+        <hr>
+        <h6>参数说明</h6>
+        <ul class="list-unstyled">
+            ${strategy.params.map(p => `
+                <li class="mb-2">
+                    <strong>${p.description}</strong>:
+                    默认值 ${p.default}
+                    ${p.min !== null ? `, 范围 ${p.min} ~ ${p.max}` : ''}
+                </li>
+            `).join('')}
+        </ul>
+    `;
+
+    // 生成参数输入
+    paramsContainer.innerHTML = strategy.params.map(p => {
+        let input = '';
+        if (p.type === 'select') {
+            input = `
+                <select class="form-select" name="params.${p.name}">
+                    ${p.options.map(o => `<option value="${o}" ${o === p.default ? 'selected' : ''}>${o}</option>`).join('')}
+                </select>
+            `;
+        } else if (p.type === 'int' || p.type === 'float') {
+            input = `
+                <input type="number" class="form-control" name="params.${p.name}"
+                       value="${p.default}"
+                       ${p.min !== null ? `min="${p.min}"` : ''}
+                       ${p.max !== null ? `max="${p.max}"` : ''}
+                       step="${p.type === 'float' ? '0.1' : '1'}">
+            `;
+        } else {
+            input = `<input type="text" class="form-control" name="params.${p.name}" value="${p.default}">`;
+        }
+
+        return `
+            <div class="mb-3">
+                <label class="form-label">${p.description}</label>
+                ${input}
+            </div>
+        `;
+    }).join('');
+}
+
+function addEtf(code) {
+    const input = document.getElementById('etfsInput');
+    const codes = input.value.split(',').map(s => s.trim()).filter(s => s);
+
+    if (!codes.includes(code)) {
+        codes.push(code);
+        input.value = codes.join(',');
+    }
+}
+
+function resetForm() {
+    document.getElementById('backtestForm').reset();
+    document.getElementById('strategyParams').style.display = 'none';
+}
+
+document.getElementById('backtestForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = {
+        name: formData.get('name'),
+        strategy: formData.get('strategy'),
+        params: {},
+        etfs: formData.get('etfs').split(',').map(s => s.trim()).filter(s => s),
+        start_date: formData.get('start_date'),
+        end_date: formData.get('end_date'),
+        initial_capital: parseFloat(formData.get('initial_capital')),
+        commission: parseFloat(formData.get('commission')),
+        slippage: parseFloat(formData.get('slippage')),
+        benchmark: formData.get('benchmark'),
+    };
+
+    // 收集策略参数
+    for (let [key, value] of formData.entries()) {
+        if (key.startsWith('params.')) {
+            const paramName = key.replace('params.', '');
+            data.params[paramName] = isNaN(value) ? value : parseFloat(value);
+        }
+    }
+
+    try {
+        const response = await fetch('/api/backtest', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.code === 0) {
+            alert('回测任务已创建，正在执行...');
+            window.location.href = '/result/' + result.data.backtest_id;
+        } else {
+            alert('创建失败: ' + result.message);
+        }
+    } catch (error) {
+        alert('请求失败: ' + error.message);
+    }
+});
+</script>
+{% endblock %}
