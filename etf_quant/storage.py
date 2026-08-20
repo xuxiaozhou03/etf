@@ -52,6 +52,24 @@ class SQLiteStore:
     def load_adjusted_kline(self, code: str):
         return DailyKline.load_adjusted(self.conn, code)
 
+    def load_adjusted_ohlc(self, code: str):
+        """完整前复权 OHLC（含 adj_open/high/low/close），供回测引擎与K线图使用。"""
+        return DailyKline.load_full_adjusted(self.conn, code)
+
+    def latest_quote_fast(self, code: str) -> Dict[str, Optional[float]]:
+        """轻量最新行情：SQL 取末两行，不加载全量K线（列表页批量用）。"""
+        row = self.conn.execute(
+            f"SELECT date, close, prev_close, amount FROM {DailyKline.table} "
+            f"WHERE code=? ORDER BY date DESC LIMIT 1", (code,)
+        ).fetchone()
+        if not row:
+            return {}
+        date, close, prev_close, amount = row
+        change = None
+        if prev_close:
+            change = round((close - prev_close) / prev_close * 100, 2)
+        return {"date": date, "price": close, "changePercent": change, "amount": amount}
+
     def latest_quote(self, code: str):
         return DailyKline.latest_quote(self.conn, code)
 

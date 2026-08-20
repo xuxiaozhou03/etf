@@ -3,3 +3,6 @@ __pycache__/
 data/*.db
 data/*.db-wal
 data/*.db-shm
+node_modules/
+frontend/dist/
+.DS_Store
