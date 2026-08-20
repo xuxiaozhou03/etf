@@ -3,14 +3,18 @@
 
 用法：
   python scripts/crawl.py --limit 10          # 试跑：只抓前 10 只
-  python scripts/crawl.py                     # 全量抓取（增量，已成功的跳过）
+  python scripts/crawl.py                     # 全量抓取（增量跳过）
   python scripts/crawl.py --force             # 强制重抓已成功的标的
   python scripts/crawl.py --codes 510300.SH,159915.SZ
+
+增量跳过规则：失败的标的直接重抓；成功的标的在「最近一个 A 股交易日 15:00
+收盘之后已跑过」则跳过，否则重跑（补齐当日/近期日K线）。
 """
 
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import logging
 import sys
 import time
@@ -29,14 +33,38 @@ logging.basicConfig(
 )
 log = logging.getLogger("crawl")
 
+TZ_CN = dt.timezone(dt.timedelta(hours=8))  # 北京时间，A 股无夏令时
+
+
+def _last_trading_close_utc() -> dt.datetime:
+    """最近一个 A 股交易日收盘时刻（北京 15:00）对应的 UTC 时间。
+
+    交易日按工作日（周一~周五）近似，不处理节假日——节假日只会让结果
+    偏旧从而多抓一次，upsert 幂等，多抓无害。
+    """
+    now = dt.datetime.now(TZ_CN)
+    day = now - dt.timedelta(days=1) if now.time() < dt.time(15, 0) else now
+    while day.weekday() >= 5:  # 未收盘时回退到前一交易日，再跳过周末
+        day -= dt.timedelta(days=1)
+    return day.replace(hour=15, minute=0, second=0, microsecond=0).astimezone(dt.timezone.utc)
+
+
+def _needs_rerun(state) -> bool:
+    """失败直接重跑；成功则完成时间早于最近收盘时刻视为过期重跑。"""
+    if not state or state.get("status") != "ok" or not state.get("last_run_at"):
+        return True
+    last = dt.datetime.fromisoformat(state["last_run_at"])
+    if last.tzinfo is None:
+        last = last.replace(tzinfo=dt.timezone.utc)
+    return last < _last_trading_close_utc()
+
 
 def crawl_kline(store: SQLiteStore, client: KlineClient, code: str,
                 force: bool, delay: float) -> None:
     """抓取单只 ETF 日K线并落库。"""
     state = store.load_state()
-    latest = store.latest_kline_date(code)
-    if not force and state.get(code) == "ok" and latest:
-        return  # 增量跳过
+    if not force and not _needs_rerun(state.get(code)):
+        return  # 增量跳过：失败重跑，成功未过期则跳过
 
     norm = normalize_code(code)
     for attempt in range(3):
@@ -60,7 +88,7 @@ def crawl_kline(store: SQLiteStore, client: KlineClient, code: str,
                 log.warning("%s 失败(%s)，%.0fs 后重试", code, exc, wait)
                 time.sleep(wait)
             else:
-                store.mark_error(code, str(exc))
+                store.mark_error(code)
                 log.error("FAIL %s: %s", code, exc)
     time.sleep(delay)
 

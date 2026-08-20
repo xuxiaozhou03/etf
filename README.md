@@ -36,6 +36,6 @@ python scripts/verify.py
 - `daily_kline`：日K线（code, date, open, close, high, low, prev_close, volume, amount）
 - `adjust_factors`：复权因子（分红日才有记录）
 - `float_shares`：流通份额（按日记录）
-- `crawl_state`：抓取状态（断点续传用）
+- `crawl_state`：抓取状态（code, status, last_run_at）。增量规则：失败直接重抓；成功则按 `last_run_at` 与最近 A 股交易日 15:00 收盘时刻比对，早于收盘视为过期重抓
 
 说明：芝士财富 `dayKV2` 的 `t` 参数与 `zstokv1` 头需按前端算法动态生成（已破解并内置，见 `etf_quant/datasource/kline.py`）。

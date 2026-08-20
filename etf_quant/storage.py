@@ -1,4 +1,4 @@
-"""SQLite 本地存储：连接管理 + 建表 + 迁移 + 跨表统计。
+"""SQLite 本地存储：连接管理 + 建表 + 跨表统计。
 
 各表的 schema、读写与派生查询由 etf_quant.models 包自维护；
 本模块只保留数据库连接与薄门面，方法转发到对应 model 类方法。
@@ -6,37 +6,25 @@
 
 from __future__ import annotations
 
-import logging
 import sqlite3
 from typing import Dict, Optional
 
 from etf_quant.models import ALL_MODELS, AdjustFactor, CrawlState, DailyKline, EtfList, FloatShare
 
-log = logging.getLogger(__name__)
-
 _SCHEMA = "\n".join(model.create_sql() for model in ALL_MODELS)
 
 
-def _migrate_dropped_columns(conn: sqlite3.Connection, model: type) -> None:
-    """删除表中存在、但模型已移除的列（Schema 演进时清理旧列）。"""
-    existing = {row[1] for row in conn.execute(f"PRAGMA table_info({model.table})").fetchall()}
-    dropped = sorted(existing - set(model.names()))
-    for col in dropped:
-        conn.execute(f"ALTER TABLE {model.table} DROP COLUMN {col}")
-    if dropped:
-        log.info("迁移 %s：删除旧列 %s", model.table, ", ".join(dropped))
-
-
 class SQLiteStore:
-    """数据库会话：持有连接，建表/迁移在打开时自动执行，业务方法转发到各 model。"""
+    """数据库会话：持有连接，建表在打开时自动执行，业务方法转发到各 model。
+
+    开发阶段不做 schema 迁移；表结构变更时直接删库重建。
+    """
 
     def __init__(self, db_path: str):
         self.db_path = db_path
         self.conn = sqlite3.connect(db_path)
         self.conn.execute("PRAGMA journal_mode=WAL")
         self.conn.executescript(_SCHEMA)
-        for model in ALL_MODELS:
-            _migrate_dropped_columns(self.conn, model)
         self.conn.commit()
 
     def close(self) -> None:
@@ -89,11 +77,11 @@ class SQLiteStore:
     def mark_success(self, code: str) -> None:
         CrawlState.mark_success(self.conn, code)
 
-    def mark_error(self, code: str, error: str) -> None:
-        CrawlState.mark_error(self.conn, code, error)
+    def mark_error(self, code: str) -> None:
+        CrawlState.mark_error(self.conn, code)
 
-    def load_state(self) -> Dict[str, str]:
-        return CrawlState.load_status(self.conn)
+    def load_state(self) -> Dict[str, Dict[str, Optional[str]]]:
+        return CrawlState.load_state(self.conn)
 
     # ---------- 统计（跨表） ----------
 
