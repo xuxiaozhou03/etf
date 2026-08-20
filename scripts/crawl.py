@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from etf_quant.datasource.cheesefortune import CheeseFortuneClient, normalize_code
+from etf_quant.datasource.kline import CheeseFortuneClient, normalize_code
 from etf_quant.datasource.etf_list import fetch_etf_list, etf_list_summary
 from etf_quant.storage import SQLiteStore
 

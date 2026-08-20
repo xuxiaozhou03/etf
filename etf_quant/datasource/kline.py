@@ -1,4 +1,4 @@
-"""芝士财富（stock.cheesefortune.com）日K线数据源。
+"""日K线数据源（芝士财富 stock.cheesefortune.com）。
 
 接口：GET /api/v4/dayKV2/{code}?t={t}
 响应 datas.list 每行：[date, prev_close, open, high, low, close, volume, amount]

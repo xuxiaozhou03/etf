@@ -37,4 +37,4 @@ python scripts/verify.py
 - `adjust_factors`：复权因子（分红日才有记录）
 - `crawl_state`：抓取状态（断点续传用）
 
-说明：芝士财富 `dayKV2` 的 `t` 参数与 `zstokv1` 头需按前端算法动态生成（已破解并内置，见 `etf_quant/datasource/cheesefortune.py`）。
+说明：芝士财富 `dayKV2` 的 `t` 参数与 `zstokv1` 头需按前端算法动态生成（已破解并内置，见 `etf_quant/datasource/kline.py`）。
