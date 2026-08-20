@@ -37,37 +37,20 @@ class Model:
 
 
 class EtfList(Model):
-    """ETF 元数据与最新快照（红火箭列表接口）。"""
+    """ETF 元数据（红火箭列表接口）。
+
+    价格/成交额/涨跌幅/区间业绩等行情与收益指标不再落库，
+    由 storage 查询时从 daily_kline + adjust_factors 实时推导。
+    """
 
     table = "etf_list"
     columns: List[ColumnDef] = [
         ("securityCode", "TEXT", ""),
         ("securityName", "TEXT", ""),
-        ("securityFullName", "TEXT", ""),
         ("scale", "REAL", ""),
-        ("amount", "REAL", ""),
-        ("price", "REAL", ""),
-        ("changePercent", "REAL", ""),
         ("premiumRate", "REAL", ""),
         ("trackingIndex", "TEXT", ""),
         ("trackIndex", "TEXT", ""),
-        ("managementFee", "REAL", ""),
-        ("escrowFees", "REAL", ""),
-        ("managementcomp", "TEXT", ""),
-        ("fundManager", "TEXT", ""),
-        ("tradeDate", "TEXT", ""),
-        ("classA", "TEXT", ""),
-        ("classAName", "TEXT", ""),
-        ("weeklyPerformance", "REAL", ""),
-        ("monthlyPerformance", "REAL", ""),
-        ("quarterlyPerformance", "REAL", ""),
-        ("halfyearPerformance", "REAL", ""),
-        ("ytdPerformance", "REAL", ""),
-        ("yearlyPerformance", "REAL", ""),
-        ("threeYearPerformance", "REAL", ""),
-        ("fiveYearPerformance", "REAL", ""),
-        ("inceptionPerformance", "REAL", ""),
-        ("fetched_at", "TEXT", ""),
     ]
     primary_keys: ClassVar[List[str]] = ["securityCode"]
 

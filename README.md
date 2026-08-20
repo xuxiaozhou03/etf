@@ -32,7 +32,7 @@ python scripts/verify.py
 
 ### 落库结构（SQLite）
 
-- `etf_list`：ETF 元数据与最新快照（代码/名称/规模/价格/成交额/业绩区间）
+- `etf_list`：ETF 元数据（代码/名称/规模/溢价率/追踪指数）；价格、成交额、区间业绩由日K线实时推导，不落库
 - `daily_kline`：日K线（code, date, open, close, high, low, prev_close, volume, amount）
 - `adjust_factors`：复权因子（分红日才有记录）
 - `crawl_state`：抓取状态（断点续传用）
