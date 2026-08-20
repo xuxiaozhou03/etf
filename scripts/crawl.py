@@ -47,10 +47,12 @@ def crawl_kline(store: SQLiteStore, client: KlineClient, code: str,
             df = df.copy()
             df["date"] = df["date"].dt.strftime("%Y-%m-%d")
             factors = df.attrs.get("factors") or []
+            shares = df.attrs.get("float_shares") or []
             n = store.upsert_kline(code, df)
             nf = store.upsert_factors(code, factors)
+            ns = store.upsert_float_shares(code, shares)
             store.mark_success(code)
-            log.info("OK %s rows=%d factors=%d latest=%s", code, n, nf, df["date"].iloc[-1])
+            log.info("OK %s rows=%d factors=%d shares=%d latest=%s", code, n, nf, ns, df["date"].iloc[-1])
             return
         except Exception as exc:  # noqa: BLE001
             wait = 2 ** attempt

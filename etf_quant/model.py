@@ -85,6 +85,18 @@ class AdjustFactor(Model):
     primary_keys: ClassVar[List[str]] = ["code", "date"]
 
 
+class FloatShare(Model):
+    """流通份额（芝士财富 floatShares，[[date_int, shares], ...]，按日记录）。"""
+
+    table = "float_shares"
+    columns: List[ColumnDef] = [
+        ("code", "TEXT", "NOT NULL"),
+        ("date", "TEXT", "NOT NULL"),
+        ("shares", "REAL", ""),
+    ]
+    primary_keys: ClassVar[List[str]] = ["code", "date"]
+
+
 class CrawlState(Model):
     """抓取状态（断点续传）。"""
 
@@ -99,4 +111,4 @@ class CrawlState(Model):
     primary_keys: ClassVar[List[str]] = ["code"]
 
 
-ALL_MODELS: List[type] = [EtfList, DailyKline, AdjustFactor, CrawlState]
+ALL_MODELS: List[type] = [EtfList, DailyKline, AdjustFactor, FloatShare, CrawlState]

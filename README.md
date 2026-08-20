@@ -35,6 +35,7 @@ python scripts/verify.py
 - `etf_list`：ETF 元数据（代码/名称/规模/溢价率/追踪指数）；价格、成交额、区间业绩由日K线实时推导，不落库
 - `daily_kline`：日K线（code, date, open, close, high, low, prev_close, volume, amount）
 - `adjust_factors`：复权因子（分红日才有记录）
+- `float_shares`：流通份额（按日记录）
 - `crawl_state`：抓取状态（断点续传用）
 
 说明：芝士财富 `dayKV2` 的 `t` 参数与 `zstokv1` 头需按前端算法动态生成（已破解并内置，见 `etf_quant/datasource/kline.py`）。

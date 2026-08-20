@@ -14,7 +14,7 @@ from typing import Dict, List, Optional
 import numpy as np
 import pandas as pd
 
-from etf_quant.model import ALL_MODELS, AdjustFactor, CrawlState, DailyKline, EtfList
+from etf_quant.model import ALL_MODELS, AdjustFactor, CrawlState, DailyKline, EtfList, FloatShare
 
 log = logging.getLogger(__name__)
 
@@ -132,6 +132,16 @@ class SQLiteStore:
         self.conn.commit()
         return len(values)
 
+    def upsert_float_shares(self, code: str, shares: List[List]) -> int:
+        """写入流通份额（shares: [[date_int, shares], ...]）。"""
+        if not shares:
+            return 0
+        sql = _upsert_sql(FloatShare)
+        values = [(code, str(s[0]), float(s[1])) for s in shares]
+        self.conn.executemany(sql, values)
+        self.conn.commit()
+        return len(values)
+
     def latest_kline_date(self, code: str) -> Optional[str]:
         row = self.conn.execute(
             f"SELECT MAX(date) FROM {DailyKline.table} WHERE code=?", (code,)
@@ -149,6 +159,13 @@ class SQLiteStore:
         """复权因子 [[date_int, factor], ...]，按日期升序。"""
         rows = self.conn.execute(
             f"SELECT date, factor FROM {AdjustFactor.table} WHERE code=? ORDER BY date", (code,)
+        ).fetchall()
+        return [[r[0], r[1]] for r in rows]
+
+    def load_float_shares(self, code: str) -> List[List]:
+        """流通份额 [[date_int, shares], ...]，按日期升序。"""
+        rows = self.conn.execute(
+            f"SELECT date, shares FROM {FloatShare.table} WHERE code=? ORDER BY date", (code,)
         ).fetchall()
         return [[r[0], r[1]] for r in rows]
 
