@@ -1,4 +1,4 @@
-"""红火箭 ETF 列表/快照数据源。
+"""ETF 列表/快照数据源（红火箭 hongsehuojian.com）。
 
 接口：GET https://hongsehuojian.com/fundex-quote/allPage/findListByEtf
 实测：pageSize=2000 一次返回全部约 1640 只；classA 为分类代码。
