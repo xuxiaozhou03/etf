@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from etf_quant.datasource.kline import CheeseFortuneClient, normalize_code
+from etf_quant.datasource.kline import KlineClient, normalize_code
 from etf_quant.datasource.etf_list import fetch_etf_list, etf_list_summary
 from etf_quant.storage import SQLiteStore
 
@@ -30,7 +30,7 @@ logging.basicConfig(
 log = logging.getLogger("crawl")
 
 
-def crawl_kline(store: SQLiteStore, client: CheeseFortuneClient, code: str,
+def crawl_kline(store: SQLiteStore, client: KlineClient, code: str,
                 force: bool, delay: float) -> None:
     """抓取单只 ETF 日K线并落库。"""
     state = store.load_state()
@@ -76,7 +76,7 @@ def main() -> int:
 
     Path(args.db).parent.mkdir(parents=True, exist_ok=True)
     store = SQLiteStore(args.db)
-    client = CheeseFortuneClient()
+    client = KlineClient()
 
     try:
         if not args.no_list:

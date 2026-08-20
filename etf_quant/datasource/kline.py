@@ -106,7 +106,7 @@ def build_headers(timestamp_ms: int, api_token: str, user_token: str = "", refer
     return headers
 
 
-class CheeseFortuneClient:
+class KlineClient:
     """芝士财富日K线客户端。"""
 
     def __init__(self, user_token: str = "", timeout: int = 20):
