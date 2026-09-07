@@ -95,15 +95,34 @@ importers:
 
   packages/data:
     dependencies:
-      '@prisma/client':
-        specifier: ^5.20.0
-        version: 5.22.0(prisma@5.22.0)
       '@quant-backtest/core':
         specifier: workspace:*
         version: link:../core
       '@quant-backtest/crawler':
         specifier: workspace:*
         version: link:../crawler
+      '@quant-backtest/db':
+        specifier: workspace:*
+        version: link:../db
+    devDependencies:
+      '@types/node':
+        specifier: ^20.14.0
+        version: 20.19.43
+      tsup:
+        specifier: ^8.3.0
+        version: 8.5.1(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)
+      typescript:
+        specifier: ^5.5.4
+        version: 5.9.3
+
+  packages/db:
+    dependencies:
+      '@prisma/client':
+        specifier: ^5.20.0
+        version: 5.22.0(prisma@5.22.0)
+      '@quant-backtest/core':
+        specifier: workspace:*
+        version: link:../core
     devDependencies:
       '@types/node':
         specifier: ^20.14.0

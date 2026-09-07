@@ -1,10 +1,5 @@
-// @quant-backtest/data —— 数据层出口：存储 / 服务 / 同步调度。
-// 抓取（fetchKlineData / ETFFetcher）已迁至 @quant-backtest/crawler，需要时从 crawler 导入。
-export * from "./data-writer";
-export * from "./data-service";
-export * from "./period-return-calculator";
-
-// 同步任务调度（docs/09）
+// @quant-backtest/data —— 同步调度层出口（docs/09）：SyncTask / 规则 / 两阶段调度器。
+// 抓取原语见 @quant-backtest/crawler；存储读写（Prisma）见 @quant-backtest/db。
 export * from "./sync/types";
 export * from "./sync/rule";
 export * from "./sync/tasks";

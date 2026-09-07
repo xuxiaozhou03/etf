@@ -1,5 +1,6 @@
-// 数据写入（骨架）
+// @quant-backtest/db —— 数据写入（骨架）
 // 完整实现见 docs/02 §5：syncETF / syncETFs / syncETFList / syncAllETFs。
+// 只负责入库写原语；HTTP 抓取来自 @quant-backtest/crawler，编排在 @quant-backtest/data 的 sync。
 
 import { Result } from "@quant-backtest/core";
 

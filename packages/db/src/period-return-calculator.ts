@@ -1,4 +1,4 @@
-// 阶段收益计算器（骨架）
+// @quant-backtest/db —— 阶段收益计算器（骨架）
 // 完整实现见 docs/02 §6：calculateAndSaveAll（周/月/季/年/YTD 全量重算覆盖）。
 
 export class PeriodReturnCalculator {

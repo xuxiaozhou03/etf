@@ -1,4 +1,4 @@
-// 数据服务（骨架）
+// @quant-backtest/db —— 数据服务（骨架）
 // 完整实现见 docs/03 §3：loadCandles / getPeriodReturns / getRanking / getMultiPeriodRanking 等。
 
 import { DailyCandle } from "@quant-backtest/core";

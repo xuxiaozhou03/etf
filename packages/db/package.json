@@ -1,8 +1,8 @@
 {
-  "name": "@quant-backtest/data",
+  "name": "@quant-backtest/db",
   "version": "0.1.0",
   "private": true,
-  "description": "同步调度层：统一 pnpm/quant sync 编排（docs/09）",
+  "description": "存储层：Prisma schema / 数据读写（docs/02、03）",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -15,17 +15,22 @@
     }
   },
   "files": ["dist"],
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev"
   },
   "dependencies": {
-    "@quant-backtest/core": "workspace:*",
-    "@quant-backtest/crawler": "workspace:*",
-    "@quant-backtest/db": "workspace:*"
+    "@prisma/client": "^5.20.0",
+    "@quant-backtest/core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
+    "prisma": "^5.20.0",
     "tsup": "^8.3.0",
     "typescript": "^5.5.4"
   }
