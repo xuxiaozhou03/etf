@@ -6,8 +6,8 @@
   "scripts": {
     "typecheck": "pnpm -r typecheck",
     "test": "vitest run",
-    "sync": "pnpm --filter @quant-backtest/cli sync",
-    "example:basic": "pnpm --filter @quant-backtest/example-basic dev"
+    "sync": "pnpm --filter @quant-backtest/app sync",
+    "basic": "pnpm --filter @quant-backtest/app basic"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
