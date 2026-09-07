@@ -1,14 +1,16 @@
 /**
- * pnpm sync 统一入口（docs/09）
- *   pnpm sync            两阶段：先 etf_list，再从 DB 组装 [code]_kline
- *   pnpm sync --force    忽略跳过判断，全部强制执行
- * TODO(骨架)：真正接入时替换 runSync 的实现依赖（SyncTaskRun 持久化等）。
+ * quant sync —— 数据同步子命令（docs/09）
+ *
+ * 两阶段：先判断 etf_list（抓列表/刷 Security），再从 DB 组装 [code]_kline 逐个判断。
+ * 跳过规则「收盘后已完成 → 跳过」见 data/sync/rule.ts。
+ *
+ * 用法：quant sync [--force]     --force 忽略跳过判断，全部强制执行
  */
 
 import { runSync } from "@quant-backtest/data";
 
-async function main() {
-  const force = process.argv.includes("--force");
+export async function runSyncCommand(args: string[]): Promise<number> {
+  const force = args.includes("--force");
   const ctx = { force };
 
   const report = await runSync(ctx);
@@ -24,10 +26,5 @@ async function main() {
   const { executed, skipped, failed } = report.summary;
   console.log(`\n完成：执行 ${executed}，跳过 ${skipped}，失败 ${failed}`);
 
-  process.exitCode = failed > 0 ? 1 : 0;
+  return failed > 0 ? 1 : 0;
 }
-
-main().catch((e) => {
-  console.error(e);
-  process.exitCode = 1;
-});

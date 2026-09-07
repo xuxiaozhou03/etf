@@ -42,13 +42,19 @@ importers:
 
   packages/cli:
     dependencies:
+      '@quant-backtest/data':
+        specifier: workspace:*
+        version: link:../data
       '@quant-backtest/engine':
         specifier: workspace:*
         version: link:../engine
     devDependencies:
       tsup:
-        specifier: ^8.0.0
+        specifier: ^8.3.0
         version: 8.5.1(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)
+      tsx:
+        specifier: ^4.19.0
+        version: 4.23.13
       typescript:
         specifier: ^5.5.4
         version: 5.9.3
@@ -157,22 +163,6 @@ importers:
       tsup:
         specifier: ^8.0.0
         version: 8.5.1(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  scripts:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../packages/core
-      '@quant-backtest/data':
-        specifier: workspace:*
-        version: link:../packages/data
-    devDependencies:
-      tsx:
-        specifier: ^4.0.0
-        version: 4.23.13
       typescript:
         specifier: ^5.5.4
         version: 5.9.3

@@ -7,7 +7,7 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel --stream dev",
     "test": "vitest run",
-    "sync": "pnpm --filter @quant-backtest/scripts sync",
+    "sync": "pnpm --filter @quant-backtest/cli sync",
     "example:basic": "pnpm --filter @quant-backtest/example-basic dev"
   },
   "devDependencies": {
