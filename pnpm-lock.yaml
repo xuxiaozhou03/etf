@@ -54,25 +54,6 @@ importers:
       '@quant-backtest/core':
         specifier: workspace:*
         version: link:../core
-      '@quant-backtest/data':
-        specifier: workspace:*
-        version: link:../data
-      '@quant-backtest/db':
-        specifier: workspace:*
-        version: link:../db
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/data:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
       '@quant-backtest/db':
         specifier: workspace:*
         version: link:../db
@@ -105,9 +86,6 @@ importers:
       '@quant-backtest/core':
         specifier: workspace:*
         version: link:../core
-      '@quant-backtest/data':
-        specifier: workspace:*
-        version: link:../data
       '@quant-backtest/execution':
         specifier: workspace:*
         version: link:../execution

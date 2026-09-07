@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@quant-backtest/core": "workspace:*",
-    "@quant-backtest/data": "workspace:*",
     "@quant-backtest/strategy": "workspace:*",
     "@quant-backtest/execution": "workspace:*",
     "@quant-backtest/result": "workspace:*"

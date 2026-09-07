@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@quant-backtest/core": "workspace:*",
-    "@quant-backtest/data": "workspace:*",
     "@quant-backtest/db": "workspace:*"
   },
   "devDependencies": {
