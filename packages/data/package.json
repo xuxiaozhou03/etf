@@ -2,31 +2,23 @@
   "name": "@quant-backtest/data",
   "version": "0.1.0",
   "private": true,
-  "description": "同步调度层：统一 pnpm/quant sync 编排（docs/09）",
+  "description": "取数层：上游 HTTP 抓取解析 + DataService 读服务",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     }
   },
-  "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@quant-backtest/core": "workspace:*",
-    "@quant-backtest/crawler": "workspace:*",
     "@quant-backtest/db": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
-    "tsup": "^8.3.0",
     "typescript": "^5.5.4"
   }
 }

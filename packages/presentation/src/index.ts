@@ -1,6 +1,6 @@
 // @quant-backtest/presentation —— 展示/报表层（骨架）
-// 规划见 docs/01：HTML 报告、榜单、可视化数据。
-// TODO(骨架)：实现报告渲染（docs/07）。
+// 规划：HTML 报告、榜单、可视化数据。
+// TODO(骨架)：实现报告渲染。
 
 export interface ReportRenderer {
   // TODO(骨架)

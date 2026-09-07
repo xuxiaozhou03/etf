@@ -1,5 +1,5 @@
 /**
- * 两阶段同步调度器（docs/09 §3.4）：
+ * 两阶段同步调度器：
  *
  *   pnpm sync
  *    └─ 阶段① 判断 etf_list —— 执行(抓列表/刷 Security) 或 跳过
@@ -23,7 +23,7 @@ async function runOne(task: SyncTask, ctx: SyncContext): Promise<TaskRunOutcome>
     const needRun = await task.shouldRun(ctx);
     if (!needRun) {
       outcome.status = "skipped";
-      outcome.reason = "上次成功完成于数据收盘参考点之后，无需重跑（docs/09 §5）";
+      outcome.reason = "上次成功完成于数据收盘参考点之后，无需重跑";
       return outcome;
     }
   } catch (e) {
@@ -47,7 +47,8 @@ async function runOne(task: SyncTask, ctx: SyncContext): Promise<TaskRunOutcome>
 
 /**
  * 执行一次完整同步。
- * ctx 当前为纯标记（force），真实的 DataService / DataWriter 注入见 TODO。
+ * ctx 当前为纯标记（force）；真实的取数（@quant-backtest/data 的 DataService）与
+ * 本层 DataWriter 注入见 TODO。
  */
 export async function runSync(ctx: SyncContext): Promise<SyncReport> {
   const outcomes: TaskRunOutcome[] = [];
@@ -56,7 +57,7 @@ export async function runSync(ctx: SyncContext): Promise<SyncReport> {
   outcomes.push(await runOne(etfListTask, ctx));
 
   // ---- 阶段②：从 DB 读 Security → 组装 [code]_kline → 逐个判断执行 ----
-  // TODO(骨架)：真实实现改为 DataService.getETFList() 取全量 Security；
+  // TODO(骨架)：真实实现改为 data 的 DataService.getETFList() 取全量 Security；
   //   此处用占位（阶段①若本次成功执行会刷新该表，但组装始终以 DB 现值为准）。
   const securities: Array<{ code: string; name: string }> = [
     // { code: "510300", name: "沪深300ETF" },

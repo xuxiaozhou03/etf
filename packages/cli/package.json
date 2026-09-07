@@ -3,30 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "bin": {
-    "quant": "./dist/index.js"
+    "quant": "./src/index.ts"
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "sync": "tsx src/index.ts sync"
+    "sync": "tsx src/index.ts sync",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@quant-backtest/data": "workspace:*",
-    "@quant-backtest/engine": "workspace:*"
+    "@quant-backtest/crawler": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
-    "tsup": "^8.3.0",
     "typescript": "^5.5.4",
     "@types/node": "^20.14.0"
   }

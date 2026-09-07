@@ -1,6 +1,6 @@
 /**
  * Result<T, E> 统一错误处理（骨架）
- * 完整语义见 docs/01 §2.3 错误处理。
+ * 语义：成功 { ok:true; value } / 失败 { ok:false; error }。
  */
 
 export type Result<T, E> = { ok: true; value: T } | { ok: false; error: E };

@@ -2,27 +2,18 @@
   "name": "@quant-backtest/core",
   "version": "0.1.0",
   "private": true,
-  "description": "核心类型定义 + Result 错误处理（见 docs/03、04、05、06 类型）",
+  "description": "核心类型定义 + Result 错误处理",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "tsup": "^8.3.0",
     "typescript": "^5.5.4",
     "@types/node": "^20.14.0"
   }

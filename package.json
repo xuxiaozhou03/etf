@@ -2,17 +2,15 @@
   "name": "quant-backtest",
   "version": "0.1.0",
   "private": true,
-  "description": "量化回测系统（monorepo）— 设计见 docs/",
+  "description": "量化回测系统（monorepo）",
   "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm -r --parallel --stream dev",
+    "typecheck": "pnpm -r typecheck",
     "test": "vitest run",
     "sync": "pnpm --filter @quant-backtest/cli sync",
     "example:basic": "pnpm --filter @quant-backtest/example-basic dev"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
-    "tsup": "^8.3.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
     "vitest": "^2.1.0"

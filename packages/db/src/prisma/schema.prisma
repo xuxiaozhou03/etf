@@ -1,5 +1,5 @@
 // 量化回测系统 Prisma Schema（骨架）
-// 模型定义见 docs/02 §2，SyncTaskRun 见 docs/09 §3.3
+// 模型：日K（Kline）/ 阶段收益（PeriodReturn）/ 标的基础信息（Security）/ 同步任务历史（SyncTaskRun）
 
 generator client {
   provider = "prisma-client-js"
@@ -62,7 +62,7 @@ model Security {
   @@map("security")
 }
 
-/// 同步任务执行历史（docs/09 §3.3）：判断"是否需要跳过"的依据
+/// 同步任务执行历史：判断「收盘后已完成 → 跳过」规则的依据
 model SyncTaskRun {
   id         Int       @id @default(autoincrement())
   taskType   String // 'etf_list' | 'kline'

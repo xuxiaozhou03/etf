@@ -1,6 +1,6 @@
-// @quant-backtest/crawler —— 日K 抓取（骨架）
-// 完整实现见 docs/02 §3：fetchKlineData（p-retry + 429 限流）、parseKlineResponse、parseDateToInt、incrementDate。
-// 只负责抓取与解析，不做存储（写入归 @quant-backtest/data 的 DataWriter）。
+// @quant-backtest/data —— 日K 抓取（骨架）
+// 负责从数据源抓日K 并解析：fetchKlineData（p-retry + 429 限流）、parseKlineResponse、parseDateToInt、incrementDate。
+// 只抓不存；写库由 @quant-backtest/crawler 的 DataWriter 完成。
 
 import { Result } from "@quant-backtest/core";
 

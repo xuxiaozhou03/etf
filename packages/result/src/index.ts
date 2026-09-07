@@ -1,6 +1,6 @@
 // @quant-backtest/result —— 结果/绩效层（骨架）
-// 规划见 docs/01：QuantResult、日频快照、基准对比、收益计算。
-// TODO(骨架)：实现结果聚合与绩效计算（docs/06）。
+// 规划：QuantResult、日频快照、基准对比、收益计算。
+// TODO(骨架)：实现结果聚合与绩效计算。
 
 export interface QuantResult {
   // TODO(骨架)

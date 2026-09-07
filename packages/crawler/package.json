@@ -2,28 +2,24 @@
   "name": "@quant-backtest/crawler",
   "version": "0.1.0",
   "private": true,
+  "description": "调度爬虫 + 落库：sync 两阶段调度 / DataWriter / 阶段收益计算",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     }
   },
-  "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@quant-backtest/core": "workspace:*"
+    "@quant-backtest/core": "workspace:*",
+    "@quant-backtest/data": "workspace:*",
+    "@quant-backtest/db": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
-    "tsup": "^8.3.0",
     "typescript": "^5.5.4"
   }
 }

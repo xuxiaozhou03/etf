@@ -1,12 +1,12 @@
 /**
  * 统一同步任务调度 —— 类型定义（骨架）
- * 设计见 docs/09 §3。
+ * 属于 @quant-backtest/crawler：任务从 @quant-backtest/data 取数、经本层 DataWriter 落库。
  */
 
 export interface SyncContext {
   /** 是否 --force 强制（忽略跳过判断） */
   force: boolean;
-  // TODO(骨架)：注入 DataService / DataWriter / SyncTaskRun 访问入口，供任务 run/shouldRun 使用
+  // TODO(骨架)：注入取数（data 的 DataService / ETFFetcher）+ 本层 DataWriter + SyncTaskRun 访问入口
 }
 
 /** 同步任务：etf_list / kline 等 */

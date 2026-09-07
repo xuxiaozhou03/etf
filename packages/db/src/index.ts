@@ -1,5 +1,5 @@
-// @quant-backtest/db —— 存储层出口：Prisma schema + 数据读写。
-// 抓取见 @quant-backtest/crawler，同步调度编排见 @quant-backtest/data。
-export * from "./data-writer";
-export * from "./data-service";
-export * from "./period-return-calculator";
+// @quant-backtest/db —— 存储基础设施：Prisma schema + 客户端，仅此而已。
+// 不承担任何业务读写：取数（DataService）见 @quant-backtest/data，
+// 调度与落库（DataWriter / PeriodReturnCalculator）见 @quant-backtest/crawler。
+
+export * from "./client";

@@ -1,5 +1,6 @@
-// @quant-backtest/db —— 数据服务（骨架）
-// 完整实现见 docs/03 §3：loadCandles / getPeriodReturns / getRanking / getMultiPeriodRanking 等。
+// @quant-backtest/data —— 数据读服务（骨架）
+// loadCandles / getPeriodReturns / getRanking / getMultiPeriodRanking 等，供回测引擎取数。
+// 底层 Prisma 来自 @quant-backtest/db；本层不含调度与写库。
 
 import { DailyCandle } from "@quant-backtest/core";
 

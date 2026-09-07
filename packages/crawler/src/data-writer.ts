@@ -1,6 +1,6 @@
-// @quant-backtest/db —— 数据写入（骨架）
-// 完整实现见 docs/02 §5：syncETF / syncETFs / syncETFList / syncAllETFs。
-// 只负责入库写原语；HTTP 抓取来自 @quant-backtest/crawler，编排在 @quant-backtest/data 的 sync。
+// @quant-backtest/crawler —— 数据入库写原语（骨架）
+// syncETF / syncETFs / syncETFList / syncAllETFs：把取到的 ETF 列表与日K 写入 DB。
+// 取数来自 @quant-backtest/data；调度编排见本层 sync/；Prisma 来自 @quant-backtest/db。
 
 import { Result } from "@quant-backtest/core";
 

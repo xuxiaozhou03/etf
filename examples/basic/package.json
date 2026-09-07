@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@quant-backtest/core": "workspace:*",
@@ -14,5 +15,11 @@
     "tsx": "^4.0.0",
     "typescript": "^5.5.4",
     "@types/node": "^20.14.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
   }
 }

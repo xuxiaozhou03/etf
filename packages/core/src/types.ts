@@ -1,10 +1,10 @@
 /**
  * 核心类型定义（骨架）
- * 先落系统最常用的集合，其余按文档补齐：
- *  - docs/03 §2   DailyCandle
- *  - docs/04 §2   策略信号/风控/账户
- *  - docs/05 §2   执行/持仓/快照/费用
- *  - docs/06 §2   量化结果/基准对比
+ * 先落系统最常用的集合，其余按各层补齐：
+ *  - DailyCandle（data 取数）
+ *  - 策略信号/风控/账户（strategy）
+ *  - 执行/持仓/快照/费用（execution）
+ *  - 量化结果/基准对比（result）
  */
 
 /** 交易动作 */
@@ -66,7 +66,7 @@ export interface FilledOrder {
   reason?: string;
 }
 
-/** 费用配置（A股默认见 docs/05 §3） */
+/** 费用配置（A股默认值） */
 export interface FeeConfig {
   commissionRate: number;
   minCommission: number;
@@ -76,4 +76,4 @@ export interface FeeConfig {
 
 // TODO(骨架) 补充：RiskAction / RiskType、AdviceContext、Position、Account、
 // TradeRecord、DailySnapshot、SnapshotPosition、ExecutionResult、ExecutionResultData、
-// QuantResult、MonthlyReturn、BenchmarkComparison、BenchmarkConfig（依 docs/03~06）。
+// QuantResult、MonthlyReturn、BenchmarkComparison、BenchmarkConfig（后续按各层补充）。

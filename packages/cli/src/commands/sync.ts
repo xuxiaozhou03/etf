@@ -1,13 +1,13 @@
 /**
- * quant sync —— 数据同步子命令（docs/09）
+ * quant sync —— 数据同步子命令
  *
  * 两阶段：先判断 etf_list（抓列表/刷 Security），再从 DB 组装 [code]_kline 逐个判断。
- * 跳过规则「收盘后已完成 → 跳过」见 data/sync/rule.ts。
+ * 跳过规则「收盘后已完成 → 跳过」见 @quant-backtest/crawler 的 sync/rule.ts。
  *
  * 用法：quant sync [--force]     --force 忽略跳过判断，全部强制执行
  */
 
-import { runSync } from "@quant-backtest/data";
+import { runSync } from "@quant-backtest/crawler";
 
 export async function runSyncCommand(args: string[]): Promise<number> {
   const force = args.includes("--force");

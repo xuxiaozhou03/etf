@@ -1,6 +1,6 @@
 // @quant-backtest/engine —— 回测引擎（骨架）
-// 规划见 docs/01：编排数据→策略→撮合→记账→结果的回测主流程。
-// TODO(骨架)：实现 runBacktest 主循环（docs/08）。
+// 规划：编排数据→策略→撮合→记账→结果的回测主流程。
+// TODO(骨架)：实现 runBacktest 主循环。
 
 export interface BacktestOptions {
   // TODO(骨架)

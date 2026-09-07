@@ -1,5 +1,6 @@
-// @quant-backtest/db —— 阶段收益计算器（骨架）
-// 完整实现见 docs/02 §6：calculateAndSaveAll（周/月/季/年/YTD 全量重算覆盖）。
+// @quant-backtest/crawler —— 阶段收益计算器（骨架）
+// calculateAndSaveAll：基于已入库日K 计算周/月/季/年/YTD 收益并全量重算保存。
+// Prisma 来自 @quant-backtest/db；在 sync 落库后调用。
 
 export class PeriodReturnCalculator {
   // TODO(骨架)：实现 calculateAndSaveAll / disconnect
