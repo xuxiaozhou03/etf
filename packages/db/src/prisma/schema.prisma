@@ -40,9 +40,10 @@ model PeriodReturn {
 
 /// ETF/指数基础信息
 model Etf {
-  code          String  @id
+  code          String @id
   name          String
-  trackingIndex String?
+  trackingIndex String
+  trackIndex    String
   scale         Float?
 
   @@map("etf")
