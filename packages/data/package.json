@@ -14,7 +14,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "prisma": {
     "schema": "src/prisma/schema.prisma"
   },
@@ -31,6 +33,7 @@
   "devDependencies": {
     "prisma": "^5.20.0",
     "tsup": "^8.3.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "@types/node": "^20.14.0"
   }
 }
