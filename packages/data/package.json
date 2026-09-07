@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
-    "@quant-backtest/core": "workspace:*"
+    "@quant-backtest/core": "workspace:*",
+    "@quant-backtest/crawler": "workspace:*"
   },
   "devDependencies": {
     "prisma": "^5.20.0",

@@ -1,5 +1,6 @@
-// ETF 列表采集与过滤（骨架）
+// @quant-backtest/crawler —— ETF 列表采集与过滤（骨架）
 // 完整实现见 docs/02 §4：分页抓取 + 过滤（trackingIndex≠null、规模>3亿、同指数取最大）+ 类别推断。
+// 只负责抓取与过滤，写入 Security 表归 @quant-backtest/data。
 
 import { Result } from "@quant-backtest/core";
 
