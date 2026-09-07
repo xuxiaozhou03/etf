@@ -9,7 +9,7 @@
  */
 
 /** 计算当前时刻对应的"数据收盘参考点 T" */
-export function tradingCutoff(now: Date = new Date()): Date {
+function tradingCutoff(now: Date = new Date()): Date {
   const d = new Date(now);
   const day = d.getDay(); // 0=周日 … 6=周六
   if (day >= 1 && day <= 5) {
@@ -30,12 +30,4 @@ export function shouldSkipAfterCutoff(
 ): boolean {
   if (finishedAt == null) return false; // 从未成功完成 → 必须跑
   return finishedAt.getTime() > tradingCutoff(now).getTime();
-}
-
-/**
- * 计算任务标识（写入 SyncTaskRun 用）：type + taskKey + params
- * 同参数任务只保留一条历史记录。
- */
-export function taskId(type: string, key?: string | null, params?: Record<string, unknown>): string {
-  return [type, key ?? "", JSON.stringify(params ?? {})].join("|");
 }

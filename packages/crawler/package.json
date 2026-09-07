@@ -4,14 +4,9 @@
   "private": true,
   "description": "调度爬虫 + 落库：sync 两阶段调度 / DataWriter / 阶段收益计算",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
-    }
-  },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "crawler": "tsx ./src/crawler.ts"
   },
   "dependencies": {
     "@quant-backtest/core": "workspace:*",

@@ -12,10 +12,8 @@ datasource db {
 
 /// 前复权日K线数据
 model Kline {
-  id            Int    @id @default(autoincrement())
   code          String
   date          Int // YYYYMMDD
-  week          String?
   open          Float
   high          Float
   low           Float
@@ -32,48 +30,31 @@ model Kline {
 
 /// 阶段收益（预计算存储）
 model PeriodReturn {
-  id           Int    @id @default(autoincrement())
-  code         String
-  periodType   String // 'weekly' | 'monthly' | 'quarterly' | 'yearly' | 'ytd'
-  periodKey    String // '2024-W03' | '2024-01' | '2024-Q1' | '2024' | '2024-ytd'
-  startDate    Int
-  endDate      Int
-  startPrice   Float
-  endPrice     Float
-  returnRate   Float
-  returnAmount Float
-  tradeDays    Int
+  code       String
+  periodType String // '近一周' | '近一月' | '近三月' | '近六月' | '近一年' | '近三年' | '近五年' | '今年以来' | '成立以来'
+  returnRate Float // 涨跌幅
 
-  @@unique([code, periodType, periodKey])
-  @@index([periodType, periodKey])
+  @@unique([code, periodType])
   @@map("periodReturn")
 }
 
 /// ETF/指数基础信息
-model Security {
+model Etf {
   code          String  @id
   name          String
-  market        String // 'SH' | 'SZ'
-  type          String // 'etf' | 'index' | 'stock'
-  category      String? // '宽基' | '行业' | '主题' | '债券' | '商品' | '其他'
   trackingIndex String?
   scale         Float?
 
-  @@map("security")
+  @@map("etf")
 }
 
 /// 同步任务执行历史：判断「收盘后已完成 → 跳过」规则的依据
 model SyncTaskRun {
-  id         Int       @id @default(autoincrement())
-  taskType   String // 'etf_list' | 'kline'
-  taskKey    String? // kline 任务 = code
-  params     String? // JSON 序列化；同类型不同参数视为不同任务
-  status     String // 'success' | 'failed' | 'running'
-  startedAt  DateTime
+  name       String // 'etf_list' | '[code]_kline'
+  status     String // 'success' | 'failed'
   finishedAt DateTime?
   error      String?
 
-  @@unique([taskType, taskKey, params])
-  @@index([taskType, taskKey])
+  @@unique([name])
   @@map("syncTaskRun")
 }
