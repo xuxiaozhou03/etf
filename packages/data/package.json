@@ -1,0 +1,36 @@
+{
+  "name": "@quant-backtest/data",
+  "version": "0.1.0",
+  "private": true,
+  "description": "数据层：采集 / 存储 / 服务 / ETF / 统一同步调度（docs/02、03、09）",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "@quant-backtest/core": "workspace:*"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.4"
+  }
+}

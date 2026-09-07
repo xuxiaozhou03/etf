@@ -1,0 +1,17 @@
+{
+  "name": "@quant-backtest/example-basic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@quant-backtest/core": "workspace:*",
+    "@quant-backtest/engine": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.4"
+  }
+}
