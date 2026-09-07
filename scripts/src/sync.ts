@@ -15,8 +15,11 @@ async function main() {
 
   // 汇总输出
   for (const o of report.outcomes) {
-    const flag = o.status === "executed" ? "✔" : o.status === "skipped" ? "⏭" : "✖";
-    console.log(`${flag} ${o.taskId}${o.reason ? `  (${o.reason})` : ""}${o.error ? `  -> ${o.error}` : ""}`);
+    const flag =
+      o.status === "executed" ? "✔" : o.status === "skipped" ? "⏭" : "✖";
+    console.log(
+      `${flag} ${o.taskId}${o.reason ? `  (${o.reason})` : ""}${o.error ? `  -> ${o.error}` : ""}`,
+    );
   }
   const { executed, skipped, failed } = report.summary;
   console.log(`\n完成：执行 ${executed}，跳过 ${skipped}，失败 ${failed}`);
