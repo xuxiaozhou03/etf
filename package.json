@@ -7,7 +7,9 @@
     "typecheck": "pnpm -r typecheck",
     "test": "vitest run",
     "sync": "pnpm --filter @quant-backtest/app sync",
-    "basic": "pnpm --filter @quant-backtest/app basic"
+    "basic": "pnpm --filter @quant-backtest/app basic",
+    "db:generate": "pnpm --filter @quant-backtest/db db:generate",
+    "db:push": "pnpm --filter @quant-backtest/db db:push"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",

@@ -14,8 +14,8 @@
     "schema": "src/prisma/schema.prisma"
   },
   "scripts": {
-    "prisma:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
