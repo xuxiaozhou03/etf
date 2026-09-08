@@ -18,7 +18,7 @@ export const runTask = async (task: Task): Promise<void> => {
     if (
       syncTask &&
       syncTask.status === "success" &&
-      !shouldSkipAfterCutoff(syncTask.finishedAt)
+      shouldSkipAfterCutoff(syncTask.finishedAt)
     ) {
       console.log(
         `Task ${task.name} has already been completed successfully. Skipping.`,

@@ -13,8 +13,8 @@ export const etfTask: Task = {
           code: etf.securityCode,
           name: etf.securityName,
           scale: etf.scale,
-          trackingIndex: etf.trackingIndex,
-          trackIndex: etf.trackIndex,
+          trackingIndex: etf.trackingIndex!,
+          trackIndex: etf.trackIndex!,
         })),
       });
     });

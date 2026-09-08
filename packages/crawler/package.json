@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "crawler:dev": "tsx ./src/crawler.ts --dev",
     "crawler": "tsx ./src/crawler.ts"
   },
   "dependencies": {
