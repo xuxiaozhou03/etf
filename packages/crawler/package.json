@@ -10,7 +10,6 @@
     "crawler": "tsx ./src/crawler.ts"
   },
   "dependencies": {
-    "@quant-backtest/core": "workspace:*",
     "@quant-backtest/db": "workspace:*"
   },
   "devDependencies": {

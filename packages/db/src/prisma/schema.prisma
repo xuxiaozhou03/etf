@@ -38,7 +38,7 @@ model PeriodReturn {
   @@map("periodReturn")
 }
 
-/// ETF/指数基础信息
+/// ETF基础信息
 model Etf {
   code          String @id
   name          String

@@ -21,39 +21,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.9(@types/node@20.19.43)
 
-  packages/app:
-    dependencies:
-      '@quant-backtest/crawler':
-        specifier: workspace:*
-        version: link:../crawler
-      '@quant-backtest/engine':
-        specifier: workspace:*
-        version: link:../engine
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      tsx:
-        specifier: ^4.19.0
-        version: 4.23.13
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/core:
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
   packages/crawler:
     dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
       '@quant-backtest/db':
         specifier: workspace:*
         version: link:../db
@@ -77,83 +46,6 @@ importers:
       prisma:
         specifier: ^5.20.0
         version: 5.22.0
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/engine:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
-      '@quant-backtest/execution':
-        specifier: workspace:*
-        version: link:../execution
-      '@quant-backtest/result':
-        specifier: workspace:*
-        version: link:../result
-      '@quant-backtest/strategy':
-        specifier: workspace:*
-        version: link:../strategy
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/execution:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/presentation:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
-      '@quant-backtest/result':
-        specifier: workspace:*
-        version: link:../result
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/result:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
-      typescript:
-        specifier: ^5.5.4
-        version: 5.9.3
-
-  packages/strategy:
-    dependencies:
-      '@quant-backtest/core':
-        specifier: workspace:*
-        version: link:../core
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.0
-        version: 20.19.43
       typescript:
         specifier: ^5.5.4
         version: 5.9.3
