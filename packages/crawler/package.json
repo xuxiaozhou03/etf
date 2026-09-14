@@ -10,7 +10,8 @@
     "crawler": "tsx ./src/crawler.ts"
   },
   "dependencies": {
-    "@quant-backtest/db": "workspace:*"
+    "@quant-backtest/db": "workspace:*",
+    "dayjs": "^1.11.23"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",

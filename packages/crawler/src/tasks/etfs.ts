@@ -21,6 +21,8 @@ export const etfTask: Task = {
   },
 };
 
+const trackingIndexBlackList = ["短融", "城投", "债", "信用"];
+
 interface OriginalEtf {
   securityName: string;
   securityCode: string;
@@ -60,7 +62,14 @@ const fetchEtfs = async () => {
     // 过滤掉没有跟踪指数的 ETF
     .filter((etf) => etf.trackingIndex)
     // 过滤掉规模小于 3 亿的 ETF
-    .filter((etf) => etf.scale < 300_000_000)
+    .filter((etf) => etf.scale >= 300_000_000)
+    // 过滤 trackingIndex 黑名单
+    .filter(
+      (etf) =>
+        !trackingIndexBlackList.find((item) =>
+          etf.trackingIndex?.includes(item),
+        ),
+    )
     .map((etf) => ({
       securityName: etf.securityName,
       securityCode: etf.securityCode,
