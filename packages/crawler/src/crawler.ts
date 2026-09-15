@@ -2,7 +2,7 @@ import { prisma } from "@quant-backtest/db";
 import { etfTask } from "./tasks/etfs";
 import { runTask } from "./utils/runTask";
 import { getEtfKlineTask } from "./tasks/kline";
-import { getEtfCalculatorTask } from "./tasks/calculator";
+import { getFeatureEngineTask } from "./tasks/featureEngine";
 
 const runCrawler = async (isDev = false) => {
   console.log("Starting crawler...");
@@ -16,7 +16,7 @@ const runCrawler = async (isDev = false) => {
 
   for (const etf of etfs) {
     await runTask(getEtfKlineTask(etf.code));
-    await runTask(getEtfCalculatorTask(etf.code));
+    await runTask(getFeatureEngineTask(etf.code));
   }
 
   console.log("Crawler finished.");

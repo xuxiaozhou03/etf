@@ -28,16 +28,6 @@ model Kline {
   @@map("kline")
 }
 
-/// 阶段收益（预计算存储）
-model PeriodReturn {
-  code       String
-  periodType String // '近一周' | '近一月' | '近三月' | '近六月' | '近一年' | '近三年' | '近五年' | '今年以来' | '成立以来'
-  returnRate Float // 涨跌幅
-
-  @@unique([code, periodType])
-  @@map("periodReturn")
-}
-
 /// ETF基础信息
 model Etf {
   code          String @id
@@ -47,6 +37,49 @@ model Etf {
   scale         Float?
 
   @@map("etf")
+}
+
+model Feature {
+  code String
+  date Int // YYYYMMDD
+
+  // 均线
+  ma5        Float?
+  ma20       Float?
+  ma60       Float?
+  ma5_ma20   Float?
+  ma20_ma60  Float?
+  close_ma20 Float?
+
+  // 动量 / 区间收益率
+  ret1w    Float? // 近一周
+  ret1m    Float? // 近一月
+  ret6m    Float? // 近6月
+  ret1y    Float? // 近1年
+  retYtd   Float? // 今年来
+  ret3y    Float? // 近3年
+  ret6y    Float? // 近6年
+  retSince Float? // 成立以来
+  rsi14    Float?
+
+  // 波动率
+  vol20      Float?
+  atr14_norm Float?
+  bb_width20 Float?
+
+  // 量价
+  vol_ratio5   Float?
+  vol_ma5_ma20 Float?
+  obv          Float?
+
+  // 标签
+  label_ret1 Float?
+  label_ret5 Float?
+
+  @@unique([code, date])
+  @@index([code, date])
+  @@index([date])
+  @@map("feature")
 }
 
 /// 同步任务执行历史：判断「收盘后已完成 → 跳过」规则的依据

@@ -1,6 +1,3 @@
-import { prisma } from "@quant-backtest/db";
-import { Task } from "../utils/runTask";
-
 const KLINE_API = "https://hongsehuojian.com/fundex-quote/line/kline";
 
 /** 接口单次最多返回 1000 条，超出需用 begin 翻页 */
@@ -36,23 +33,12 @@ interface KlineRow {
   changePercent: number;
 }
 
-export const getEtfKlineTask = (code: string): Task => ({
-  name: `kline_${code}`,
-  run: async () => {
-    const rows = await collectKlines(code);
-    await prisma.$transaction(async (tx) => {
-      await tx.kline.deleteMany({ where: { code } });
-      await tx.kline.createMany({ data: rows });
-    });
-  },
-});
-
 /**
  * 拉取某 ETF 的完整日 K。
  *  - 库中无该代码数据：从今天开始 count=-1000 往回翻页，直到取到最早一根；
  *  - 库中已有数据：从 max(date) 之后向后 count=1000 补新的 bar（日常 1 次请求即可）。
  */
-async function collectKlines(code: string): Promise<KlineRow[]> {
+export async function collectKlines(code: string): Promise<KlineRow[]> {
   const byDate = new Map<number, KlineRow>();
   let cursor = todayYmd();
   while (true) {

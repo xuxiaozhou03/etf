@@ -1,26 +1,3 @@
-import { prisma } from "@quant-backtest/db";
-import { Task } from "../utils/runTask";
-
-export const etfTask: Task = {
-  name: "etf_list",
-  run: async () => {
-    const list = await fetchEtfs();
-
-    await prisma.$transaction(async (tx) => {
-      await tx.etf.deleteMany();
-      await tx.etf.createMany({
-        data: list.map((etf) => ({
-          code: etf.securityCode,
-          name: etf.securityName,
-          scale: etf.scale,
-          trackingIndex: etf.trackingIndex!,
-          trackIndex: etf.trackIndex!,
-        })),
-      });
-    });
-  },
-};
-
 const trackingIndexBlackList = ["短融", "城投", "债", "信用"];
 
 interface OriginalEtf {
@@ -30,7 +7,7 @@ interface OriginalEtf {
   trackingIndex: string | null;
   trackIndex: string | null;
 }
-const fetchEtfs = async () => {
+export const fetchEtfs = async () => {
   const res = await fetch(
     "https://hongsehuojian.com/fundex-quote/allPage/findListByEtf?classA=&classB=&orderBy=l.scale&order=desc&searchValue=&isSelected=&pageNo=1&pageSize=2000&position=",
     {
