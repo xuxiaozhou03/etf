@@ -1,5 +1,5 @@
 import { FeatureRow, Kline } from "./types";
-import { sma, ema, std, safeDiv, returns, yearStartIndex } from "./utils";
+import { sma, ema, std, safeDiv, returns, yearBaseIndex } from "./utils";
 
 export function buildFeatures(klines: Kline[]): FeatureRow[] {
   const data = [...klines].sort((a, b) => a.date - b.date);
@@ -33,9 +33,9 @@ export function buildFeatures(klines: Kline[]): FeatureRow[] {
     if (i >= 750) ret3y[i] = close[i] / close[i - 750] - 1;
     if (i >= 1500) ret6y[i] = close[i] / close[i - 1500] - 1;
 
-    // 今年来
-    const startIdx = yearStartIndex(data, i);
-    if (startIdx < i) retYtd[i] = close[i] / close[startIdx] - 1;
+    // 今年来：基准取上一年最后一个交易日收盘（行情软件口径）
+    const baseIdx = yearBaseIndex(data, i);
+    if (baseIdx >= 0) retYtd[i] = close[i] / close[baseIdx] - 1;
 
     // 成立以来
     if (i > 0) retSince[i] = close[i] / close[0] - 1;

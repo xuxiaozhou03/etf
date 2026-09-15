@@ -42,11 +42,20 @@ export function returns(closes: number[]): (number | null)[] {
   return out;
 }
 
-/** 找到 i 所在年份的第一个交易日索引 */
-export function yearStartIndex(data: { date: number }[], i: number): number {
+/**
+ * 找到 i 所在年份的「今年来」基准索引，即上一年最后一个交易日的索引。
+ *
+ * 基准必须是上一年最后一个交易日的收盘价，而不是当年第一个交易日的收盘价：
+ * 后者会把年初第一天的涨跌幅整年丢掉，让 YTD 系统性偏移一天的量。
+ *
+ * 返回 -1 表示没有可信基准：数据起点就在本年，或跨年处断档（往前的第一根
+ * 不是上一年，中间整年缺失），这两种情况都算不出「今年来」。
+ */
+export function yearBaseIndex(data: { date: number }[], i: number): number {
   const year = Math.floor(data[i].date / 10000);
-  for (let j = i; j >= 0; j--) {
-    if (Math.floor(data[j].date / 10000) !== year) return j + 1;
+  for (let j = i - 1; j >= 0; j--) {
+    const y = Math.floor(data[j].date / 10000);
+    if (y !== year) return y === year - 1 ? j : -1;
   }
-  return 0;
+  return -1;
 }

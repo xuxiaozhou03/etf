@@ -7,7 +7,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "crawler:dev": "tsx ./src/crawler.ts --dev",
-    "crawler": "tsx ./src/crawler.ts"
+    "crawler": "tsx ./src/crawler.ts",
+    "verify:ytd": "tsx ./src/tasks/featureEngine/verifyYtd.ts"
   },
   "dependencies": {
     "@quant-backtest/db": "workspace:*",
