@@ -7,17 +7,62 @@
     <link rel="stylesheet" href="/assets/styles.css" />
     <style>
       /* 详情页优先「全屏看 K 线」：取消 main 的 1040px 限宽、也不套 .card，
-         K 线紧贴顶栏撑满首屏，表格往下滚才出现。
+         页头一行加图表正好铺满首屏，表格往下滚才出现。
          只覆盖本页，styles.css 里的 index.html（列表页）不受影响。 */
       main {
         max-width: none;
         padding: 0 16px 24px;
       }
-      /* 高度 = 视口 − 顶栏。顶栏虽是 sticky 但仍在文档流里占位，
-         所以减掉它剩下的正好是首屏可视高度（--topbar-h 由脚本实测写入）。 */
+      /* 页头：← 返回 + 基金名/代码 + 主题，一行，不占纵向空间 */
+      .page-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0 6px;
+      }
+      .page-head .back {
+        color: var(--ink-2);
+        font-size: 15px;
+        line-height: 1;
+      }
+      .page-head h1 {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .page-head .code {
+        color: var(--ink-2);
+        font-size: 13px;
+        font-weight: 400;
+        font-variant-numeric: tabular-nums;
+      }
+      .page-head .theme-toggle {
+        margin-left: auto;
+      }
+      /* 行情明细：原本是画在 canvas 上的图例（和 {ticker}·{period} 标题），
+         改成 DOM 后既能跟随十字光标，也不占用图表内的绘图区 */
+      .quote {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        margin: 0 0 8px;
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+      }
+      .quote i {
+        font-style: normal;
+        color: var(--ink-2);
+        margin-right: 5px;
+      }
+      .quote b {
+        font-weight: 600;
+      }
+      /* 高度由脚本按「视口 − 图表在文档中的偏移」写入，见 syncChartHeight() */
       #kline-chart {
         width: 100%;
-        height: calc(100dvh - var(--topbar-h, 45px));
         min-height: 240px;
       }
       /* 两级表头：分组那一行居中；下面的指标名沿用默认的左/右对齐 */
@@ -28,16 +73,6 @@
   </head>
   <body>
     <div id="app">
-      <header class="topbar">
-        <a class="brand" href="/">ETF 看板</a>
-        <nav class="nav">
-          <a href="/">总览</a><a href="#" class="active">{{ code }}</a>
-        </nav>
-        <button class="theme-toggle" @click="toggleTheme" type="button">
-          主题
-        </button>
-      </header>
-
       <main>
         <template v-if="loading">
           <div class="empty" style="padding: 60px 0">加载中…</div>
@@ -48,8 +83,28 @@
         </template>
 
         <template v-else>
-          <!-- 首屏只有图：标题行和统计行都去掉了，K 线紧贴顶栏撑满一屏。
-               基金名称/跟踪指数并入图表图例（见 renderChart 的 ticker），不额外占行。 -->
+          <!-- 页头一行：名称 + 代码在前；← 回总览和主题按钮挂两头，不另起一行 -->
+          <header class="page-head">
+            <a class="back" href="/" title="返回总览">←</a>
+            <h1>
+              <span class="name">{{ etf.name }}</span>
+              <span class="code">{{ etf.code }}</span>
+            </h1>
+            <button class="theme-toggle" @click="toggleTheme" type="button">
+              主题
+            </button>
+          </header>
+
+          <!-- 行情明细：值和原本 canvas 图例一致，鼠标划过时跟随十字光标 -->
+          <div class="quote" v-if="quote">
+            <span><i>时间</i><b>{{ quote.date }}</b></span>
+            <span><i>开</i><b>{{ fmtPrice(quote.open) }}</b></span>
+            <span><i>高</i><b>{{ fmtPrice(quote.high) }}</b></span>
+            <span><i>低</i><b>{{ fmtPrice(quote.low) }}</b></span>
+            <span><i>收</i><b>{{ fmtPrice(quote.close) }}</b></span>
+            <span><i>量</i><b>{{ fmtVol(quote.volume) }}</b></span>
+          </div>
+
           <div id="kline-chart"></div>
 
           <!-- 近期表现（表格视图：图表的可访问性孪生） -->
@@ -136,19 +191,41 @@
         // 否则会被深度响应式 Proxy 包住，破坏库的内部状态。
         var chart = null;
 
-        // 首屏高度按「视口 − 顶栏」算。顶栏高度实测而不是写死，
-        // 免得字号或内边距一改就和视口对不齐、底部漏出一条。
-        function syncTopbarHeight() {
-          var bar = document.querySelector(".topbar");
-          if (bar) {
-            document.documentElement.style.setProperty(
-              "--topbar-h",
-              bar.offsetHeight + "px",
-            );
-          }
+        // 让图表底边正好落在首屏底边：高度 = 视口高 − 图表在文档中的偏移。
+        // 量偏移而不是去量页头/行情行：它们会随内容换行变高，而偏移量把
+        // 上面所有东西的高度一次算进去了。图表自身高度不影响自己的上边缘，
+        // 所以不存在「改高度→再量→再改」的循环。
+        function syncChartHeight() {
+          var el = document.getElementById("kline-chart");
+          if (!el) return;
+          var top = el.getBoundingClientRect().top + window.scrollY;
+          el.style.height = "calc(100dvh - " + top + "px)";
         }
-        syncTopbarHeight();
-        window.addEventListener("resize", syncTopbarHeight);
+        window.addEventListener("resize", syncChartHeight);
+
+        // 滚轮不要用来缩放。库自己的 _mouseWheelHandler 对纵向滚轮是无条件
+        // preventDefault 的（它判断「有没有 mouseWheelVertEvent 订阅者」那一步，
+        // 因为该方法始终挂在原型上而永远为真，所以提前返回那行不会生效），
+        // 于是 setZoomEnabled(false) 只能让缩放失效、滚轮照样被吃掉——图表占满
+        // 首屏时，整屏就成了滚不动的死区，比能缩放还难受。
+        //
+        // 所以这里在捕获阶段就把事件截住，让它根本传不到图表：
+        // 浏览器按默认行为滚页面，图表也就不会再触发缩放。
+        //
+        // 挂 document 而不是 main：同一元素上的监听器按注册顺序执行、capture
+        // 并不优先，所以挂图表自己身上挡不住先注册的库；而 main 会被 Vue 换掉
+        // （mount("#app") 会用模板重建 #app 的子节点），脚本执行时拿到的那个
+        // main 挂完就成了游离节点，等于没挂。
+        // 横向为主的滚轮（触控板横扫）留给图表平移，它不跟页面滚动打架。
+        document.addEventListener(
+          "wheel",
+          function (ev) {
+            if (Math.abs(ev.deltaX) > Math.abs(ev.deltaY)) return;
+            var el = document.getElementById("kline-chart");
+            if (el && el.contains(ev.target)) ev.stopPropagation();
+          },
+          { capture: true, passive: true },
+        );
 
         function cssVar(name) {
           return getComputedStyle(document.documentElement)
@@ -221,6 +298,10 @@
                 upWickColor: cssVar("--up"),
                 downWickColor: cssVar("--down"),
               },
+              // 画布上的行情图例（Time/Open/High/Low/Close/Volume）和
+              // {ticker} · {period} 标题一起关掉：名称/代码在页头，明细在
+              // .quote 那行 DOM 里，画布上不再留任何文字，绘图区还给 K 线。
+              tooltip: { showRule: "none" },
               // 关掉「可视区间最高/最低」标记：它的文字画在 pane 顶部，
               // 会压住左上角的 {ticker} · {period} 标题（库自身的绘制顺序是标题在上）。
               // 区间极值页面顶部的 KPI 行已经给了，这里留着只是噪音。
@@ -243,6 +324,9 @@
                   downColor: hexA(cssVar("--down"), 0.7),
                 },
               ],
+              // VOL 副图的图例（VOL(5,10,20) MA5 MA10 MA20 VOLUME）也关掉，
+              // 三条均线是库自带的默认叠加，颜色不跟页面调色板走
+              tooltip: { showRule: "none" },
             },
             xAxis: {
               axisLine: { color: cssVar("--baseline") },
@@ -289,6 +373,11 @@
               features: [],
               loading: true,
               error: "",
+              // 行情明细行的内容，跟随十字光标；不是响应式的一部分以外的用途
+              quote: null,
+              // 当前显示的是第几根 K 线；用它挡掉同一根上的重复赋值，
+              // 否则鼠标每动一像素就触发一次重渲染
+              quoteIndex: -1,
             };
           },
           computed: {
@@ -365,10 +454,13 @@
                 window.klinecharts.dispose("kline-chart");
                 chart = null;
               }
+              // 必须在 init 之前把高度定下来：klinecharts 是照容器的
+              // clientHeight 建画布的，高度晚一步给它就白建一次
+              syncChartHeight();
               chart = window.klinecharts.init("kline-chart");
               chart.setSymbol({
-                // 页面上没有标题行了，基金名放进图例，省一行纵向空间又不丢信息
-                ticker: this.code + (this.etf ? " " + this.etf.name : ""),
+                // 名称和代码都在页头，画布上不再显示文字，ticker 只剩内部标识作用
+                ticker: this.code,
                 pricePrecision: 3,
                 volumePrecision: 0,
               });
@@ -379,7 +471,40 @@
                 },
               });
               chart.createIndicator("VOL");
+              // 这里没用 subscribeAction("onCrosshairChange")：klinecharts 会
+              // 忽略非受信（脚本合成）的鼠标事件，那条路没法在自动化里验证。
+              // convertFromPixel 是纯坐标换算，自己监听 mousemove 效果一样，
+              // 而且它返回的 dataIndex 正好就是 klines 的下标。
+              var el = document.getElementById("kline-chart");
+              el.onmousemove = function (ev) {
+                var r = el.getBoundingClientRect();
+                var p = chart.convertFromPixel({
+                  x: ev.clientX - r.left,
+                  y: ev.clientY - r.top,
+                });
+                // 光标落在绘图区外（坐标轴、右上角空白）时拿不到 dataIndex，
+                // 保持上一次的值，不要闪回最新一根
+                if (p && p.dataIndex != null) self.showQuote(p.dataIndex);
+              };
+              // 移出图表就回到最后一根，和库「不悬停时显示最新一根」一致
+              el.onmouseleave = function () {
+                self.showQuote(self.klines.length - 1);
+              };
               applyChartTheme();
+            },
+            // 把第 i 根 K 线填进行情明细行
+            showQuote: function (i) {
+              var k = this.klines[i];
+              if (!k || i === this.quoteIndex) return;
+              this.quoteIndex = i;
+              this.quote = {
+                date: this.fmtDate(k.date),
+                open: k.open,
+                high: k.high,
+                low: k.low,
+                close: k.close,
+                volume: k.volume,
+              };
             },
             // 3 位小数：ETF 最小变动价位是 0.001，且要与图表 pricePrecision 一致。
             // 用 2 位会把 0.710 / 0.715 / 0.714 压成同一个 "0.71"。
@@ -407,6 +532,14 @@
             fmtNum2: function (v) {
               return v != null ? (+v).toFixed(2) : "—";
             },
+            // 成交量按中文习惯用万/亿，比库默认的 4.114M 好读
+            fmtVol: function (v) {
+              if (v == null) return "—";
+              var n = +v;
+              if (Math.abs(n) >= 1e8) return (n / 1e8).toFixed(2) + "亿";
+              if (Math.abs(n) >= 1e4) return (n / 1e4).toFixed(2) + "万";
+              return String(n);
+            },
             fmtDate: function (d) {
               var s = String(d);
               return s.length === 8
@@ -430,9 +563,13 @@
                 self.etf = data.etf;
                 self.klines = data.klines;
                 self.features = data.features;
+                // 行情明细要赶在 loading=false 之前填好：.quote 那行有 v-if，
+                // 晚一步出现会把图表往下顶一行，而高度是按图表当时的位置算的，
+                // 结果就是底部超出一行、首屏出现滚动条
+                self.showQuote(self.klines.length - 1);
                 self.loading = false;
-                // 标题行去掉了，基金名只剩图例和这里；标签页标题也是无 h1 页面的可访问名
-                document.title = data.etf.code + " · " + data.etf.name + " · ETF 看板";
+                document.title =
+                  data.etf.code + " · " + data.etf.name + " · ETF 看板";
                 // 图表容器在 <template v-else> 里，要等这一轮渲染出来才存在
                 self.$nextTick(function () {
                   self.renderChart();
