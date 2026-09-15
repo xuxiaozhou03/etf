@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ETF 详情</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      /* 详情页优先「全屏看 K 线」：取消 main 的 1040px 限宽、也不套 .card，
+         K 线紧贴顶栏撑满首屏，表格往下滚才出现。
+         只覆盖本页，styles.css 里的 index.html（列表页）不受影响。 */
+      main {
+        max-width: none;
+        padding: 0 16px 24px;
+      }
+      /* 高度 = 视口 − 顶栏。顶栏虽是 sticky 但仍在文档流里占位，
+         所以减掉它剩下的正好是首屏可视高度（--topbar-h 由脚本实测写入）。 */
+      #kline-chart {
+        width: 100%;
+        height: calc(100dvh - var(--topbar-h, 45px));
+        min-height: 240px;
+      }
+      /* 两级表头：分组那一行居中；下面的指标名沿用默认的左/右对齐 */
+      thead tr:first-child th.group {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="/">ETF 看板</a>
+        <nav class="nav">
+          <a href="/">总览</a><a href="#" class="active">{{ code }}</a>
+        </nav>
+        <button class="theme-toggle" @click="toggleTheme" type="button">
+          主题
+        </button>
+      </header>
+
+      <main>
+        <template v-if="loading">
+          <div class="empty" style="padding: 60px 0">加载中…</div>
+        </template>
+
+        <template v-else-if="error">
+          <div class="empty" style="padding: 60px 0">加载失败：{{ error }}</div>
+        </template>
+
+        <template v-else>
+          <!-- 首屏只有图：标题行和统计行都去掉了，K 线紧贴顶栏撑满一屏。
+               基金名称/跟踪指数并入图表图例（见 renderChart 的 ticker），不额外占行。 -->
+          <div id="kline-chart"></div>
+
+          <!-- 近期表现（表格视图：图表的可访问性孪生） -->
+          <div class="card" style="margin-top: 20px">
+            <h2>近期表现（最近 20 个交易日）</h2>
+            <div class="sub">
+              收盘价、涨跌幅取自日 K 线 · 乖离(20日)=收盘/MA20−1，多空(5/20)=MA5/MA20−1
+            </div>
+            <div class="table-wrap" style="margin-top: 12px">
+              <table>
+                <thead>
+                  <tr>
+                    <th rowspan="2">日期</th>
+                    <th rowspan="2" class="num">收盘价</th>
+                    <th rowspan="2" class="num">涨跌幅</th>
+                    <th colspan="5" class="group">区间收益</th>
+                    <th colspan="3" class="group">波动</th>
+                    <th colspan="2" class="group">量价</th>
+                    <th colspan="2" class="group">均线</th>
+                  </tr>
+                  <tr>
+                    <th class="num">近1周</th>
+                    <th class="num">近1月</th>
+                    <th class="num">近6月</th>
+                    <th class="num">今年来</th>
+                    <th class="num">成立以来</th>
+                    <th class="num">波动率(20日)</th>
+                    <th class="num">ATR(14)</th>
+                    <th class="num">布林带宽(20日)</th>
+                    <th class="num">量比(5日)</th>
+                    <th class="num">量能(5/20)</th>
+                    <th class="num">乖离(20日)</th>
+                    <th class="num">多空(5/20)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="r in recentRows" :key="r.date">
+                    <td>{{ fmtDate(r.date) }}</td>
+                    <td class="num">{{ fmtPrice(r.close) }}</td>
+                    <td class="num" :class="chgClass(r.changePercent)">
+                      {{ fmtChangePct(r.changePercent) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.ret1w)">
+                      {{ fmtRet(r.ret1w) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.ret1m)">
+                      {{ fmtRet(r.ret1m) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.ret6m)">
+                      {{ fmtRet(r.ret6m) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.retYtd)">
+                      {{ fmtRet(r.retYtd) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.retSince)">
+                      {{ fmtRet(r.retSince) }}
+                    </td>
+                    <td class="num">{{ fmtPct(r.vol20) }}</td>
+                    <td class="num">{{ fmtPct(r.atr14_norm) }}</td>
+                    <td class="num">{{ fmtPct(r.bb_width20) }}</td>
+                    <td class="num">{{ fmtNum2(r.vol_ratio5) }}</td>
+                    <td class="num">{{ fmtNum2(r.vol_ma5_ma20) }}</td>
+                    <td class="num" :class="chgClass(r.close_ma20_dev)">
+                      {{ fmtRet(r.close_ma20_dev) }}
+                    </td>
+                    <td class="num" :class="chgClass(r.ma5_ma20_dev)">
+                      {{ fmtRet(r.ma5_ma20_dev) }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </template>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/klinecharts@10.0.3/dist/umd/klinecharts.min.js"></script>
+    <script src="https://unpkg.com/vue@3.4.38/dist/vue.global.prod.js"></script>
+    <script src="/assets/theme.js"></script>
+    <script>
+      (function () {
+        // klinecharts 实例放在闭包里：绝不能放进 Vue 的 data，
+        // 否则会被深度响应式 Proxy 包住，破坏库的内部状态。
+        var chart = null;
+
+        // 首屏高度按「视口 − 顶栏」算。顶栏高度实测而不是写死，
+        // 免得字号或内边距一改就和视口对不齐、底部漏出一条。
+        function syncTopbarHeight() {
+          var bar = document.querySelector(".topbar");
+          if (bar) {
+            document.documentElement.style.setProperty(
+              "--topbar-h",
+              bar.offsetHeight + "px",
+            );
+          }
+        }
+        syncTopbarHeight();
+        window.addEventListener("resize", syncTopbarHeight);
+
+        function cssVar(name) {
+          return getComputedStyle(document.documentElement)
+            .getPropertyValue(name)
+            .trim();
+        }
+
+        // Kline.date 是 YYYYMMDD 整数，klinecharts 要毫秒时间戳。
+        // 用 Date.UTC 而不是 new Date(y,m,d)：按 UTC 午夜存，横轴日期在 zh-CN 下才是正确日历日。
+        function toKLineData(rows) {
+          return rows
+            .map(function (k) {
+              var d = k.date;
+              return {
+                timestamp: Date.UTC(
+                  Math.floor(d / 10000),
+                  (Math.floor(d / 100) % 100) - 1,
+                  d % 100,
+                ),
+                open: +k.open,
+                high: +k.high,
+                low: +k.low,
+                close: +k.close,
+                volume: +k.volume,
+                turnover: +k.amount,
+              };
+            })
+            .sort(function (a, b) {
+              return a.timestamp - b.timestamp;
+            });
+        }
+
+        // 收益率带正号显示：+0.56% / -1.39%
+        function fmtSigned(s) {
+          return s.charAt(0) === "-" ? s : "+" + s;
+        }
+
+        // #rrggbb -> rgba(r,g,b,a)。库里 VOL 柱子默认是半透明的，转成 rgba 保留这个观感。
+        function hexA(hex, a) {
+          var h = hex.replace("#", "");
+          if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+          var n = parseInt(h, 16);
+          return (
+            "rgba(" +
+            ((n >> 16) & 255) +
+            "," +
+            ((n >> 8) & 255) +
+            "," +
+            (n & 255) +
+            "," +
+            a +
+            ")"
+          );
+        }
+
+        // 把当前主题的 CSS 变量同步到图表样式
+        function applyChartTheme() {
+          if (!chart) return;
+          chart.setStyles({
+            grid: {
+              horizontal: { color: cssVar("--grid") },
+              vertical: { color: cssVar("--grid") },
+            },
+            candle: {
+              bar: {
+                upColor: cssVar("--up"),
+                downColor: cssVar("--down"),
+                upBorderColor: cssVar("--up"),
+                downBorderColor: cssVar("--down"),
+                upWickColor: cssVar("--up"),
+                downWickColor: cssVar("--down"),
+              },
+              // 关掉「可视区间最高/最低」标记：它的文字画在 pane 顶部，
+              // 会压住左上角的 {ticker} · {period} 标题（库自身的绘制顺序是标题在上）。
+              // 区间极值页面顶部的 KPI 行已经给了，这里留着只是噪音。
+              priceMark: {
+                high: { show: false },
+                low: { show: false },
+                // 最新价标签底色跟 A 股习惯走：反弹用红、回落用绿
+                last: {
+                  upColor: cssVar("--up"),
+                  downColor: cssVar("--down"),
+                },
+              },
+            },
+            indicator: {
+              // VOL 副图的柱子：库默认绿涨红跌，得跟着 A 股习惯翻过来，
+              // 否则同一张图里 K 线是红涨、成交量柱却是绿涨。
+              bars: [
+                {
+                  upColor: hexA(cssVar("--up"), 0.7),
+                  downColor: hexA(cssVar("--down"), 0.7),
+                },
+              ],
+            },
+            xAxis: {
+              axisLine: { color: cssVar("--baseline") },
+              tickText: { color: cssVar("--muted") },
+            },
+            yAxis: {
+              axisLine: { color: cssVar("--baseline") },
+              tickText: { color: cssVar("--muted") },
+            },
+            crosshair: {
+              horizontal: { line: { color: cssVar("--baseline") } },
+              vertical: { line: { color: cssVar("--baseline") } },
+            },
+            separator: { color: cssVar("--border") },
+          });
+        }
+
+        // theme.js 只改 <html> 的 data-theme、不派发事件，所以监听属性变化
+        new MutationObserver(applyChartTheme).observe(
+          document.documentElement,
+          {
+            attributes: true,
+            attributeFilter: ["data-theme"],
+          },
+        );
+
+        // 深色还有第二个来源：styles.css 的 @media (prefers-color-scheme: dark)，
+        // 走这条路时 <html> 上没有任何属性变化，上面的 observer 抓不到。
+        // 系统主题切换时重新读一遍计算值即可——用户显式选过主题时
+        // （styles.css:17 的 :not([data-theme="light"]) 守卫）这里读到的是同一套值，等于空操作。
+        if (window.matchMedia) {
+          var darkMQ = window.matchMedia("(prefers-color-scheme: dark)");
+          if (darkMQ.addEventListener)
+            darkMQ.addEventListener("change", applyChartTheme);
+          else if (darkMQ.addListener) darkMQ.addListener(applyChartTheme); // 老 Safari
+        }
+
+        var vm = Vue.createApp({
+          data: function () {
+            return {
+              code: "",
+              etf: null,
+              klines: [],
+              features: [],
+              loading: true,
+              error: "",
+            };
+          },
+          computed: {
+            lastClose: function () {
+              return this.klines.length
+                ? this.klines[this.klines.length - 1].close
+                : 0;
+            },
+            lastChange: function () {
+              return this.klines.length
+                ? this.klines[this.klines.length - 1].changePercent
+                : 0;
+            },
+            high: function () {
+              return Math.max.apply(
+                null,
+                this.klines.map(function (k) {
+                  return k.high;
+                }),
+              );
+            },
+            low: function () {
+              return Math.min.apply(
+                null,
+                this.klines.map(function (k) {
+                  return k.low;
+                }),
+              );
+            },
+            // 表格视图：按日期把 K 线（收盘价/涨跌幅）和特征关联起来。
+            // 两张表日期集合一致且都按 date 升序，所以直接按日期查表即可。
+            recentRows: function () {
+              var byDate = {};
+              this.klines.forEach(function (k) {
+                byDate[k.date] = k;
+              });
+              return this.features
+                .slice(-20)
+                .reverse()
+                .map(function (f) {
+                  var k = byDate[f.date] || {};
+                  return {
+                    date: f.date,
+                    close: k.close != null ? k.close : null,
+                    changePercent:
+                      k.changePercent != null ? k.changePercent : null,
+                    // 区间收益
+                    ret1w: f.ret1w,
+                    ret1m: f.ret1m,
+                    ret6m: f.ret6m,
+                    retYtd: f.retYtd,
+                    retSince: f.retSince,
+                    // 波动
+                    vol20: f.vol20,
+                    atr14_norm: f.atr14_norm,
+                    bb_width20: f.bb_width20,
+                    // 量价
+                    vol_ratio5: f.vol_ratio5,
+                    vol_ma5_ma20: f.vol_ma5_ma20,
+                    // 均线是比值（收盘/MA20、MA5/MA20），减 1 就是乖离率，
+                    // 正好能复用 fmtRet 的小数→带符号百分比
+                    close_ma20_dev:
+                      f.close_ma20 == null ? null : f.close_ma20 - 1,
+                    ma5_ma20_dev: f.ma5_ma20 == null ? null : f.ma5_ma20 - 1,
+                  };
+                });
+            },
+          },
+          methods: {
+            renderChart: function () {
+              var self = this;
+              if (!window.klinecharts || !this.klines.length) return;
+              if (chart) {
+                window.klinecharts.dispose("kline-chart");
+                chart = null;
+              }
+              chart = window.klinecharts.init("kline-chart");
+              chart.setSymbol({
+                // 页面上没有标题行了，基金名放进图例，省一行纵向空间又不丢信息
+                ticker: this.code + (this.etf ? " " + this.etf.name : ""),
+                pricePrecision: 3,
+                volumePrecision: 0,
+              });
+              chart.setPeriod({ span: 1, type: "day" });
+              chart.setDataLoader({
+                getBars: function (p) {
+                  p.callback(toKLineData(self.klines));
+                },
+              });
+              chart.createIndicator("VOL");
+              applyChartTheme();
+            },
+            // 3 位小数：ETF 最小变动价位是 0.001，且要与图表 pricePrecision 一致。
+            // 用 2 位会把 0.710 / 0.715 / 0.714 压成同一个 "0.71"。
+            fmtPrice: function (v) {
+              return v != null ? (+v).toFixed(3) : "—";
+            },
+            // 没有值时不加涨跌色，避免 "—" 被染红/染绿（null >= 0 为 true）
+            chgClass: function (v) {
+              return v == null ? "" : v >= 0 ? "up" : "down";
+            },
+            // 两套百分比约定并存，别用错：
+            // Kline.changePercent 已经是百分数（-0.7 表示 -0.70%），
+            // Feature 的 ret* 是小数（-0.0961 表示 -9.61%）。
+            fmtChangePct: function (v) {
+              return v != null ? fmtSigned((+v).toFixed(2) + "%") : "—";
+            },
+            fmtRet: function (v) {
+              return v != null ? fmtSigned((v * 100).toFixed(2) + "%") : "—";
+            },
+            // 波动率是幅度，没有正负好坏，所以不带符号
+            fmtPct: function (v) {
+              return v != null ? (v * 100).toFixed(2) + "%" : "—";
+            },
+            // 量比这类无量纲比值
+            fmtNum2: function (v) {
+              return v != null ? (+v).toFixed(2) : "—";
+            },
+            fmtDate: function (d) {
+              var s = String(d);
+              return s.length === 8
+                ? s.slice(0, 4) + "-" + s.slice(4, 6) + "-" + s.slice(6)
+                : s;
+            },
+            toggleTheme: function () {
+              window.__toggleTheme && window.__toggleTheme();
+            },
+          },
+          mounted: function () {
+            var self = this;
+            this.code =
+              (location.pathname.match(/\/etfs\/([^/]+)/) || [])[1] || "";
+            fetch("/api/etfs/" + encodeURIComponent(this.code))
+              .then(function (r) {
+                if (!r.ok) throw new Error("HTTP " + r.status);
+                return r.json();
+              })
+              .then(function (data) {
+                self.etf = data.etf;
+                self.klines = data.klines;
+                self.features = data.features;
+                self.loading = false;
+                // 标题行去掉了，基金名只剩图例和这里；标签页标题也是无 h1 页面的可访问名
+                document.title = data.etf.code + " · " + data.etf.name + " · ETF 看板";
+                // 图表容器在 <template v-else> 里，要等这一轮渲染出来才存在
+                self.$nextTick(function () {
+                  self.renderChart();
+                });
+              })
+              .catch(function (err) {
+                self.error = err.message;
+                self.loading = false;
+              });
+          },
+        });
+        vm.mount("#app");
+      })();
+    </script>
+  </body>
+</html>

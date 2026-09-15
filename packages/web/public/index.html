@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF 总览</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <a class="brand" href="/">ETF 看板</a>
+    <nav class="nav"><a href="/" class="active">总览</a></nav>
+    <button class="theme-toggle" @click="toggleTheme" type="button">主题</button>
+  </header>
+
+  <main>
+    <h1 style="font-size:20px;margin:0 0 18px;font-weight:600">ETF 总览</h1>
+
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th>代码</th><th>名称</th><th>跟踪指数</th><th class="num">规模（亿）</th>
+          </tr></thead>
+          <tbody>
+            <tr v-if="loading"><td colspan="4" class="loading">加载中…</td></tr>
+            <tr v-else-if="error"><td colspan="4" class="empty">加载失败：{{ error }}</td></tr>
+            <tr v-else-if="!etfs.length"><td colspan="4" class="empty">暂无 ETF 数据，先运行爬虫同步。</td></tr>
+            <tr v-else v-for="e in etfs" :key="e.code" class="rowlink" @click="go(e.code)">
+              <td>{{ e.code }}</td>
+              <td>{{ e.name }}</td>
+              <td>{{ e.trackingIndex }}</td>
+              <td class="num">{{ fmtScale(e.scale) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/vue@3.4.38/dist/vue.global.prod.js"></script>
+<script src="/assets/theme.js"></script>
+<script>
+(function () {
+  var vm = Vue.createApp({
+    data: function () {
+      return { etfs: [], loading: true, error: "" };
+    },
+    mounted: function () {
+      var self = this;
+      fetch("/api/etfs")
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then(function (data) { self.etfs = data; self.loading = false; })
+        .catch(function (err) { self.error = err.message; self.loading = false; });
+    },
+    methods: {
+      fmtScale: function (v) { return v != null ? v.toFixed(2) : "—"; },
+      go: function (code) { location.href = "/etfs/" + code; },
+      toggleTheme: function () { window.__toggleTheme && window.__toggleTheme(); }
+    }
+  });
+  vm.mount("#app");
+})();
+</script>
+</body>
+</html>

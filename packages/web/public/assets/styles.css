@@ -1,0 +1,113 @@
+/* 主题变量（dataviz 参考调色板：浅/深两套） */
+:root {
+  color-scheme: light;
+  --surface-1: #fcfcfb;   /* 图表/卡片表面 */
+  --page:      #f9f9f7;   /* 页面底色 */
+  --ink-1:     #0b0b0b;   /* 主文字 */
+  --ink-2:     #52514e;   /* 次文字 */
+  --muted:     #898781;   /* 弱文字/轴标签 */
+  --grid:      #e1e0d9;   /* 网格线（hairline） */
+  --baseline:  #c3c2b7;   /* 轴线 */
+  --series-1:  #2a78d6;   /* 主序列（收盘价） */
+  --up:        #d03b3b;   /* 涨：红（A 股习惯） */
+  --down:      #006300;   /* 跌：绿（A 股习惯） */
+  --border:    rgba(11, 11, 11, 0.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page:      #0d0d0d;
+    --ink-1:     #ffffff;
+    --ink-2:     #c3c2b7;
+    --muted:     #898781;
+    --grid:      #2c2c2a;
+    --baseline:  #383835;
+    --series-1:  #3987e5;
+    --up:        #e66767;
+    --down:      #0ca30c;
+    --border:    rgba(255, 255, 255, 0.10);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1: #1a1a19;
+  --page:      #0d0d0d;
+  --ink-1:     #ffffff;
+  --ink-2:     #c3c2b7;
+  --muted:     #898781;
+  --grid:      #2c2c2a;
+  --baseline:  #383835;
+  --series-1:  #3987e5;
+  --up:        #e66767;
+  --down:      #0ca30c;
+  --border:    rgba(255, 255, 255, 0.10);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--page);
+  color: var(--ink-1);
+  line-height: 1.5;
+  padding-bottom: 64px;
+}
+a { color: var(--series-1); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 20px;
+  padding: 10px 24px;
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 600; font-size: 15px; color: var(--ink-1); }
+.nav { display: flex; gap: 4px; flex: 1; }
+.nav a {
+  padding: 4px 10px; border-radius: 6px;
+  color: var(--ink-2); font-size: 14px;
+}
+.nav a.active { color: var(--ink-1); background: var(--grid); }
+.theme-toggle {
+  border: 1px solid var(--border); background: var(--surface-1);
+  color: var(--ink-2); border-radius: 6px; padding: 4px 10px;
+  font-size: 13px; cursor: pointer;
+}
+.theme-toggle:hover { color: var(--ink-1); }
+
+/* ---------- 布局与卡片 ---------- */
+main { max-width: 1040px; margin: 0 auto; padding: 24px 24px 0; }
+.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.card h2 { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
+.card .sub { margin: 0 0 14px; font-size: 13px; color: var(--ink-2); }
+.stat .label { font-size: 13px; color: var(--ink-2); margin-bottom: 4px; }
+.stat .value { font-size: 22px; font-weight: 600; }
+.stat .delta { font-size: 13px; margin-left: 8px; }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.muted { color: var(--muted); }
+
+/* ---------- 表格 ---------- */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { font-weight: 600; color: var(--ink-2); font-size: 12.5px; }
+tbody tr:hover { background: var(--page); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.rowlink { cursor: pointer; }
+
+/* ---------- 空状态 ---------- */
+.empty { padding: 40px 0; text-align: center; color: var(--ink-2); font-size: 14px; }
+
+/* ---------- 加载态 ---------- */
+.loading { padding: 60px 0; text-align: center; color: var(--ink-2); font-size: 14px; }

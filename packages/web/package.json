@@ -1,0 +1,21 @@
+{
+  "name": "@quant-backtest/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web UI：Hono JSON API + 静态 HTML 页面（客户端 fetch 渲染）",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "web:dev": "tsx ./src/server.ts --dev",
+    "web": "tsx ./src/server.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "@quant-backtest/db": "workspace:*",
+    "hono": "^4.13.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4"
+  }
+}
