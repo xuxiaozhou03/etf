@@ -11,6 +11,9 @@ const runCrawler = async (isDev = false) => {
 
   const etfs = await prisma.etf.findMany({
     take: isDev ? 2 : undefined,
+    orderBy: {
+      scale: "desc",
+    },
   });
   console.log(`Found ${etfs.length} ETFs.`);
 
