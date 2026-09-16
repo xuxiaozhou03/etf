@@ -7,14 +7,17 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "crawler:dev": "tsx ./src/crawler.ts --dev",
-    "crawler": "tsx ./src/crawler.ts"
+    "crawler": "tsx ./src/crawler.ts",
+    "test": "tsx ./src/tasks/pepb/fetch.ts"
   },
   "dependencies": {
     "@quant-backtest/db": "workspace:*",
-    "dayjs": "^1.11.23"
+    "dayjs": "^1.11.23",
+    "crypto-js": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
+    "@types/crypto-js": "^4.2.2",
     "typescript": "^5.5.4"
   }
 }
