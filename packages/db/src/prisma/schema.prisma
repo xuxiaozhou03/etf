@@ -39,6 +39,16 @@ model Etf {
   @@map("etf")
 }
 
+/// 相似度
+model LinkEtf {
+  target  String
+  source  String
+  similar Float?
+
+  @@unique([target, source])
+  @@map("linkEtf")
+}
+
 /// 同步任务执行历史：判断「收盘后已完成 → 跳过」规则的依据
 model SyncTaskRun {
   name       String // 'etf_list' | '[code]_kline'

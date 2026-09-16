@@ -1,0 +1,30 @@
+fetch(
+  "https://stock.cheesefortune.com/api/v4/etf/rps/517380SH?t=17895642496916",
+  {
+    headers: {
+      accept: "*/*",
+      "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+      "app-version": "",
+      "cache-control": "no-cache",
+      "content-type": "application/json;charset=utf-8",
+      devicetype: "ios",
+      expires: "-1",
+      pragma: "no-cache",
+      requestfrom: "wechat",
+      runtimetype: "unknown",
+      "sec-ch-ua":
+        '"Chromium";v="152", "Not?A_Brand";v="24", "Google Chrome";v="152"',
+      "sec-ch-ua-mobile": "?1",
+      "sec-ch-ua-platform": '"iOS"',
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      timestamp: "1789542496916",
+      token: "",
+      zstokv1: "21714ec5b258e7be4813828252f45841",
+      Referer: "https://stock.cheesefortune.com/security/etf/517380.SH",
+    },
+    body: null,
+    method: "GET",
+  },
+);
