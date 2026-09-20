@@ -8,6 +8,18 @@ const TOKEN_API = "/api/v2/system/apiOuth";
 // ============ 内存缓存（模拟 sessionStorage） ============
 let cachedToken: string | null = null;
 
+export class CheeseApiError extends Error {
+  constructor(
+    message: string,
+    readonly code: string,
+    readonly httpStatus: number,
+    readonly retryable: boolean,
+  ) {
+    super(message);
+    this.name = "CheeseApiError";
+  }
+}
+
 // ============ 工具函数 ============
 
 /**
@@ -127,7 +139,7 @@ export async function fetchCheeseApi(options: {
   url: string;
   Referer: string;
   timestamp: number;
-}): Promise<any> {
+}): Promise<unknown> {
   const headers = await buildHeaders(options.timestamp, options.Referer);
   const resp = await fetch(options.url, {
     method: "GET",
@@ -135,8 +147,46 @@ export async function fetchCheeseApi(options: {
     headers,
   });
 
-  // 处理响应（对应源码中的解密逻辑，如需可补充）
-  let data = (await resp.json()) as any;
+  if (!resp.ok) {
+    const retryable =
+      resp.status === 408 ||
+      resp.status === 425 ||
+      resp.status === 429 ||
+      resp.status >= 500;
+    throw new CheeseApiError(
+      `Cheese API HTTP ${resp.status}: ${resp.statusText || "request failed"}`,
+      String(resp.status),
+      resp.status,
+      retryable,
+    );
+  }
+
+  let data: {
+    code?: string;
+    datas?: unknown;
+    message?: string;
+  };
+  try {
+    data = (await resp.json()) as typeof data;
+  } catch {
+    throw new CheeseApiError(
+      "Cheese API returned invalid JSON",
+      "INVALID_JSON",
+      resp.status,
+      true,
+    );
+  }
+
+  if (data?.code !== "000") {
+    const code = data?.code ?? "unknown";
+    const retryable = /^5\d\d$/.test(code) || code === "429";
+    throw new CheeseApiError(
+      `Cheese API ${data?.code ?? "unknown"}: ${data?.message ?? "request failed"}`,
+      code,
+      resp.status,
+      retryable,
+    );
+  }
 
   return data?.datas ?? null;
 }

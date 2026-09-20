@@ -4,15 +4,20 @@ import { obfuscateTimestamp } from "../utils/obfuscateTimestamp";
 export const fetchLinkFund = async (code = "513050.SH") => {
   const timestamp = Date.now(); // 13 位毫秒时间戳
 
-  const res = await fetchCheeseApi({
+  const res = (await fetchCheeseApi({
     timestamp,
     url: `https://stock.cheesefortune.com/api/v4/etf/linkFund/${code.replace(".", "")}?t=${obfuscateTimestamp(timestamp)}`,
     Referer: `https://stock.cheesefortune.com/security/etf/${code}`,
-  });
+  })) as { etfs?: Array<{ similar: number; code: string }> } | null;
+
   if (!res) {
     return [];
   }
-  const { etfs } = res as { etfs: Array<{ similar: number; code: string }> };
+  const { etfs } = res;
+  if (!Array.isArray(etfs)) {
+    throw new Error(`Cheese API linkFund response is missing etfs: ${code}`);
+  }
+
   const formatedEtfs = etfs.map((etf) => ({
     code: etf.code,
     similar: etf.similar,
