@@ -39,8 +39,8 @@ interface DroppedEtf extends Etf {
 }
 
 interface KeptEtf extends Etf {
-  similarFunds: SimilarFund[];
-  dropped: DroppedEtf[];
+  similarFunds?: SimilarFund[];
+  dropped?: DroppedEtf[];
 }
 
 interface CategoryResult {
@@ -147,31 +147,38 @@ const main = () => {
     let matched: KeptEtf | undefined;
     let matchedSimilarity = 0;
 
+    // keptEtfs 按规模从大到小排列，所以第一个命中的就是规模最大的候选
     for (const kept of keptEtfs) {
       const similarity = edgeMap.get(
         pairKey(member.securityCode, kept.securityCode),
       );
-      if (
-        similarity &&
-        similarity > THRESHOLD &&
-        similarity > matchedSimilarity
-      ) {
+      if (similarity && similarity > THRESHOLD) {
         matched = kept;
         matchedSimilarity = similarity;
+        break;
       }
     }
 
     if (matched) {
-      matched.dropped.push({
+      (matched.dropped ??= []).push({
         ...member,
         similar: matchedSimilarity,
       });
     } else {
-      keptEtfs.push({
-        ...member,
-        similarFunds: getSimilarFunds(member.securityCode),
-        dropped: [],
-      });
+      keptEtfs.push({ ...member });
+    }
+  }
+
+  // similarFunds 只保留已分类、且未被合并进 dropped 的基金；空数组不输出
+  for (const kept of keptEtfs) {
+    const droppedCodes = new Set(
+      (kept.dropped ?? []).map((etf) => etf.securityCode),
+    );
+    const similarFunds = getSimilarFunds(kept.securityCode).filter(
+      (fund) => classifiedCodes.has(fund.code) && !droppedCodes.has(fund.code),
+    );
+    if (similarFunds.length > 0) {
+      kept.similarFunds = similarFunds;
     }
   }
 
@@ -195,8 +202,12 @@ const main = () => {
     (etf) => !classifiedCodes.has(etf.securityCode),
   );
 
+  const droppedCount = keptEtfs.reduce(
+    (total, etf) => total + (etf.dropped?.length ?? 0),
+    0,
+  );
   console.log(
-    `ETF ${etfs.length}, classified ${classifiedCodes.size}, kept ${keptEtfs.length}`,
+    `ETF ${etfs.length}, classified ${classifiedCodes.size}, kept ${keptEtfs.length}, dropped ${droppedCount}`,
   );
   if (unclassified.length > 0) {
     console.warn(
