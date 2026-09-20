@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "crawler": "tsx ./src/main.ts"
+    "crawler": "tsx ./src/main.ts",
+    "cluster": "tsx ./src/linkFund/cluster.ts"
   },
   "keywords": [],
   "author": "",

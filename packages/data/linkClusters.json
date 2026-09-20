@@ -1,0 +1,6264 @@
+[
+  {
+    "name": "宽基指数",
+    "lists": [
+      {
+        "securityName": "沪深300ETF华泰柏瑞",
+        "securityCode": "510300.SH",
+        "scale": 108598383841.4,
+        "trackingIndex": "沪深300",
+        "trackIndex": "000300.SH",
+        "similarFunds": [
+          {
+            "similar": 77.88,
+            "name": "A500ETF华泰柏瑞",
+            "code": "563360.SH",
+            "scale": 39195926086.2
+          },
+          {
+            "similar": 74.38,
+            "name": "MSCIA股ETF易方达",
+            "code": "512090.SH",
+            "scale": 614148423.3
+          },
+          {
+            "similar": 70.22,
+            "name": "中证800ETF汇添富",
+            "code": "515800.SH",
+            "scale": 4818320369.6
+          },
+          {
+            "similar": 64.05,
+            "name": "沪港深300ETF国寿",
+            "code": "517300.SH",
+            "scale": 934268954
+          },
+          {
+            "similar": 59.21,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          },
+          {
+            "similar": 56.21,
+            "name": "上证180ETF华安",
+            "code": "510180.SH",
+            "scale": 17284793433.9
+          },
+          {
+            "similar": 50.62,
+            "name": "中国A50ETF汇添富",
+            "code": "560050.SH",
+            "scale": 2304729676.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中证500ETF南方",
+        "securityCode": "510500.SH",
+        "scale": 44554020138,
+        "trackingIndex": "中证500",
+        "trackIndex": "000905.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "A500ETF华泰柏瑞",
+        "securityCode": "563360.SH",
+        "scale": 39195926086.2,
+        "trackingIndex": "中证A500",
+        "trackIndex": "000510.CSI",
+        "similarFunds": [
+          {
+            "similar": 77.88,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 71.05,
+            "name": "中证800ETF汇添富",
+            "code": "515800.SH",
+            "scale": 4818320369.6
+          },
+          {
+            "similar": 70.66,
+            "name": "MSCIA股ETF易方达",
+            "code": "512090.SH",
+            "scale": 614148423.3
+          },
+          {
+            "similar": 55.88,
+            "name": "沪港深300ETF国寿",
+            "code": "517300.SH",
+            "scale": 934268954
+          },
+          {
+            "similar": 54.18,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "上证50ETF华夏",
+        "securityCode": "510050.SH",
+        "scale": 23175746230,
+        "trackingIndex": "上证50",
+        "trackIndex": "000016.SH",
+        "similarFunds": [
+          {
+            "similar": 58.65,
+            "name": "上证180ETF华安",
+            "code": "510180.SH",
+            "scale": 17284793433.9
+          },
+          {
+            "similar": 51.43,
+            "name": "中证A50ETF平安",
+            "code": "159593.SZ",
+            "scale": 2464259380.72
+          },
+          {
+            "similar": 51.21,
+            "name": "中国A50ETF汇添富",
+            "code": "560050.SH",
+            "scale": 2304729676.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中证1000ETF南方",
+        "securityCode": "512100.SH",
+        "scale": 19998119870.4,
+        "trackingIndex": "中证1000",
+        "trackIndex": "000852.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "上证180ETF华安",
+        "securityCode": "510180.SH",
+        "scale": 17284793433.9,
+        "trackingIndex": "上证180",
+        "trackIndex": "000010.SH",
+        "similarFunds": [
+          {
+            "similar": 58.65,
+            "name": "上证50ETF华夏",
+            "code": "510050.SH",
+            "scale": 23175746230
+          },
+          {
+            "similar": 56.21,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 51.27,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "上证指数ETF富国",
+        "securityCode": "510210.SH",
+        "scale": 14908363563,
+        "trackingIndex": "上证指数",
+        "trackIndex": "000001.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "中证2000ETF华泰柏瑞",
+        "securityCode": "563300.SH",
+        "scale": 5633452866,
+        "trackingIndex": "中证2000",
+        "trackIndex": "932000.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "中证800ETF汇添富",
+        "securityCode": "515800.SH",
+        "scale": 4818320369.6,
+        "trackingIndex": "中证800",
+        "trackIndex": "000906.SH",
+        "similarFunds": [
+          {
+            "similar": 71.05,
+            "name": "A500ETF华泰柏瑞",
+            "code": "563360.SH",
+            "scale": 39195926086.2
+          },
+          {
+            "similar": 70.22,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 68.09,
+            "name": "MSCIA股ETF易方达",
+            "code": "512090.SH",
+            "scale": 614148423.3
+          },
+          {
+            "similar": 57.89,
+            "name": "沪港深300ETF国寿",
+            "code": "517300.SH",
+            "scale": 934268954
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "深证100ETF易方达",
+        "securityCode": "159901.SZ",
+        "scale": 3738784585.14,
+        "trackingIndex": "深证100",
+        "trackIndex": "399330.SZ",
+        "similarFunds": [
+          {
+            "similar": 57.84,
+            "name": "深成ETF南方",
+            "code": "159903.SZ",
+            "scale": 778011872.183
+          },
+          {
+            "similar": 52.81,
+            "name": "民企ETF弘毅远方",
+            "code": "159973.SZ",
+            "scale": 369556429.704
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中证A50ETF平安",
+        "securityCode": "159593.SZ",
+        "scale": 2464259380.72,
+        "trackingIndex": "中证A50",
+        "trackIndex": "930050.CSI",
+        "similarFunds": [
+          {
+            "similar": 63.38,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          },
+          {
+            "similar": 56.99,
+            "name": "中国A50ETF汇添富",
+            "code": "560050.SH",
+            "scale": 2304729676.8
+          },
+          {
+            "similar": 51.43,
+            "name": "上证50ETF华夏",
+            "code": "510050.SH",
+            "scale": 23175746230
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中国A50ETF汇添富",
+        "securityCode": "560050.SH",
+        "scale": 2304729676.8,
+        "trackingIndex": "MSCI中国A50互联互通",
+        "trackIndex": "746059.MI",
+        "similarFunds": [
+          {
+            "similar": 59.22,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          },
+          {
+            "similar": 56.99,
+            "name": "中证A50ETF平安",
+            "code": "159593.SZ",
+            "scale": 2464259380.72
+          },
+          {
+            "similar": 51.86,
+            "name": "沪深300成长ETF银华",
+            "code": "562310.SH",
+            "scale": 434901481.2
+          },
+          {
+            "similar": 51.21,
+            "name": "上证50ETF华夏",
+            "code": "510050.SH",
+            "scale": 23175746230
+          },
+          {
+            "similar": 50.62,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "深成ETF南方",
+        "securityCode": "159903.SZ",
+        "scale": 778011872.183,
+        "trackingIndex": "深证成指",
+        "trackIndex": "399001.SZ",
+        "similarFunds": [
+          {
+            "similar": 57.84,
+            "name": "深证100ETF易方达",
+            "code": "159901.SZ",
+            "scale": 3738784585.14
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "MSCIA股ETF易方达",
+        "securityCode": "512090.SH",
+        "scale": 614148423.3,
+        "trackingIndex": "MSCI中国A股国际通实时(人民币)",
+        "trackIndex": "716567.CSI",
+        "similarFunds": [
+          {
+            "similar": 74.38,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 70.66,
+            "name": "A500ETF华泰柏瑞",
+            "code": "563360.SH",
+            "scale": 39195926086.2
+          },
+          {
+            "similar": 68.09,
+            "name": "中证800ETF汇添富",
+            "code": "515800.SH",
+            "scale": 4818320369.6
+          },
+          {
+            "similar": 54.89,
+            "name": "沪港深300ETF国寿",
+            "code": "517300.SH",
+            "scale": 934268954
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "浙商之江凤凰ETF",
+        "securityCode": "512190.SH",
+        "scale": 592282440,
+        "trackingIndex": "凤凰50",
+        "trackIndex": "930758.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "国证2000ETF万家",
+        "securityCode": "159628.SZ",
+        "scale": 464864266.75,
+        "trackingIndex": "国证2000",
+        "trackIndex": "399303.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "A100ETF华宝",
+        "securityCode": "562000.SH",
+        "scale": 348529885.2,
+        "trackingIndex": "中证A100",
+        "trackIndex": "000903.SH",
+        "similarFunds": [
+          {
+            "similar": 63.38,
+            "name": "中证A50ETF平安",
+            "code": "159593.SZ",
+            "scale": 2464259380.72
+          },
+          {
+            "similar": 59.22,
+            "name": "中国A50ETF汇添富",
+            "code": "560050.SH",
+            "scale": 2304729676.8
+          },
+          {
+            "similar": 59.21,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 54.8,
+            "name": "沪深300成长ETF银华",
+            "code": "562310.SH",
+            "scale": 434901481.2
+          },
+          {
+            "similar": 54.18,
+            "name": "A500ETF华泰柏瑞",
+            "code": "563360.SH",
+            "scale": 39195926086.2
+          },
+          {
+            "similar": 51.27,
+            "name": "上证180ETF华安",
+            "code": "510180.SH",
+            "scale": 17284793433.9
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中小100ETF华夏",
+        "securityCode": "159902.SZ",
+        "scale": 340026585.594,
+        "trackingIndex": "中小100",
+        "trackIndex": "399005.SZ",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "金融地产",
+    "lists": [
+      {
+        "securityName": "证券ETF国泰",
+        "securityCode": "512880.SH",
+        "scale": 60118240115.5,
+        "trackingIndex": "证券公司",
+        "trackIndex": "399975.SZ",
+        "similarFunds": [
+          {
+            "similar": 81.02,
+            "name": "证券ETF东财",
+            "code": "159692.SZ",
+            "scale": 1726307131.482
+          },
+          {
+            "similar": 75.05,
+            "name": "证券保险ETF鹏华",
+            "code": "515630.SH",
+            "scale": 1168690601.1
+          },
+          {
+            "similar": 66.53,
+            "name": "证券ETF鹏华",
+            "code": "159993.SZ",
+            "scale": 3657701397.462
+          },
+          {
+            "similar": 61.72,
+            "name": "证券保险ETF易方达",
+            "code": "512070.SH",
+            "scale": 12990747645.7
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "证券ETF东财",
+            "securityCode": "159692.SZ",
+            "scale": 1726307131.482,
+            "trackingIndex": "证券公司30",
+            "trackIndex": "931412.CSI",
+            "similar": 81.02
+          }
+        ]
+      },
+      {
+        "securityName": "证券保险ETF易方达",
+        "securityCode": "512070.SH",
+        "scale": 12990747645.7,
+        "trackingIndex": "300非银",
+        "trackIndex": "h30035.CSI",
+        "similarFunds": [
+          {
+            "similar": 82.01,
+            "name": "证券保险ETF鹏华",
+            "code": "515630.SH",
+            "scale": 1168690601.1
+          },
+          {
+            "similar": 61.72,
+            "name": "证券ETF国泰",
+            "code": "512880.SH",
+            "scale": 60118240115.5
+          },
+          {
+            "similar": 59.26,
+            "name": "证券ETF东财",
+            "code": "159692.SZ",
+            "scale": 1726307131.482
+          },
+          {
+            "similar": 55.15,
+            "name": "证券ETF鹏华",
+            "code": "159993.SZ",
+            "scale": 3657701397.462
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "证券保险ETF鹏华",
+            "securityCode": "515630.SH",
+            "scale": 1168690601.1,
+            "trackingIndex": "800非银",
+            "trackIndex": "399966.SZ",
+            "similar": 82.01
+          }
+        ]
+      },
+      {
+        "securityName": "银行ETF华宝",
+        "securityCode": "512800.SH",
+        "scale": 9822338716.5,
+        "trackingIndex": "中证银行",
+        "trackIndex": "399986.SZ",
+        "similarFunds": [
+          {
+            "similar": 95.53,
+            "name": "银行ETF富国",
+            "code": "159887.SZ",
+            "scale": 762659587.7
+          },
+          {
+            "similar": 62.27,
+            "name": "金融ETF国泰",
+            "code": "510230.SH",
+            "scale": 919989408
+          },
+          {
+            "similar": 62.01,
+            "name": "银行AH优选ETF招商",
+            "code": "517900.SH",
+            "scale": 620917808
+          },
+          {
+            "similar": 52.22,
+            "name": "金融地产ETF广发",
+            "code": "159940.SZ",
+            "scale": 350918819.362
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "银行ETF富国",
+            "securityCode": "159887.SZ",
+            "scale": 762659587.7,
+            "trackingIndex": "800银行",
+            "trackIndex": "h30022.CSI",
+            "similar": 95.53
+          }
+        ]
+      },
+      {
+        "securityName": "房地产ETF南方",
+        "securityCode": "512200.SH",
+        "scale": 3946267917,
+        "trackingIndex": "房地产",
+        "trackIndex": "931775.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "证券ETF鹏华",
+        "securityCode": "159993.SZ",
+        "scale": 3657701397.462,
+        "trackingIndex": "证券龙头",
+        "trackIndex": "399437.SZ",
+        "similarFunds": [
+          {
+            "similar": 72.02,
+            "name": "证券ETF东财",
+            "code": "159692.SZ",
+            "scale": 1726307131.482
+          },
+          {
+            "similar": 66.53,
+            "name": "证券ETF国泰",
+            "code": "512880.SH",
+            "scale": 60118240115.5
+          },
+          {
+            "similar": 56.79,
+            "name": "证券保险ETF鹏华",
+            "code": "515630.SH",
+            "scale": 1168690601.1
+          },
+          {
+            "similar": 55.15,
+            "name": "证券保险ETF易方达",
+            "code": "512070.SH",
+            "scale": 12990747645.7
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "金融ETF国泰",
+        "securityCode": "510230.SH",
+        "scale": 919989408,
+        "trackingIndex": "180金融",
+        "trackIndex": "000018.SH",
+        "similarFunds": [
+          {
+            "similar": 71.46,
+            "name": "金融地产ETF广发",
+            "code": "159940.SZ",
+            "scale": 350918819.362
+          },
+          {
+            "similar": 62.27,
+            "name": "银行ETF华宝",
+            "code": "512800.SH",
+            "scale": 9822338716.5
+          },
+          {
+            "similar": 62.27,
+            "name": "银行ETF富国",
+            "code": "159887.SZ",
+            "scale": 762659587.7
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "银行AH优选ETF招商",
+        "securityCode": "517900.SH",
+        "scale": 620917808,
+        "trackingIndex": "银行AH",
+        "trackIndex": "931039.CSI",
+        "similarFunds": [
+          {
+            "similar": 62.01,
+            "name": "银行ETF华宝",
+            "code": "512800.SH",
+            "scale": 9822338716.5
+          },
+          {
+            "similar": 59.05,
+            "name": "银行ETF富国",
+            "code": "159887.SZ",
+            "scale": 762659587.7
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "地产ETF华宝",
+        "securityCode": "159707.SZ",
+        "scale": 590637769.502,
+        "trackingIndex": "800地产",
+        "trackIndex": "399965.SZ",
+        "similarFunds": [
+          {
+            "similar": 99.5,
+            "name": "房地产ETF银华",
+            "code": "159768.SZ",
+            "scale": 383427587.151
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "房地产ETF银华",
+            "securityCode": "159768.SZ",
+            "scale": 383427587.151,
+            "trackingIndex": "内地地产",
+            "trackIndex": "000948.CSI",
+            "similar": 99.5
+          }
+        ]
+      },
+      {
+        "securityName": "金融地产ETF广发",
+        "securityCode": "159940.SZ",
+        "scale": 350918819.362,
+        "trackingIndex": "全指金融",
+        "trackIndex": "000992.SH",
+        "similarFunds": [
+          {
+            "similar": 71.46,
+            "name": "金融ETF国泰",
+            "code": "510230.SH",
+            "scale": 919989408
+          },
+          {
+            "similar": 52.22,
+            "name": "银行ETF华宝",
+            "code": "512800.SH",
+            "scale": 9822338716.5
+          },
+          {
+            "similar": 50.18,
+            "name": "银行ETF富国",
+            "code": "159887.SZ",
+            "scale": 762659587.7
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "消费",
+    "lists": [
+      {
+        "securityName": "消费ETF汇添富",
+        "securityCode": "159928.SZ",
+        "scale": 14970330134.08,
+        "trackingIndex": "中证消费",
+        "trackIndex": "000932.SH",
+        "similarFunds": [
+          {
+            "similar": 68.69,
+            "name": "食品饮料ETF天弘",
+            "code": "159736.SZ",
+            "scale": 4357191996.146
+          },
+          {
+            "similar": 67.16,
+            "name": "食品饮料ETF招商",
+            "code": "159843.SZ",
+            "scale": 321343769.589
+          },
+          {
+            "similar": 63.56,
+            "name": "食品饮料ETF华夏",
+            "code": "515170.SH",
+            "scale": 3931460360.3
+          },
+          {
+            "similar": 51.02,
+            "name": "消费ETF华夏",
+            "code": "510630.SH",
+            "scale": 432471669.5
+          },
+          {
+            "similar": 50.95,
+            "name": "消费50ETF富国",
+            "code": "515650.SH",
+            "scale": 3266743200
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "酒ETF鹏华",
+        "securityCode": "512690.SH",
+        "scale": 13234015132.2,
+        "trackingIndex": "中证酒",
+        "trackIndex": "399987.SZ",
+        "similarFunds": [
+          {
+            "similar": 54.95,
+            "name": "食品饮料ETF华夏",
+            "code": "515170.SH",
+            "scale": 3931460360.3
+          },
+          {
+            "similar": 53.34,
+            "name": "食品饮料ETF招商",
+            "code": "159843.SZ",
+            "scale": 321343769.589
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "食品饮料ETF天弘",
+        "securityCode": "159736.SZ",
+        "scale": 4357191996.146,
+        "trackingIndex": "CS食品饮",
+        "trackIndex": "930653.CSI",
+        "similarFunds": [
+          {
+            "similar": 82.68,
+            "name": "食品饮料ETF招商",
+            "code": "159843.SZ",
+            "scale": 321343769.589
+          },
+          {
+            "similar": 78.55,
+            "name": "食品饮料ETF华夏",
+            "code": "515170.SH",
+            "scale": 3931460360.3
+          },
+          {
+            "similar": 68.69,
+            "name": "消费ETF汇添富",
+            "code": "159928.SZ",
+            "scale": 14970330134.08
+          },
+          {
+            "similar": 51.75,
+            "name": "消费ETF华夏",
+            "code": "510630.SH",
+            "scale": 432471669.5
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "食品饮料ETF华夏",
+        "securityCode": "515170.SH",
+        "scale": 3931460360.3,
+        "trackingIndex": "细分食品",
+        "trackIndex": "000815.CSI",
+        "similarFunds": [
+          {
+            "similar": 87.3,
+            "name": "食品饮料ETF招商",
+            "code": "159843.SZ",
+            "scale": 321343769.589
+          },
+          {
+            "similar": 78.55,
+            "name": "食品饮料ETF天弘",
+            "code": "159736.SZ",
+            "scale": 4357191996.146
+          },
+          {
+            "similar": 63.56,
+            "name": "消费ETF汇添富",
+            "code": "159928.SZ",
+            "scale": 14970330134.08
+          },
+          {
+            "similar": 59.78,
+            "name": "消费ETF华夏",
+            "code": "510630.SH",
+            "scale": 432471669.5
+          },
+          {
+            "similar": 54.95,
+            "name": "酒ETF鹏华",
+            "code": "512690.SH",
+            "scale": 13234015132.2
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "食品饮料ETF招商",
+            "securityCode": "159843.SZ",
+            "scale": 321343769.589,
+            "trackingIndex": "国证食品",
+            "trackIndex": "399396.SZ",
+            "similar": 87.3
+          }
+        ]
+      },
+      {
+        "securityName": "消费50ETF富国",
+        "securityCode": "515650.SH",
+        "scale": 3266743200,
+        "trackingIndex": "CS消费50",
+        "trackIndex": "931139.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.65,
+            "name": "消费龙头ETF华宝",
+            "code": "516130.SH",
+            "scale": 1050486300
+          },
+          {
+            "similar": 50.95,
+            "name": "消费ETF汇添富",
+            "code": "159928.SZ",
+            "scale": 14970330134.08
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "旅游ETF富国",
+        "securityCode": "159766.SZ",
+        "scale": 3089025888.687,
+        "trackingIndex": "中证旅游",
+        "trackIndex": "930633.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "消费ETF招商",
+        "securityCode": "510150.SH",
+        "scale": 1381512335.4,
+        "trackingIndex": "消费80",
+        "trackIndex": "000069.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "消费龙头ETF华宝",
+        "securityCode": "516130.SH",
+        "scale": 1050486300,
+        "trackingIndex": "消费龙头",
+        "trackIndex": "931068.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.65,
+            "name": "消费50ETF富国",
+            "code": "515650.SH",
+            "scale": 3266743200
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "家电ETF国泰",
+        "securityCode": "159996.SZ",
+        "scale": 654052552.244,
+        "trackingIndex": "家用电器",
+        "trackIndex": "930697.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "消费ETF华夏",
+        "securityCode": "510630.SH",
+        "scale": 432471669.5,
+        "trackingIndex": "上证消费",
+        "trackIndex": "000036.SH",
+        "similarFunds": [
+          {
+            "similar": 60.04,
+            "name": "食品饮料ETF招商",
+            "code": "159843.SZ",
+            "scale": 321343769.589
+          },
+          {
+            "similar": 59.78,
+            "name": "食品饮料ETF华夏",
+            "code": "515170.SH",
+            "scale": 3931460360.3
+          },
+          {
+            "similar": 51.75,
+            "name": "食品饮料ETF天弘",
+            "code": "159736.SZ",
+            "scale": 4357191996.146
+          },
+          {
+            "similar": 51.02,
+            "name": "消费ETF汇添富",
+            "code": "159928.SZ",
+            "scale": 14970330134.08
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "医药医疗",
+    "lists": [
+      {
+        "securityName": "医疗ETF华宝",
+        "securityCode": "512170.SH",
+        "scale": 24250778970,
+        "trackingIndex": "中证医疗",
+        "trackIndex": "399989.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "医药ETF易方达",
+        "securityCode": "512010.SH",
+        "scale": 14857222197.7,
+        "trackingIndex": "300医药",
+        "trackIndex": "000913.SH",
+        "similarFunds": [
+          {
+            "similar": 55.89,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 52.7,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          },
+          {
+            "similar": 52.56,
+            "name": "医疗创新ETF平安",
+            "code": "516820.SH",
+            "scale": 1582233998.4
+          },
+          {
+            "similar": 51.48,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "医药ETF广发",
+        "securityCode": "159938.SZ",
+        "scale": 4562940627.624,
+        "trackingIndex": "全指医药",
+        "trackIndex": "000991.SH",
+        "similarFunds": [
+          {
+            "similar": 77.47,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          },
+          {
+            "similar": 63.22,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          },
+          {
+            "similar": 57.92,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 51.89,
+            "name": "创新药ETF银华",
+            "code": "159992.SZ",
+            "scale": 16313546316.195
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "生物医药ETF天弘",
+        "securityCode": "159859.SZ",
+        "scale": 4208370901.168,
+        "trackingIndex": "生物医药",
+        "trackIndex": "399441.SZ",
+        "similarFunds": [
+          {
+            "similar": 56.25,
+            "name": "生物科技ETF易方达",
+            "code": "159837.SZ",
+            "scale": 1467749501.478
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "医疗器械ETF永赢",
+        "securityCode": "159883.SZ",
+        "scale": 3877292310.333,
+        "trackingIndex": "医疗器械",
+        "trackIndex": "h30217.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "生物医药ETF国泰",
+        "securityCode": "512290.SH",
+        "scale": 3248389293.3,
+        "trackingIndex": "CS生医",
+        "trackIndex": "930726.CSI",
+        "similarFunds": [
+          {
+            "similar": 66.42,
+            "name": "生物科技ETF易方达",
+            "code": "159837.SZ",
+            "scale": 1467749501.478
+          },
+          {
+            "similar": 55.45,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          },
+          {
+            "similar": 52.55,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "医药ETF汇添富",
+        "securityCode": "159929.SZ",
+        "scale": 2124750851.291,
+        "trackingIndex": "中证医药",
+        "trackIndex": "000933.SH",
+        "similarFunds": [
+          {
+            "similar": 77.47,
+            "name": "医药ETF广发",
+            "code": "159938.SZ",
+            "scale": 4562940627.624
+          },
+          {
+            "similar": 66.85,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          },
+          {
+            "similar": 63.57,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 52.7,
+            "name": "医药ETF易方达",
+            "code": "512010.SH",
+            "scale": 14857222197.7
+          },
+          {
+            "similar": 52.55,
+            "name": "生物医药ETF国泰",
+            "code": "512290.SH",
+            "scale": 3248389293.3
+          },
+          {
+            "similar": 51.94,
+            "name": "医疗创新ETF平安",
+            "code": "516820.SH",
+            "scale": 1582233998.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中药ETF汇添富",
+        "securityCode": "560080.SH",
+        "scale": 2104021920,
+        "trackingIndex": "中证中药",
+        "trackIndex": "930641.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "医疗创新ETF平安",
+        "securityCode": "516820.SH",
+        "scale": 1582233998.4,
+        "trackingIndex": "CS医药创新",
+        "trackIndex": "931484.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.15,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 52.56,
+            "name": "医药ETF易方达",
+            "code": "512010.SH",
+            "scale": 14857222197.7
+          },
+          {
+            "similar": 51.94,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "生物科技ETF易方达",
+        "securityCode": "159837.SZ",
+        "scale": 1467749501.478,
+        "trackingIndex": "中证生科",
+        "trackIndex": "930743.CSI",
+        "similarFunds": [
+          {
+            "similar": 66.42,
+            "name": "生物医药ETF国泰",
+            "code": "512290.SH",
+            "scale": 3248389293.3
+          },
+          {
+            "similar": 57.47,
+            "name": "创新药ETF银华",
+            "code": "159992.SZ",
+            "scale": 16313546316.195
+          },
+          {
+            "similar": 56.25,
+            "name": "生物医药ETF天弘",
+            "code": "159859.SZ",
+            "scale": 4208370901.168
+          },
+          {
+            "similar": 51.79,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "医药50ETF富国",
+        "securityCode": "515950.SH",
+        "scale": 495836153.8,
+        "trackingIndex": "医药50",
+        "trackIndex": "931140.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.15,
+            "name": "医疗创新ETF平安",
+            "code": "516820.SH",
+            "scale": 1582233998.4
+          },
+          {
+            "similar": 63.57,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          },
+          {
+            "similar": 57.92,
+            "name": "医药ETF广发",
+            "code": "159938.SZ",
+            "scale": 4562940627.624
+          },
+          {
+            "similar": 55.89,
+            "name": "医药ETF易方达",
+            "code": "512010.SH",
+            "scale": 14857222197.7
+          },
+          {
+            "similar": 54.28,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          },
+          {
+            "similar": 52.83,
+            "name": "创新药ETF银华",
+            "code": "159992.SZ",
+            "scale": 16313546316.195
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创医药ETF华夏",
+        "securityCode": "588130.SH",
+        "scale": 460865939.2,
+        "trackingIndex": "科创生物",
+        "trackIndex": "000683.SH",
+        "similarFunds": [
+          {
+            "similar": 57.35,
+            "name": "科创创新药ETF国泰",
+            "code": "589720.SH",
+            "scale": 4743807417
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "医药ETF华安",
+        "securityCode": "512120.SH",
+        "scale": 350774306.4,
+        "trackingIndex": "细分医药",
+        "trackIndex": "000814.SH",
+        "similarFunds": [
+          {
+            "similar": 66.85,
+            "name": "医药ETF汇添富",
+            "code": "159929.SZ",
+            "scale": 2124750851.291
+          },
+          {
+            "similar": 65.45,
+            "name": "创新药ETF银华",
+            "code": "159992.SZ",
+            "scale": 16313546316.195
+          },
+          {
+            "similar": 63.22,
+            "name": "医药ETF广发",
+            "code": "159938.SZ",
+            "scale": 4562940627.624
+          },
+          {
+            "similar": 55.45,
+            "name": "生物医药ETF国泰",
+            "code": "512290.SH",
+            "scale": 3248389293.3
+          },
+          {
+            "similar": 54.28,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 51.79,
+            "name": "生物科技ETF易方达",
+            "code": "159837.SZ",
+            "scale": 1467749501.478
+          },
+          {
+            "similar": 51.48,
+            "name": "医药ETF易方达",
+            "code": "512010.SH",
+            "scale": 14857222197.7
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "半导体芯片",
+    "lists": [
+      {
+        "securityName": "科创芯片ETF嘉实",
+        "securityCode": "588200.SH",
+        "scale": 50805658211.2,
+        "trackingIndex": "科创芯片",
+        "trackIndex": "000685.SH",
+        "similarFunds": [
+          {
+            "similar": 87.68,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 78.5,
+            "name": "科创50ETF华夏",
+            "code": "588000.SH",
+            "scale": 96953613340.8
+          },
+          {
+            "similar": 62.97,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 61.49,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 59.33,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 58.47,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          },
+          {
+            "similar": 57.88,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          },
+          {
+            "similar": 57.16,
+            "name": "集成电路ETF国泰",
+            "code": "159546.SZ",
+            "scale": 582693917.694
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "科创信息ETF摩根",
+            "securityCode": "588770.SH",
+            "scale": 576766232.1,
+            "trackingIndex": "科创信息",
+            "trackIndex": "000682.SH",
+            "similar": 87.68
+          }
+        ]
+      },
+      {
+        "securityName": "半导体设备ETF国泰",
+        "securityCode": "159516.SZ",
+        "scale": 44669008419.588,
+        "trackingIndex": "半导体材料设备",
+        "trackIndex": "931743.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.69,
+            "name": "半导体设备ETF招商",
+            "code": "561980.SH",
+            "scale": 5860093900
+          },
+          {
+            "similar": 56.11,
+            "name": "科创半导体ETF华夏",
+            "code": "588170.SH",
+            "scale": 43614674493
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创半导体ETF华夏",
+        "securityCode": "588170.SH",
+        "scale": 43614674493,
+        "trackingIndex": "科创半导体材料设备",
+        "trackIndex": "950125.SH",
+        "similarFunds": [
+          {
+            "similar": 56.11,
+            "name": "半导体设备ETF国泰",
+            "code": "159516.SZ",
+            "scale": 44669008419.588
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "芯片ETF华夏",
+        "securityCode": "159995.SZ",
+        "scale": 27896977165.824,
+        "trackingIndex": "国证芯片",
+        "trackIndex": "980017.CNI",
+        "similarFunds": [
+          {
+            "similar": 77.13,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 76,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 75.06,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          },
+          {
+            "similar": 64.58,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          },
+          {
+            "similar": 62.97,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 62.79,
+            "name": "科创50ETF华夏",
+            "code": "588000.SH",
+            "scale": 96953613340.8
+          },
+          {
+            "similar": 62.29,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 61.21,
+            "name": "集成电路ETF国泰",
+            "code": "159546.SZ",
+            "scale": 582693917.694
+          },
+          {
+            "similar": 56.41,
+            "name": "数字经济ETF鹏扬",
+            "code": "560800.SH",
+            "scale": 342844107.3
+          },
+          {
+            "similar": 52.21,
+            "name": "中韩半导体ETF华泰柏瑞",
+            "code": "513310.SH",
+            "scale": 12097226680
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "半导体ETF国联安",
+        "securityCode": "512480.SH",
+        "scale": 20676349495.2,
+        "trackingIndex": "半导体",
+        "trackIndex": "h30184.CSI",
+        "similarFunds": [
+          {
+            "similar": 80.7,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 78.95,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 67.76,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          },
+          {
+            "similar": 64.58,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 60.93,
+            "name": "集成电路ETF国泰",
+            "code": "159546.SZ",
+            "scale": 582693917.694
+          },
+          {
+            "similar": 57.88,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 52.88,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 51.54,
+            "name": "数字经济ETF鹏扬",
+            "code": "560800.SH",
+            "scale": 342844107.3
+          },
+          {
+            "similar": 50.94,
+            "name": "电子ETF天弘",
+            "code": "159997.SZ",
+            "scale": 1429712224.276
+          },
+          {
+            "similar": 50.28,
+            "name": "半导体设备ETF招商",
+            "code": "561980.SH",
+            "scale": 5860093900
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中韩半导体ETF华泰柏瑞",
+        "securityCode": "513310.SH",
+        "scale": 12097226680,
+        "trackingIndex": "中韩半导体",
+        "trackIndex": "931790.CSI",
+        "similarFunds": [
+          {
+            "similar": 52.21,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 52.2,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 51.21,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "芯片ETF国泰",
+        "securityCode": "512760.SH",
+        "scale": 10944390050,
+        "trackingIndex": "中华半导体芯片",
+        "trackIndex": "990001.CSI",
+        "similarFunds": [
+          {
+            "similar": 87.76,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 78.95,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          },
+          {
+            "similar": 76,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 71.41,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          },
+          {
+            "similar": 65.42,
+            "name": "集成电路ETF国泰",
+            "code": "159546.SZ",
+            "scale": 582693917.694
+          },
+          {
+            "similar": 59.33,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 59.25,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 58.81,
+            "name": "科创50ETF华夏",
+            "code": "588000.SH",
+            "scale": 96953613340.8
+          },
+          {
+            "similar": 58.23,
+            "name": "数字经济ETF鹏扬",
+            "code": "560800.SH",
+            "scale": 342844107.3
+          },
+          {
+            "similar": 54.76,
+            "name": "电子ETF天弘",
+            "code": "159997.SZ",
+            "scale": 1429712224.276
+          },
+          {
+            "similar": 51.21,
+            "name": "中韩半导体ETF华泰柏瑞",
+            "code": "513310.SH",
+            "scale": 12097226680
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "芯片ETF易方达",
+            "securityCode": "516350.SH",
+            "scale": 2213114600.2,
+            "trackingIndex": "芯片产业",
+            "trackIndex": "h30007.CSI",
+            "similar": 87.76
+          }
+        ]
+      },
+      {
+        "securityName": "半导体设备ETF招商",
+        "securityCode": "561980.SH",
+        "scale": 5860093900,
+        "trackingIndex": "中证半导",
+        "trackIndex": "931865.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.69,
+            "name": "半导体设备ETF国泰",
+            "code": "159516.SZ",
+            "scale": 44669008419.588
+          },
+          {
+            "similar": 52.8,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 50.28,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创芯片设计ETF天弘",
+        "securityCode": "589070.SH",
+        "scale": 2102686803,
+        "trackingIndex": "科创芯片设计",
+        "trackIndex": "950162.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "半导体ETF南方",
+        "securityCode": "159325.SZ",
+        "scale": 1137332003.584,
+        "trackingIndex": "半导体行业精选",
+        "trackIndex": "932066.CSI",
+        "similarFunds": [
+          {
+            "similar": 75.06,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 72.83,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 71.41,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 67.76,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          },
+          {
+            "similar": 59.6,
+            "name": "集成电路ETF国泰",
+            "code": "159546.SZ",
+            "scale": 582693917.694
+          },
+          {
+            "similar": 58.47,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 54.46,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 52.5,
+            "name": "科创50ETF华夏",
+            "code": "588000.SH",
+            "scale": 96953613340.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "集成电路ETF国泰",
+        "securityCode": "159546.SZ",
+        "scale": 582693917.694,
+        "trackingIndex": "集成电路",
+        "trackIndex": "932087.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.42,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 61.43,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 61.21,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 60.93,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          },
+          {
+            "similar": 59.6,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          },
+          {
+            "similar": 57.16,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 52.28,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "通信电子",
+    "lists": [
+      {
+        "securityName": "通信ETF国泰",
+        "securityCode": "515880.SH",
+        "scale": 44543328896,
+        "trackingIndex": "通信设备",
+        "trackIndex": "931160.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.34,
+            "name": "通信ETF嘉实",
+            "code": "159695.SZ",
+            "scale": 841284311.806
+          },
+          {
+            "similar": 71.18,
+            "name": "通信ETF富国",
+            "code": "159583.SZ",
+            "scale": 4987611206.892
+          },
+          {
+            "similar": 61.13,
+            "name": "通信ETF南方",
+            "code": "159511.SZ",
+            "scale": 356339203.85
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "通信ETF华夏",
+        "securityCode": "515050.SH",
+        "scale": 19167129778,
+        "trackingIndex": "5G通信",
+        "trackIndex": "931079.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "通信ETF富国",
+        "securityCode": "159583.SZ",
+        "scale": 4987611206.892,
+        "trackingIndex": "通信设备主题",
+        "trackIndex": "931271.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.18,
+            "name": "通信ETF国泰",
+            "code": "515880.SH",
+            "scale": 44543328896
+          },
+          {
+            "similar": 63.37,
+            "name": "通信ETF嘉实",
+            "code": "159695.SZ",
+            "scale": 841284311.806
+          },
+          {
+            "similar": 60.78,
+            "name": "通信ETF南方",
+            "code": "159511.SZ",
+            "scale": 356339203.85
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "消费电子ETF华夏",
+        "securityCode": "159732.SZ",
+        "scale": 3217654045.248,
+        "trackingIndex": "消费电子",
+        "trackIndex": "980030.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "电子ETF天弘",
+        "securityCode": "159997.SZ",
+        "scale": 1429712224.276,
+        "trackingIndex": "CS电子",
+        "trackIndex": "930652.CSI",
+        "similarFunds": [
+          {
+            "similar": 74.73,
+            "name": "信息技术ETF广发",
+            "code": "159939.SZ",
+            "scale": 857396902.084
+          },
+          {
+            "similar": 68.64,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          },
+          {
+            "similar": 54.76,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 53.51,
+            "name": "消费电子ETF易方达",
+            "code": "562950.SH",
+            "scale": 1609503080.8
+          },
+          {
+            "similar": 51.43,
+            "name": "TMTETF景顺",
+            "code": "512220.SH",
+            "scale": 845216811.6
+          },
+          {
+            "similar": 51.11,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 50.94,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "信息技术ETF广发",
+        "securityCode": "159939.SZ",
+        "scale": 857396902.084,
+        "trackingIndex": "全指信息",
+        "trackIndex": "000993.SH",
+        "similarFunds": [
+          {
+            "similar": 74.73,
+            "name": "电子ETF天弘",
+            "code": "159997.SZ",
+            "scale": 1429712224.276
+          },
+          {
+            "similar": 64.45,
+            "name": "TMTETF景顺",
+            "code": "512220.SH",
+            "scale": 845216811.6
+          },
+          {
+            "similar": 58.5,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "通信ETF嘉实",
+        "securityCode": "159695.SZ",
+        "scale": 841284311.806,
+        "trackingIndex": "国证通信",
+        "trackIndex": "399389.SZ",
+        "similarFunds": [
+          {
+            "similar": 72.34,
+            "name": "通信ETF国泰",
+            "code": "515880.SH",
+            "scale": 44543328896
+          },
+          {
+            "similar": 63.37,
+            "name": "通信ETF富国",
+            "code": "159583.SZ",
+            "scale": 4987611206.892
+          },
+          {
+            "similar": 60.91,
+            "name": "通信ETF南方",
+            "code": "159511.SZ",
+            "scale": 356339203.85
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "电子ETF华宝",
+        "securityCode": "515260.SH",
+        "scale": 734759729.6,
+        "trackingIndex": "电子50",
+        "trackIndex": "931461.CSI",
+        "similarFunds": [
+          {
+            "similar": 68.64,
+            "name": "电子ETF天弘",
+            "code": "159997.SZ",
+            "scale": 1429712224.276
+          },
+          {
+            "similar": 58.5,
+            "name": "信息技术ETF广发",
+            "code": "159939.SZ",
+            "scale": 857396902.084
+          },
+          {
+            "similar": 56.14,
+            "name": "科技ETF易方达",
+            "code": "159807.SZ",
+            "scale": 849601233.772
+          },
+          {
+            "similar": 53.87,
+            "name": "消费电子ETF易方达",
+            "code": "562950.SH",
+            "scale": 1609503080.8
+          },
+          {
+            "similar": 52.93,
+            "name": "数字经济ETF鹏扬",
+            "code": "560800.SH",
+            "scale": 342844107.3
+          },
+          {
+            "similar": 50.89,
+            "name": "TMT50ETF招商",
+            "code": "159909.SZ",
+            "scale": 701007139.4
+          },
+          {
+            "similar": 50.05,
+            "name": "科技ETF华宝",
+            "code": "515000.SH",
+            "scale": 4128680345.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "信息科技ETF南方",
+        "securityCode": "512330.SH",
+        "scale": 684127584,
+        "trackingIndex": "500信息",
+        "trackIndex": "h30257.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "通信ETF南方",
+        "securityCode": "159511.SZ",
+        "scale": 356339203.85,
+        "trackingIndex": "800通信",
+        "trackIndex": "000936.CSI",
+        "similarFunds": [
+          {
+            "similar": 61.13,
+            "name": "通信ETF国泰",
+            "code": "515880.SH",
+            "scale": 44543328896
+          },
+          {
+            "similar": 60.91,
+            "name": "通信ETF嘉实",
+            "code": "159695.SZ",
+            "scale": 841284311.806
+          },
+          {
+            "similar": 60.78,
+            "name": "通信ETF富国",
+            "code": "159583.SZ",
+            "scale": 4987611206.892
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "计算机软件",
+    "lists": [
+      {
+        "securityName": "软件ETF嘉实",
+        "securityCode": "159852.SZ",
+        "scale": 9433996163.939,
+        "trackingIndex": "中证软件",
+        "trackIndex": "930601.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.64,
+            "name": "软件ETF国泰",
+            "code": "515230.SH",
+            "scale": 5451091357.5
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "软件ETF国泰",
+        "securityCode": "515230.SH",
+        "scale": 5451091357.5,
+        "trackingIndex": "软件指数",
+        "trackIndex": "h30202.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.64,
+            "name": "软件ETF嘉实",
+            "code": "159852.SZ",
+            "scale": 9433996163.939
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "计算机ETF天弘",
+        "securityCode": "159998.SZ",
+        "scale": 1533674654.176,
+        "trackingIndex": "CS计算机",
+        "trackIndex": "930651.CSI",
+        "similarFunds": [
+          {
+            "similar": 52.45,
+            "name": "云计算ETF易方达",
+            "code": "516510.SH",
+            "scale": 2500933710
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板软件ETF富国",
+        "securityCode": "159107.SZ",
+        "scale": 561240794.38,
+        "trackingIndex": "创业软件",
+        "trackIndex": "399264.SZ",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "传媒游戏",
+    "lists": [
+      {
+        "securityName": "游戏ETF华夏",
+        "securityCode": "159869.SZ",
+        "scale": 8288008697.16,
+        "trackingIndex": "动漫游戏",
+        "trackIndex": "930901.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "传媒ETF广发",
+        "securityCode": "512980.SH",
+        "scale": 4133210886,
+        "trackingIndex": "中证传媒",
+        "trackIndex": "399971.SZ",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "新能源",
+    "lists": [
+      {
+        "securityName": "电池ETF广发",
+        "securityCode": "159755.SZ",
+        "scale": 6820996196.242,
+        "trackingIndex": "新能电池",
+        "trackIndex": "980032.CNI",
+        "similarFunds": [
+          {
+            "similar": 65.54,
+            "name": "新能源车ETF华夏",
+            "code": "515030.SH",
+            "scale": 2178424152
+          },
+          {
+            "similar": 63.51,
+            "name": "新能源车ETF平安",
+            "code": "515700.SH",
+            "scale": 1189287542.8
+          },
+          {
+            "similar": 58.07,
+            "name": "电池ETF汇添富",
+            "code": "159796.SZ",
+            "scale": 4712761234.7
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "光伏ETF华泰柏瑞",
+        "securityCode": "515790.SH",
+        "scale": 4843947610,
+        "trackingIndex": "光伏产业",
+        "trackIndex": "931151.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "电池ETF汇添富",
+        "securityCode": "159796.SZ",
+        "scale": 4712761234.7,
+        "trackingIndex": "CS电池",
+        "trackIndex": "931719.CSI",
+        "similarFunds": [
+          {
+            "similar": 58.81,
+            "name": "新能源车ETF华夏",
+            "code": "515030.SH",
+            "scale": 2178424152
+          },
+          {
+            "similar": 58.07,
+            "name": "电池ETF广发",
+            "code": "159755.SZ",
+            "scale": 6820996196.242
+          },
+          {
+            "similar": 57.36,
+            "name": "新能源车ETF平安",
+            "code": "515700.SH",
+            "scale": 1189287542.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "储能电池ETF易方达",
+        "securityCode": "159566.SZ",
+        "scale": 4136710265.984,
+        "trackingIndex": "CNINEB",
+        "trackIndex": "980027.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "新能源ETF南方",
+        "securityCode": "516160.SH",
+        "scale": 3591190428,
+        "trackingIndex": "中证新能",
+        "trackIndex": "399808.SZ",
+        "similarFunds": [
+          {
+            "similar": 67.4,
+            "name": "环保ETF广发",
+            "code": "512580.SH",
+            "scale": 609690092.7
+          },
+          {
+            "similar": 62.16,
+            "name": "碳中和ETF华夏",
+            "code": "159790.SZ",
+            "scale": 1038528800.1
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "新能源车ETF华夏",
+        "securityCode": "515030.SH",
+        "scale": 2178424152,
+        "trackingIndex": "CS新能车",
+        "trackIndex": "399976.SZ",
+        "similarFunds": [
+          {
+            "similar": 95.99,
+            "name": "新能源车ETF平安",
+            "code": "515700.SH",
+            "scale": 1189287542.8
+          },
+          {
+            "similar": 65.54,
+            "name": "电池ETF广发",
+            "code": "159755.SZ",
+            "scale": 6820996196.242
+          },
+          {
+            "similar": 58.81,
+            "name": "电池ETF汇添富",
+            "code": "159796.SZ",
+            "scale": 4712761234.7
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "新能源车ETF平安",
+            "securityCode": "515700.SH",
+            "scale": 1189287542.8,
+            "trackingIndex": "新能源车",
+            "trackIndex": "930997.CSI",
+            "similar": 95.99
+          }
+        ]
+      },
+      {
+        "securityName": "创业板新能源ETF国泰",
+        "securityCode": "159387.SZ",
+        "scale": 838314046.768,
+        "trackingIndex": "创新能源",
+        "trackIndex": "399266.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科创新能源ETF鹏华",
+        "securityCode": "588830.SH",
+        "scale": 807479544.7,
+        "trackingIndex": "科创新能",
+        "trackIndex": "000692.SH",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "军工航空航天",
+    "lists": [
+      {
+        "securityName": "卫星ETF永赢",
+        "securityCode": "159206.SZ",
+        "scale": 12816725410.525,
+        "trackingIndex": "卫星通信",
+        "trackIndex": "980018.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "军工ETF国泰",
+        "securityCode": "512660.SH",
+        "scale": 7847492800,
+        "trackingIndex": "中证军工",
+        "trackIndex": "399967.SZ",
+        "similarFunds": [
+          {
+            "similar": 55.6,
+            "name": "国防ETF鹏华",
+            "code": "512670.SH",
+            "scale": 1615742943.6
+          },
+          {
+            "similar": 51.98,
+            "name": "航空航天ETF嘉实",
+            "code": "159638.SZ",
+            "scale": 1192421855.152
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "军工龙头ETF富国",
+        "securityCode": "512710.SH",
+        "scale": 7046913400.8,
+        "trackingIndex": "军工龙头",
+        "trackIndex": "931066.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.27,
+            "name": "航空航天ETF华泰柏瑞",
+            "code": "563380.SH",
+            "scale": 769388850
+          },
+          {
+            "similar": 62.02,
+            "name": "航空航天ETF嘉实",
+            "code": "159638.SZ",
+            "scale": 1192421855.152
+          },
+          {
+            "similar": 60.67,
+            "name": "国防ETF鹏华",
+            "code": "512670.SH",
+            "scale": 1615742943.6
+          },
+          {
+            "similar": 58.15,
+            "name": "航空航天ETF华夏",
+            "code": "159227.SZ",
+            "scale": 4447618890.174
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "航空航天ETF华夏",
+        "securityCode": "159227.SZ",
+        "scale": 4447618890.174,
+        "trackingIndex": "国证航天",
+        "trackIndex": "CN5082.CNI",
+        "similarFunds": [
+          {
+            "similar": 64.93,
+            "name": "航空航天ETF华泰柏瑞",
+            "code": "563380.SH",
+            "scale": 769388850
+          },
+          {
+            "similar": 58.27,
+            "name": "航空航天ETF嘉实",
+            "code": "159638.SZ",
+            "scale": 1192421855.152
+          },
+          {
+            "similar": 58.15,
+            "name": "军工龙头ETF富国",
+            "code": "512710.SH",
+            "scale": 7046913400.8
+          },
+          {
+            "similar": 52.36,
+            "name": "国防ETF鹏华",
+            "code": "512670.SH",
+            "scale": 1615742943.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "卫星ETF富国",
+        "securityCode": "563230.SH",
+        "scale": 3524346411,
+        "trackingIndex": "卫星产业",
+        "trackIndex": "931594.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "国防ETF鹏华",
+        "securityCode": "512670.SH",
+        "scale": 1615742943.6,
+        "trackingIndex": "中证国防",
+        "trackIndex": "399973.SZ",
+        "similarFunds": [
+          {
+            "similar": 66.79,
+            "name": "航空航天ETF嘉实",
+            "code": "159638.SZ",
+            "scale": 1192421855.152
+          },
+          {
+            "similar": 60.67,
+            "name": "军工龙头ETF富国",
+            "code": "512710.SH",
+            "scale": 7046913400.8
+          },
+          {
+            "similar": 55.6,
+            "name": "军工ETF国泰",
+            "code": "512660.SH",
+            "scale": 7847492800
+          },
+          {
+            "similar": 52.36,
+            "name": "航空航天ETF华夏",
+            "code": "159227.SZ",
+            "scale": 4447618890.174
+          },
+          {
+            "similar": 51.36,
+            "name": "航空航天ETF华泰柏瑞",
+            "code": "563380.SH",
+            "scale": 769388850
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "航空航天ETF嘉实",
+        "securityCode": "159638.SZ",
+        "scale": 1192421855.152,
+        "trackingIndex": "智选航空航天科技",
+        "trackIndex": "931521.CSI",
+        "similarFunds": [
+          {
+            "similar": 66.79,
+            "name": "国防ETF鹏华",
+            "code": "512670.SH",
+            "scale": 1615742943.6
+          },
+          {
+            "similar": 62.02,
+            "name": "军工龙头ETF富国",
+            "code": "512710.SH",
+            "scale": 7046913400.8
+          },
+          {
+            "similar": 61.67,
+            "name": "航空航天ETF华泰柏瑞",
+            "code": "563380.SH",
+            "scale": 769388850
+          },
+          {
+            "similar": 58.27,
+            "name": "航空航天ETF华夏",
+            "code": "159227.SZ",
+            "scale": 4447618890.174
+          },
+          {
+            "similar": 51.98,
+            "name": "军工ETF国泰",
+            "code": "512660.SH",
+            "scale": 7847492800
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "航空航天ETF华泰柏瑞",
+        "securityCode": "563380.SH",
+        "scale": 769388850,
+        "trackingIndex": "全指航空",
+        "trackIndex": "932088.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.27,
+            "name": "军工龙头ETF富国",
+            "code": "512710.SH",
+            "scale": 7046913400.8
+          },
+          {
+            "similar": 64.93,
+            "name": "航空航天ETF华夏",
+            "code": "159227.SZ",
+            "scale": 4447618890.174
+          },
+          {
+            "similar": 61.67,
+            "name": "航空航天ETF嘉实",
+            "code": "159638.SZ",
+            "scale": 1192421855.152
+          },
+          {
+            "similar": 51.36,
+            "name": "国防ETF鹏华",
+            "code": "512670.SH",
+            "scale": 1615742943.6
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "电力电网",
+    "lists": [
+      {
+        "securityName": "电网设备ETF华夏",
+        "securityCode": "159326.SZ",
+        "scale": 18804952099.125,
+        "trackingIndex": "电网设备主题",
+        "trackIndex": "931994.CSI",
+        "similarFunds": [
+          {
+            "similar": 84.78,
+            "name": "电网设备ETF国泰",
+            "code": "561380.SH",
+            "scale": 4502328786
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "电网设备ETF国泰",
+            "securityCode": "561380.SH",
+            "scale": 4502328786,
+            "trackingIndex": "恒生A股电网设备指数",
+            "trackIndex": "HSCAUPG.HI",
+            "similar": 84.78
+          }
+        ]
+      },
+      {
+        "securityName": "电力ETF广发",
+        "securityCode": "159611.SZ",
+        "scale": 9337497416,
+        "trackingIndex": "电力指数",
+        "trackIndex": "h30199.CSI",
+        "similarFunds": [
+          {
+            "similar": 89.82,
+            "name": "绿电ETF华夏",
+            "code": "562550.SH",
+            "scale": 1611034566.9
+          },
+          {
+            "similar": 79.26,
+            "name": "绿色电力ETF嘉实",
+            "code": "159625.SZ",
+            "scale": 2378057383.947
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "绿色电力ETF嘉实",
+        "securityCode": "159625.SZ",
+        "scale": 2378057383.947,
+        "trackingIndex": "绿色电力",
+        "trackIndex": "399438.SZ",
+        "similarFunds": [
+          {
+            "similar": 83.26,
+            "name": "绿电ETF华夏",
+            "code": "562550.SH",
+            "scale": 1611034566.9
+          },
+          {
+            "similar": 79.26,
+            "name": "电力ETF广发",
+            "code": "159611.SZ",
+            "scale": 9337497416
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "环保ETF广发",
+        "securityCode": "512580.SH",
+        "scale": 609690092.7,
+        "trackingIndex": "中证环保",
+        "trackIndex": "000827.SH",
+        "similarFunds": [
+          {
+            "similar": 73.79,
+            "name": "碳中和ETF华夏",
+            "code": "159790.SZ",
+            "scale": 1038528800.1
+          },
+          {
+            "similar": 67.4,
+            "name": "新能源ETF南方",
+            "code": "516160.SH",
+            "scale": 3591190428
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "机械制造与基建",
+    "lists": [
+      {
+        "securityName": "工业母机ETF国泰",
+        "securityCode": "159667.SZ",
+        "scale": 2233680626.034,
+        "trackingIndex": "中证机床",
+        "trackIndex": "931866.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "工程机械ETF广发",
+        "securityCode": "560280.SH",
+        "scale": 1987374636,
+        "trackingIndex": "工程机械主题",
+        "trackIndex": "931752.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "基建ETF广发",
+        "securityCode": "516970.SH",
+        "scale": 1198524037.5,
+        "trackingIndex": "基建工程",
+        "trackIndex": "399995.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "建材ETF国泰",
+        "securityCode": "159745.SZ",
+        "scale": 667791209.535,
+        "trackingIndex": "建筑材料",
+        "trackIndex": "931009.CSI",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "有色金属",
+    "lists": [
+      {
+        "securityName": "有色金属ETF南方",
+        "securityCode": "512400.SH",
+        "scale": 24629973548,
+        "trackingIndex": "有色金属",
+        "trackIndex": "000819.SH",
+        "similarFunds": [
+          {
+            "similar": 87.65,
+            "name": "有色金属ETF华夏",
+            "code": "516650.SH",
+            "scale": 9362294512.8
+          },
+          {
+            "similar": 85.37,
+            "name": "有色ETF华宝",
+            "code": "159876.SZ",
+            "scale": 1507636819.902
+          },
+          {
+            "similar": 84.94,
+            "name": "有色ETF鹏华",
+            "code": "159880.SZ",
+            "scale": 1218320308.3
+          },
+          {
+            "similar": 82.87,
+            "name": "有色ETF华安",
+            "code": "512940.SH",
+            "scale": 1723207295
+          },
+          {
+            "similar": 62.17,
+            "name": "工业有色ETF万家",
+            "code": "560860.SH",
+            "scale": 8265132684
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "有色金属ETF华夏",
+            "securityCode": "516650.SH",
+            "scale": 9362294512.8,
+            "trackingIndex": "细分有色",
+            "trackIndex": "000811.CSI",
+            "similar": 87.65
+          },
+          {
+            "securityName": "有色ETF华安",
+            "securityCode": "512940.SH",
+            "scale": 1723207295,
+            "trackingIndex": "有色矿业",
+            "trackIndex": "931892.CSI",
+            "similar": 82.87
+          },
+          {
+            "securityName": "有色ETF华宝",
+            "securityCode": "159876.SZ",
+            "scale": 1507636819.902,
+            "trackingIndex": "中证有色",
+            "trackIndex": "930708.CSI",
+            "similar": 85.37
+          },
+          {
+            "securityName": "有色ETF鹏华",
+            "securityCode": "159880.SZ",
+            "scale": 1218320308.3,
+            "trackingIndex": "国证有色",
+            "trackIndex": "399395.SZ",
+            "similar": 84.94
+          }
+        ]
+      },
+      {
+        "securityName": "工业有色ETF万家",
+        "securityCode": "560860.SH",
+        "scale": 8265132684,
+        "trackingIndex": "工业有色",
+        "trackIndex": "h11059.CSI",
+        "similarFunds": [
+          {
+            "similar": 64.74,
+            "name": "有色ETF华安",
+            "code": "512940.SH",
+            "scale": 1723207295
+          },
+          {
+            "similar": 62.17,
+            "name": "有色金属ETF南方",
+            "code": "512400.SH",
+            "scale": 24629973548
+          },
+          {
+            "similar": 58.33,
+            "name": "有色ETF鹏华",
+            "code": "159880.SZ",
+            "scale": 1218320308.3
+          },
+          {
+            "similar": 56.61,
+            "name": "有色金属ETF华夏",
+            "code": "516650.SH",
+            "scale": 9362294512.8
+          },
+          {
+            "similar": 56.27,
+            "name": "有色ETF华宝",
+            "code": "159876.SZ",
+            "scale": 1507636819.902
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "有色ETF大成",
+        "securityCode": "159980.SZ",
+        "scale": 6657904466.982,
+        "trackingIndex": "上期有色金属指数",
+        "trackIndex": "IMCI.SHF",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "稀土ETF嘉实",
+        "securityCode": "516150.SH",
+        "scale": 6245047820,
+        "trackingIndex": "稀土产业",
+        "trackIndex": "930598.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "稀有金属ETF嘉实",
+        "securityCode": "562800.SH",
+        "scale": 5164061490,
+        "trackingIndex": "CS稀金属",
+        "trackIndex": "930632.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "资源ETF博时",
+        "securityCode": "510410.SH",
+        "scale": 840013027.2,
+        "trackingIndex": "上证资源",
+        "trackIndex": "000068.SH",
+        "similarFunds": [
+          {
+            "similar": 61.92,
+            "name": "大宗商品ETF国联安",
+            "code": "510170.SH",
+            "scale": 423060809.6
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "能源油气",
+    "lists": [
+      {
+        "securityName": "能源化工ETF建信",
+        "securityCode": "159981.SZ",
+        "scale": 3531969379.094,
+        "trackingIndex": "易盛能化A",
+        "trackIndex": "000201.CZC",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "石油ETF国泰",
+        "securityCode": "561360.SH",
+        "scale": 1897987560,
+        "trackingIndex": "油气产业",
+        "trackIndex": "h30198.CSI",
+        "similarFunds": [
+          {
+            "similar": 78.35,
+            "name": "油气ETF汇添富",
+            "code": "159309.SZ",
+            "scale": 947517184.632
+          },
+          {
+            "similar": 68.83,
+            "name": "石油ETF鹏华",
+            "code": "159697.SZ",
+            "scale": 1303201025.914
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "石油ETF鹏华",
+        "securityCode": "159697.SZ",
+        "scale": 1303201025.914,
+        "trackingIndex": "国证油气",
+        "trackIndex": "399439.SZ",
+        "similarFunds": [
+          {
+            "similar": 70.73,
+            "name": "油气ETF汇添富",
+            "code": "159309.SZ",
+            "scale": 947517184.632
+          },
+          {
+            "similar": 68.83,
+            "name": "石油ETF国泰",
+            "code": "561360.SH",
+            "scale": 1897987560
+          },
+          {
+            "similar": 50.51,
+            "name": "能源ETF汇添富",
+            "code": "159930.SZ",
+            "scale": 846044993.85
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "石化ETF易方达",
+        "securityCode": "516570.SH",
+        "scale": 1123095878.4,
+        "trackingIndex": "石化产业",
+        "trackIndex": "h11057.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.83,
+            "name": "化工ETF鹏华",
+            "code": "159870.SZ",
+            "scale": 12594367511.649
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "油气ETF汇添富",
+        "securityCode": "159309.SZ",
+        "scale": 947517184.632,
+        "trackingIndex": "油气资源",
+        "trackIndex": "931248.CSI",
+        "similarFunds": [
+          {
+            "similar": 78.35,
+            "name": "石油ETF国泰",
+            "code": "561360.SH",
+            "scale": 1897987560
+          },
+          {
+            "similar": 70.73,
+            "name": "石油ETF鹏华",
+            "code": "159697.SZ",
+            "scale": 1303201025.914
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "能源ETF汇添富",
+        "securityCode": "159930.SZ",
+        "scale": 846044993.85,
+        "trackingIndex": "中证能源",
+        "trackIndex": "000928.SH",
+        "similarFunds": [
+          {
+            "similar": 50.51,
+            "name": "石油ETF鹏华",
+            "code": "159697.SZ",
+            "scale": 1303201025.914
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "钢铁化工与煤炭",
+    "lists": [
+      {
+        "securityName": "化工ETF鹏华",
+        "securityCode": "159870.SZ",
+        "scale": 12594367511.649,
+        "trackingIndex": "细分化工",
+        "trackIndex": "000813.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.83,
+            "name": "石化ETF易方达",
+            "code": "516570.SH",
+            "scale": 1123095878.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "煤炭ETF国泰",
+        "securityCode": "515220.SH",
+        "scale": 9947256948.1,
+        "trackingIndex": "中证煤炭",
+        "trackIndex": "399998.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科创新材料ETF博时",
+        "securityCode": "588010.SH",
+        "scale": 1105230606,
+        "trackingIndex": "科创材料",
+        "trackIndex": "000689.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "钢铁ETF国泰",
+        "securityCode": "515210.SH",
+        "scale": 1067701301.8,
+        "trackingIndex": "中证钢铁",
+        "trackIndex": "930606.CSI",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "农业与食品",
+    "lists": [
+      {
+        "securityName": "养殖ETF国泰",
+        "securityCode": "159865.SZ",
+        "scale": 6469998777.565,
+        "trackingIndex": "中证畜牧",
+        "trackIndex": "930707.CSI",
+        "similarFunds": [
+          {
+            "similar": 79.2,
+            "name": "养殖ETF汇添富",
+            "code": "159172.SZ",
+            "scale": 318896801.069
+          },
+          {
+            "similar": 63.87,
+            "name": "农牧渔ETF景顺",
+            "code": "560210.SH",
+            "scale": 404299782
+          },
+          {
+            "similar": 56.24,
+            "name": "农业ETF富国",
+            "code": "159825.SZ",
+            "scale": 1714400661.924
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "豆粕ETF华夏",
+        "securityCode": "159985.SZ",
+        "scale": 3626727827.734,
+        "trackingIndex": "大商所豆粕期货价格指数",
+        "trackIndex": "DCESMFI.DCE",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "粮食ETF鹏华",
+        "securityCode": "159698.SZ",
+        "scale": 1908715492.832,
+        "trackingIndex": "国证粮食",
+        "trackIndex": "399365.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "农业ETF富国",
+        "securityCode": "159825.SZ",
+        "scale": 1714400661.924,
+        "trackingIndex": "中证农业",
+        "trackIndex": "000949.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.74,
+            "name": "农牧渔ETF景顺",
+            "code": "560210.SH",
+            "scale": 404299782
+          },
+          {
+            "similar": 63.87,
+            "name": "养殖ETF汇添富",
+            "code": "159172.SZ",
+            "scale": 318896801.069
+          },
+          {
+            "similar": 56.24,
+            "name": "养殖ETF国泰",
+            "code": "159865.SZ",
+            "scale": 6469998777.565
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "农牧渔ETF景顺",
+        "securityCode": "560210.SH",
+        "scale": 404299782,
+        "trackingIndex": "农牧渔",
+        "trackIndex": "930910.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.74,
+            "name": "农业ETF富国",
+            "code": "159825.SZ",
+            "scale": 1714400661.924
+          },
+          {
+            "similar": 76,
+            "name": "养殖ETF汇添富",
+            "code": "159172.SZ",
+            "scale": 318896801.069
+          },
+          {
+            "similar": 63.87,
+            "name": "养殖ETF国泰",
+            "code": "159865.SZ",
+            "scale": 6469998777.565
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "养殖ETF汇添富",
+        "securityCode": "159172.SZ",
+        "scale": 318896801.069,
+        "trackingIndex": "畜牧养殖",
+        "trackIndex": "931946.CSI",
+        "similarFunds": [
+          {
+            "similar": 79.2,
+            "name": "养殖ETF国泰",
+            "code": "159865.SZ",
+            "scale": 6469998777.565
+          },
+          {
+            "similar": 76,
+            "name": "农牧渔ETF景顺",
+            "code": "560210.SH",
+            "scale": 404299782
+          },
+          {
+            "similar": 63.87,
+            "name": "农业ETF富国",
+            "code": "159825.SZ",
+            "scale": 1714400661.924
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "人工智能与机器人",
+    "lists": [
+      {
+        "securityName": "人工智能ETF易方达",
+        "securityCode": "159819.SZ",
+        "scale": 21276554676.778,
+        "trackingIndex": "CS人工智",
+        "trackIndex": "930713.CSI",
+        "similarFunds": [
+          {
+            "similar": 63.25,
+            "name": "科创创业人工智能ETF永赢",
+            "code": "159141.SZ",
+            "scale": 1738500479.21
+          },
+          {
+            "similar": 58.53,
+            "name": "人工智能ETF华富",
+            "code": "515980.SH",
+            "scale": 6508457967
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "机器人ETF华夏",
+        "securityCode": "562500.SH",
+        "scale": 17296453938.2,
+        "trackingIndex": "机器人",
+        "trackIndex": "h30590.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "机器人ETF易方达",
+        "securityCode": "159530.SZ",
+        "scale": 16251965185.545,
+        "trackingIndex": "CNIROBOT",
+        "trackIndex": "980022.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板人工智能ETF华宝",
+        "securityCode": "159363.SZ",
+        "scale": 7342200143.328,
+        "trackingIndex": "创业板人工智能",
+        "trackIndex": "970070.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "人工智能ETF华富",
+        "securityCode": "515980.SH",
+        "scale": 6508457967,
+        "trackingIndex": "人工智能",
+        "trackIndex": "931071.CSI",
+        "similarFunds": [
+          {
+            "similar": 58.53,
+            "name": "人工智能ETF易方达",
+            "code": "159819.SZ",
+            "scale": 21276554676.778
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "金融科技ETF华宝",
+        "securityCode": "159851.SZ",
+        "scale": 6337472201.244,
+        "trackingIndex": "金融科技",
+        "trackIndex": "930986.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科创AIETF博时",
+        "securityCode": "588790.SH",
+        "scale": 2694290288,
+        "trackingIndex": "科创AI",
+        "trackIndex": "950180.CSI",
+        "similarFunds": [
+          {
+            "similar": 52.99,
+            "name": "科创创业人工智能ETF永赢",
+            "code": "159141.SZ",
+            "scale": 1738500479.21
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "云计算ETF易方达",
+        "securityCode": "516510.SH",
+        "scale": 2500933710,
+        "trackingIndex": "云计算",
+        "trackIndex": "930851.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.43,
+            "name": "大数据ETF富国",
+            "code": "515400.SH",
+            "scale": 1480610376
+          },
+          {
+            "similar": 62.9,
+            "name": "云计算ETF汇添富",
+            "code": "159273.SZ",
+            "scale": 976653841.376
+          },
+          {
+            "similar": 52.45,
+            "name": "计算机ETF天弘",
+            "code": "159998.SZ",
+            "scale": 1533674654.176
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创创业人工智能ETF永赢",
+        "securityCode": "159141.SZ",
+        "scale": 1738500479.21,
+        "trackingIndex": "科创创业AI",
+        "trackIndex": "932456.CSI",
+        "similarFunds": [
+          {
+            "similar": 63.25,
+            "name": "人工智能ETF易方达",
+            "code": "159819.SZ",
+            "scale": 21276554676.778
+          },
+          {
+            "similar": 52.99,
+            "name": "科创AIETF博时",
+            "code": "588790.SH",
+            "scale": 2694290288
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "大数据ETF富国",
+        "securityCode": "515400.SH",
+        "scale": 1480610376,
+        "trackingIndex": "中证数据",
+        "trackIndex": "930902.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.43,
+            "name": "云计算ETF易方达",
+            "code": "516510.SH",
+            "scale": 2500933710
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "云计算ETF汇添富",
+        "securityCode": "159273.SZ",
+        "scale": 976653841.376,
+        "trackingIndex": "SHS云计算",
+        "trackIndex": "931470.CSI",
+        "similarFunds": [
+          {
+            "similar": 62.9,
+            "name": "云计算ETF易方达",
+            "code": "516510.SH",
+            "scale": 2500933710
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "智能驾驶ETF华泰柏瑞",
+        "securityCode": "516520.SH",
+        "scale": 804468823.5,
+        "trackingIndex": "CS智汽车",
+        "trackIndex": "930721.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "信创ETF华夏",
+        "securityCode": "562570.SH",
+        "scale": 421602573,
+        "trackingIndex": "中证信创",
+        "trackIndex": "931247.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "数字经济ETF鹏扬",
+        "securityCode": "560800.SH",
+        "scale": 342844107.3,
+        "trackingIndex": "数字经济",
+        "trackIndex": "931582.CSI",
+        "similarFunds": [
+          {
+            "similar": 58.23,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 57.93,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 56.41,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 52.93,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          },
+          {
+            "similar": 51.65,
+            "name": "科技ETF华宝",
+            "code": "515000.SH",
+            "scale": 4128680345.4
+          },
+          {
+            "similar": 51.54,
+            "name": "半导体ETF国联安",
+            "code": "512480.SH",
+            "scale": 20676349495.2
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "医药创新",
+    "lists": [
+      {
+        "securityName": "创新药ETF银华",
+        "securityCode": "159992.SZ",
+        "scale": 16313546316.195,
+        "trackingIndex": "CS创新药",
+        "trackIndex": "931152.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.45,
+            "name": "医药ETF华安",
+            "code": "512120.SH",
+            "scale": 350774306.4
+          },
+          {
+            "similar": 57.47,
+            "name": "生物科技ETF易方达",
+            "code": "159837.SZ",
+            "scale": 1467749501.478
+          },
+          {
+            "similar": 52.83,
+            "name": "医药50ETF富国",
+            "code": "515950.SH",
+            "scale": 495836153.8
+          },
+          {
+            "similar": 51.89,
+            "name": "医药ETF广发",
+            "code": "159938.SZ",
+            "scale": 4562940627.624
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创创新药ETF国泰",
+        "securityCode": "589720.SH",
+        "scale": 4743807417,
+        "trackingIndex": "科创新药",
+        "trackIndex": "950161.CSI",
+        "similarFunds": [
+          {
+            "similar": 57.35,
+            "name": "科创医药ETF华夏",
+            "code": "588130.SH",
+            "scale": 460865939.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创新药ETF天弘",
+        "securityCode": "517380.SH",
+        "scale": 2448430291.7,
+        "trackingIndex": "恒生沪深港创新药精选50指数",
+        "trackIndex": "HSSSHID.HI",
+        "similarFunds": [
+          {
+            "similar": 80.92,
+            "name": "创新药ETF东财",
+            "code": "159622.SZ",
+            "scale": 1203178994.936
+          },
+          {
+            "similar": 50.61,
+            "name": "港股创新药ETF广发",
+            "code": "513120.SH",
+            "scale": 22808048572.2
+          },
+          {
+            "similar": 50.57,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "创新药ETF东财",
+            "securityCode": "159622.SZ",
+            "scale": 1203178994.936,
+            "trackingIndex": "SHS创新药",
+            "trackIndex": "931409.CSI",
+            "similar": 80.92
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "科技主题",
+    "lists": [
+      {
+        "securityName": "科技ETF华宝",
+        "securityCode": "515000.SH",
+        "scale": 4128680345.4,
+        "trackingIndex": "科技龙头",
+        "trackIndex": "931087.CSI",
+        "similarFunds": [
+          {
+            "similar": 52.69,
+            "name": "科技ETF易方达",
+            "code": "159807.SZ",
+            "scale": 849601233.772
+          },
+          {
+            "similar": 51.65,
+            "name": "数字经济ETF鹏扬",
+            "code": "560800.SH",
+            "scale": 342844107.3
+          },
+          {
+            "similar": 50.05,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科技ETF易方达",
+        "securityCode": "159807.SZ",
+        "scale": 849601233.772,
+        "trackingIndex": "科技50",
+        "trackIndex": "931380.CSI",
+        "similarFunds": [
+          {
+            "similar": 56.14,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          },
+          {
+            "similar": 52.69,
+            "name": "科技ETF华宝",
+            "code": "515000.SH",
+            "scale": 4128680345.4
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "TMTETF景顺",
+        "securityCode": "512220.SH",
+        "scale": 845216811.6,
+        "trackingIndex": "科技传媒通信150",
+        "trackIndex": "h30318.CSI",
+        "similarFunds": [
+          {
+            "similar": 64.45,
+            "name": "信息技术ETF广发",
+            "code": "159939.SZ",
+            "scale": 857396902.084
+          },
+          {
+            "similar": 51.43,
+            "name": "电子ETF天弘",
+            "code": "159997.SZ",
+            "scale": 1429712224.276
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "TMT50ETF招商",
+        "securityCode": "159909.SZ",
+        "scale": 701007139.4,
+        "trackingIndex": "TMT50",
+        "trackIndex": "399610.SZ",
+        "similarFunds": [
+          {
+            "similar": 50.89,
+            "name": "电子ETF华宝",
+            "code": "515260.SH",
+            "scale": 734759729.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "通用航空ETF永赢",
+        "securityCode": "159378.SZ",
+        "scale": 678614680.224,
+        "trackingIndex": "通用航空",
+        "trackIndex": "980076.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科技50ETF富国",
+        "securityCode": "515750.SH",
+        "scale": 533345562,
+        "trackingIndex": "中证科技",
+        "trackIndex": "931186.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科技100ETF华泰柏瑞",
+        "securityCode": "515580.SH",
+        "scale": 410158641.2,
+        "trackingIndex": "科技100",
+        "trackIndex": "931187.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "民企ETF弘毅远方",
+        "securityCode": "159973.SZ",
+        "scale": 369556429.704,
+        "trackingIndex": "民企100",
+        "trackIndex": "399362.SZ",
+        "similarFunds": [
+          {
+            "similar": 52.81,
+            "name": "深证100ETF易方达",
+            "code": "159901.SZ",
+            "scale": 3738784585.14
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "绿色与区域主题",
+    "lists": [
+      {
+        "securityName": "成渝经济圈ETF博时",
+        "securityCode": "159623.SZ",
+        "scale": 3002180827.2,
+        "trackingIndex": "成渝经济圈",
+        "trackIndex": "931695.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "碳中和ETF华夏",
+        "securityCode": "159790.SZ",
+        "scale": 1038528800.1,
+        "trackingIndex": "内地低碳",
+        "trackIndex": "000977.CSI",
+        "similarFunds": [
+          {
+            "similar": 73.79,
+            "name": "环保ETF广发",
+            "code": "512580.SH",
+            "scale": 609690092.7
+          },
+          {
+            "similar": 62.16,
+            "name": "新能源ETF南方",
+            "code": "516160.SH",
+            "scale": 3591190428
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "一带一路ETF富国",
+        "securityCode": "515150.SH",
+        "scale": 617192553.6,
+        "trackingIndex": "国企一带一路",
+        "trackIndex": "000859.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "碳中和ETF易方达",
+        "securityCode": "562990.SH",
+        "scale": 344513472,
+        "trackingIndex": "SEEE碳中和",
+        "trackIndex": "931755.CSI",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "港股宽基",
+    "lists": [
+      {
+        "securityName": "恒生ETF华夏",
+        "securityCode": "159920.SZ",
+        "scale": 8278663985.988,
+        "trackingIndex": "恒生指数",
+        "trackIndex": "HSI.HI",
+        "similarFunds": [
+          {
+            "similar": 78.46,
+            "name": "港股通50ETF华泰柏瑞",
+            "code": "513550.SH",
+            "scale": 1801809216
+          },
+          {
+            "similar": 75.03,
+            "name": "恒生50ETF景顺",
+            "code": "159109.SZ",
+            "scale": 444856591.638
+          },
+          {
+            "similar": 66.02,
+            "name": "恒生中国企业ETF易方达",
+            "code": "510900.SH",
+            "scale": 3235386162.8
+          },
+          {
+            "similar": 58.05,
+            "name": "香港大盘30ETF华宝",
+            "code": "520560.SH",
+            "scale": 481683267
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "恒生中国企业ETF易方达",
+        "securityCode": "510900.SH",
+        "scale": 3235386162.8,
+        "trackingIndex": "国企指数",
+        "trackIndex": "HSCEI.HI",
+        "similarFunds": [
+          {
+            "similar": 83.47,
+            "name": "香港大盘30ETF华宝",
+            "code": "520560.SH",
+            "scale": 481683267
+          },
+          {
+            "similar": 69.39,
+            "name": "恒生50ETF景顺",
+            "code": "159109.SZ",
+            "scale": 444856591.638
+          },
+          {
+            "similar": 66.02,
+            "name": "恒生ETF华夏",
+            "code": "159920.SZ",
+            "scale": 8278663985.988
+          },
+          {
+            "similar": 65.43,
+            "name": "港股通50ETF华泰柏瑞",
+            "code": "513550.SH",
+            "scale": 1801809216
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "香港大盘30ETF华宝",
+            "securityCode": "520560.SH",
+            "scale": 481683267,
+            "trackingIndex": "恒生中国(香港上市)30指数",
+            "trackIndex": "HSFML25.HI",
+            "similar": 83.47
+          }
+        ]
+      },
+      {
+        "securityName": "港股通50ETF华泰柏瑞",
+        "securityCode": "513550.SH",
+        "scale": 1801809216,
+        "trackingIndex": "港股通50",
+        "trackIndex": "930931.CSI",
+        "similarFunds": [
+          {
+            "similar": 78.46,
+            "name": "恒生ETF华夏",
+            "code": "159920.SZ",
+            "scale": 8278663985.988
+          },
+          {
+            "similar": 75.54,
+            "name": "恒生50ETF景顺",
+            "code": "159109.SZ",
+            "scale": 444856591.638
+          },
+          {
+            "similar": 65.44,
+            "name": "香港大盘30ETF华宝",
+            "code": "520560.SH",
+            "scale": 481683267
+          },
+          {
+            "similar": 65.43,
+            "name": "恒生中国企业ETF易方达",
+            "code": "510900.SH",
+            "scale": 3235386162.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "沪港深300ETF国寿",
+        "securityCode": "517300.SH",
+        "scale": 934268954,
+        "trackingIndex": "沪港深300",
+        "trackIndex": "931395.CSI",
+        "similarFunds": [
+          {
+            "similar": 64.05,
+            "name": "沪深300ETF华泰柏瑞",
+            "code": "510300.SH",
+            "scale": 108598383841.4
+          },
+          {
+            "similar": 57.89,
+            "name": "中证800ETF汇添富",
+            "code": "515800.SH",
+            "scale": 4818320369.6
+          },
+          {
+            "similar": 55.88,
+            "name": "A500ETF华泰柏瑞",
+            "code": "563360.SH",
+            "scale": 39195926086.2
+          },
+          {
+            "similar": 54.89,
+            "name": "MSCIA股ETF易方达",
+            "code": "512090.SH",
+            "scale": 614148423.3
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "恒生50ETF景顺",
+        "securityCode": "159109.SZ",
+        "scale": 444856591.638,
+        "trackingIndex": "恒生港股通50",
+        "trackIndex": "HSSC50.HI",
+        "similarFunds": [
+          {
+            "similar": 76.43,
+            "name": "香港大盘30ETF华宝",
+            "code": "520560.SH",
+            "scale": 481683267
+          },
+          {
+            "similar": 75.54,
+            "name": "港股通50ETF华泰柏瑞",
+            "code": "513550.SH",
+            "scale": 1801809216
+          },
+          {
+            "similar": 75.03,
+            "name": "恒生ETF华夏",
+            "code": "159920.SZ",
+            "scale": 8278663985.988
+          },
+          {
+            "similar": 69.39,
+            "name": "恒生中国企业ETF易方达",
+            "code": "510900.SH",
+            "scale": 3235386162.8
+          },
+          {
+            "similar": 50.58,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "港股红利",
+    "lists": [
+      {
+        "securityName": "港股低波红利ETF摩根",
+        "securityCode": "513630.SH",
+        "scale": 11338366809,
+        "trackingIndex": "标普港股通低波红利指数",
+        "trackIndex": "SPAHLVCP.SPI",
+        "similarFunds": [
+          {
+            "similar": 99.86,
+            "name": "港股红利低波ETF银华",
+            "code": "520610.SH",
+            "scale": 372857849
+          },
+          {
+            "similar": 54.29,
+            "name": "港股红利ETF博时",
+            "code": "513690.SH",
+            "scale": 3491257508.1
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "港股红利低波ETF银华",
+            "securityCode": "520610.SH",
+            "scale": 372857849,
+            "trackingIndex": "标普港股通低波红利指数(港币)",
+            "trackIndex": "SPAHLVHP.SPI",
+            "similar": 99.86
+          }
+        ]
+      },
+      {
+        "securityName": "港股通红利低波ETF易方达",
+        "securityCode": "159545.SZ",
+        "scale": 6859119951.432,
+        "trackingIndex": "恒生港股通高股息低波动指数",
+        "trackIndex": "HSHYLV.HI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通红利ETF华泰柏瑞",
+        "securityCode": "513530.SH",
+        "scale": 5111535555.9,
+        "trackingIndex": "港股通高股息CNY",
+        "trackIndex": "930915.CSI",
+        "similarFunds": [
+          {
+            "similar": 99.99,
+            "name": "港股通红利ETF汇添富",
+            "code": "513820.SH",
+            "scale": 2073485504
+          },
+          {
+            "similar": 61.15,
+            "name": "港股红利低波ETF景顺",
+            "code": "159569.SZ",
+            "scale": 528509634.303
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "港股通红利ETF汇添富",
+            "securityCode": "513820.SH",
+            "scale": 2073485504,
+            "trackingIndex": "港股通高股息",
+            "trackIndex": "930914.CSI",
+            "similar": 99.99
+          }
+        ]
+      },
+      {
+        "securityName": "港股红利ETF工银",
+        "securityCode": "159691.SZ",
+        "scale": 4386758238.252,
+        "trackingIndex": "港股通高息精选",
+        "trackIndex": "930839.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股红利ETF博时",
+        "securityCode": "513690.SH",
+        "scale": 3491257508.1,
+        "trackingIndex": "恒生港股通高股息率指数",
+        "trackIndex": "HSSCHKY.HI",
+        "similarFunds": [
+          {
+            "similar": 54.84,
+            "name": "港股通红利ETF华夏",
+            "code": "159726.SZ",
+            "scale": 316863717.48
+          },
+          {
+            "similar": 54.32,
+            "name": "港股红利低波ETF银华",
+            "code": "520610.SH",
+            "scale": 372857849
+          },
+          {
+            "similar": 54.29,
+            "name": "港股低波红利ETF摩根",
+            "code": "513630.SH",
+            "scale": 11338366809
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股红利低波ETF景顺",
+        "securityCode": "159569.SZ",
+        "scale": 528509634.303,
+        "trackingIndex": "港股通红利低波",
+        "trackIndex": "987016.CNI",
+        "similarFunds": [
+          {
+            "similar": 61.15,
+            "name": "港股通红利ETF华泰柏瑞",
+            "code": "513530.SH",
+            "scale": 5111535555.9
+          },
+          {
+            "similar": 61.15,
+            "name": "港股通红利ETF汇添富",
+            "code": "513820.SH",
+            "scale": 2073485504
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通红利ETF华夏",
+        "securityCode": "159726.SZ",
+        "scale": 316863717.48,
+        "trackingIndex": "恒生中国内地企业高股息率指数",
+        "trackIndex": "HSMCHYI.HI",
+        "similarFunds": [
+          {
+            "similar": 54.84,
+            "name": "港股红利ETF博时",
+            "code": "513690.SH",
+            "scale": 3491257508.1
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "港股医药",
+    "lists": [
+      {
+        "securityName": "港股创新药ETF广发",
+        "securityCode": "513120.SH",
+        "scale": 22808048572.2,
+        "trackingIndex": "港股创新药",
+        "trackIndex": "931787CNY00.CSI",
+        "similarFunds": [
+          {
+            "similar": 97.56,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          },
+          {
+            "similar": 86.11,
+            "name": "恒生医药ETF华夏",
+            "code": "159892.SZ",
+            "scale": 4216844285.556
+          },
+          {
+            "similar": 83.17,
+            "name": "港股通医药ETF易方达",
+            "code": "513200.SH",
+            "scale": 897030436.5
+          },
+          {
+            "similar": 76.5,
+            "name": "恒生医疗ETF博时",
+            "code": "513060.SH",
+            "scale": 4828029574.3
+          },
+          {
+            "similar": 72.56,
+            "name": "港股通创新药医疗ETF富国",
+            "code": "159506.SZ",
+            "scale": 3217574278.435
+          },
+          {
+            "similar": 67.22,
+            "name": "港股通创新药ETF华宝",
+            "code": "520880.SH",
+            "scale": 1949741628
+          },
+          {
+            "similar": 66.57,
+            "name": "港股通创新药ETF汇添富",
+            "code": "159570.SZ",
+            "scale": 20251261970.22
+          },
+          {
+            "similar": 66.3,
+            "name": "港股通创新药ETF易方达",
+            "code": "159316.SZ",
+            "scale": 5985378156.375
+          },
+          {
+            "similar": 62.19,
+            "name": "恒生创新药ETF华泰柏瑞",
+            "code": "520500.SH",
+            "scale": 2594598825
+          },
+          {
+            "similar": 50.61,
+            "name": "创新药ETF天弘",
+            "code": "517380.SH",
+            "scale": 2448430291.7
+          },
+          {
+            "similar": 50.36,
+            "name": "创新药ETF东财",
+            "code": "159622.SZ",
+            "scale": 1203178994.936
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "恒生医药ETF华夏",
+            "securityCode": "159892.SZ",
+            "scale": 4216844285.556,
+            "trackingIndex": "恒生生物科技指数",
+            "trackIndex": "HSBIO.HI",
+            "similar": 86.11
+          }
+        ]
+      },
+      {
+        "securityName": "港股通创新药ETF汇添富",
+        "securityCode": "159570.SZ",
+        "scale": 20251261970.22,
+        "trackingIndex": "港股通创新药",
+        "trackIndex": "987018.CNI",
+        "similarFunds": [
+          {
+            "similar": 89.15,
+            "name": "港股通创新药ETF易方达",
+            "code": "159316.SZ",
+            "scale": 5985378156.375
+          },
+          {
+            "similar": 88.42,
+            "name": "港股通创新药ETF华宝",
+            "code": "520880.SH",
+            "scale": 1949741628
+          },
+          {
+            "similar": 79.9,
+            "name": "恒生创新药ETF华泰柏瑞",
+            "code": "520500.SH",
+            "scale": 2594598825
+          },
+          {
+            "similar": 72.83,
+            "name": "港股通创新药医疗ETF富国",
+            "code": "159506.SZ",
+            "scale": 3217574278.435
+          },
+          {
+            "similar": 66.57,
+            "name": "港股创新药ETF广发",
+            "code": "513120.SH",
+            "scale": 22808048572.2
+          },
+          {
+            "similar": 64.96,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          },
+          {
+            "similar": 60.28,
+            "name": "恒生医药ETF华夏",
+            "code": "159892.SZ",
+            "scale": 4216844285.556
+          },
+          {
+            "similar": 57.67,
+            "name": "港股通医药ETF易方达",
+            "code": "513200.SH",
+            "scale": 897030436.5
+          },
+          {
+            "similar": 54.8,
+            "name": "恒生医疗ETF博时",
+            "code": "513060.SH",
+            "scale": 4828029574.3
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "港股通创新药ETF易方达",
+            "securityCode": "159316.SZ",
+            "scale": 5985378156.375,
+            "trackingIndex": "恒生港股通创新药指数",
+            "trackIndex": "HSSCID.HI",
+            "similar": 89.15
+          },
+          {
+            "securityName": "港股通创新药ETF华宝",
+            "securityCode": "520880.SH",
+            "scale": 1949741628,
+            "trackingIndex": "恒生港股通创新药精选指数",
+            "trackIndex": "HSSCPB.HI",
+            "similar": 88.42
+          }
+        ]
+      },
+      {
+        "securityName": "恒生医疗ETF博时",
+        "securityCode": "513060.SH",
+        "scale": 4828029574.3,
+        "trackingIndex": "恒生医疗保健指数",
+        "trackIndex": "HSHCI.HI",
+        "similarFunds": [
+          {
+            "similar": 86.81,
+            "name": "港股通医药ETF易方达",
+            "code": "513200.SH",
+            "scale": 897030436.5
+          },
+          {
+            "similar": 80.38,
+            "name": "恒生医药ETF华夏",
+            "code": "159892.SZ",
+            "scale": 4216844285.556
+          },
+          {
+            "similar": 76.67,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          },
+          {
+            "similar": 76.5,
+            "name": "港股创新药ETF广发",
+            "code": "513120.SH",
+            "scale": 22808048572.2
+          },
+          {
+            "similar": 63.78,
+            "name": "港股通创新药医疗ETF富国",
+            "code": "159506.SZ",
+            "scale": 3217574278.435
+          },
+          {
+            "similar": 59.68,
+            "name": "港股通创新药ETF华宝",
+            "code": "520880.SH",
+            "scale": 1949741628
+          },
+          {
+            "similar": 58.93,
+            "name": "港股通创新药ETF易方达",
+            "code": "159316.SZ",
+            "scale": 5985378156.375
+          },
+          {
+            "similar": 57.97,
+            "name": "恒生创新药ETF华泰柏瑞",
+            "code": "520500.SH",
+            "scale": 2594598825
+          },
+          {
+            "similar": 54.8,
+            "name": "港股通创新药ETF汇添富",
+            "code": "159570.SZ",
+            "scale": 20251261970.22
+          },
+          {
+            "similar": 51.71,
+            "name": "港股医疗ETF永赢",
+            "code": "159366.SZ",
+            "scale": 465402951.264
+          },
+          {
+            "similar": 50.56,
+            "name": "创新药ETF东财",
+            "code": "159622.SZ",
+            "scale": 1203178994.936
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "港股通医药ETF易方达",
+            "securityCode": "513200.SH",
+            "scale": 897030436.5,
+            "trackingIndex": "港股通医药C",
+            "trackIndex": "930965.CSI",
+            "similar": 86.81
+          }
+        ]
+      },
+      {
+        "securityName": "恒生创新药ETF华泰柏瑞",
+        "securityCode": "520500.SH",
+        "scale": 2594598825,
+        "trackingIndex": "恒生创新药",
+        "trackIndex": "HSIDI.HI",
+        "similarFunds": [
+          {
+            "similar": 82.99,
+            "name": "港股通创新药ETF易方达",
+            "code": "159316.SZ",
+            "scale": 5985378156.375
+          },
+          {
+            "similar": 81.72,
+            "name": "港股通创新药ETF华宝",
+            "code": "520880.SH",
+            "scale": 1949741628
+          },
+          {
+            "similar": 79.9,
+            "name": "港股通创新药ETF汇添富",
+            "code": "159570.SZ",
+            "scale": 20251261970.22
+          },
+          {
+            "similar": 70.24,
+            "name": "港股通创新药医疗ETF富国",
+            "code": "159506.SZ",
+            "scale": 3217574278.435
+          },
+          {
+            "similar": 62.19,
+            "name": "港股创新药ETF广发",
+            "code": "513120.SH",
+            "scale": 22808048572.2
+          },
+          {
+            "similar": 61.18,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          },
+          {
+            "similar": 58.42,
+            "name": "恒生医药ETF华夏",
+            "code": "159892.SZ",
+            "scale": 4216844285.556
+          },
+          {
+            "similar": 57.97,
+            "name": "恒生医疗ETF博时",
+            "code": "513060.SH",
+            "scale": 4828029574.3
+          },
+          {
+            "similar": 57.55,
+            "name": "港股通医药ETF易方达",
+            "code": "513200.SH",
+            "scale": 897030436.5
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创新药ETF天弘",
+        "securityCode": "517380.SH",
+        "scale": 2448430291.7,
+        "trackingIndex": "恒生沪深港创新药精选50指数",
+        "trackIndex": "HSSSHID.HI",
+        "similarFunds": [
+          {
+            "similar": 80.92,
+            "name": "创新药ETF东财",
+            "code": "159622.SZ",
+            "scale": 1203178994.936
+          },
+          {
+            "similar": 50.61,
+            "name": "港股创新药ETF广发",
+            "code": "513120.SH",
+            "scale": 22808048572.2
+          },
+          {
+            "similar": 50.57,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "创新药ETF东财",
+            "securityCode": "159622.SZ",
+            "scale": 1203178994.936,
+            "trackingIndex": "SHS创新药",
+            "trackIndex": "931409.CSI",
+            "similar": 80.92
+          }
+        ]
+      },
+      {
+        "securityName": "港股医疗ETF永赢",
+        "securityCode": "159366.SZ",
+        "scale": 465402951.264,
+        "trackingIndex": "港股通医疗主题",
+        "trackIndex": "932069.CSI",
+        "similarFunds": [
+          {
+            "similar": 57.05,
+            "name": "港股通医药ETF易方达",
+            "code": "513200.SH",
+            "scale": 897030436.5
+          },
+          {
+            "similar": 53.22,
+            "name": "恒生医药ETF华夏",
+            "code": "159892.SZ",
+            "scale": 4216844285.556
+          },
+          {
+            "similar": 51.71,
+            "name": "恒生医疗ETF博时",
+            "code": "513060.SH",
+            "scale": 4828029574.3
+          },
+          {
+            "similar": 50.69,
+            "name": "港股创新药ETF景顺",
+            "code": "513780.SH",
+            "scale": 2987515818
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "港股科技互联网",
+    "lists": [
+      {
+        "securityName": "恒生科技ETF华夏",
+        "securityCode": "513180.SH",
+        "scale": 39452546003.5,
+        "trackingIndex": "恒生科技指数",
+        "trackIndex": "HSTECH.HI",
+        "similarFunds": [
+          {
+            "similar": 75.02,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          },
+          {
+            "similar": 69.07,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 68.99,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 66.33,
+            "name": "港股科技ETF景顺",
+            "code": "513980.SH",
+            "scale": 9593487136
+          },
+          {
+            "similar": 65.59,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 60.07,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 57.52,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 54.83,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中概互联网ETF易方达",
+        "securityCode": "513050.SH",
+        "scale": 35242008757.8,
+        "trackingIndex": "中国互联网50",
+        "trackIndex": "h30533.CSI",
+        "similarFunds": [
+          {
+            "similar": 71.44,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 69.75,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          },
+          {
+            "similar": 56.48,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 53.37,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          },
+          {
+            "similar": 50.99,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通互联网ETF富国",
+        "securityCode": "159792.SZ",
+        "scale": 33444281827.98,
+        "trackingIndex": "港股通互联网",
+        "trackIndex": "931637.CSI",
+        "similarFunds": [
+          {
+            "similar": 76.82,
+            "name": "港股通互联网ETF永赢",
+            "code": "159170.SZ",
+            "scale": 314019792.456
+          },
+          {
+            "similar": 72.19,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 67.46,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 67.03,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 63.54,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 60.39,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          },
+          {
+            "similar": 59.85,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 53.37,
+            "name": "中概互联网ETF易方达",
+            "code": "513050.SH",
+            "scale": 35242008757.8
+          },
+          {
+            "similar": 50.21,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "恒生互联网ETF华夏",
+        "securityCode": "513330.SH",
+        "scale": 25945668080,
+        "trackingIndex": "恒生互联网科技业指数",
+        "trackIndex": "HSIII.HI",
+        "similarFunds": [
+          {
+            "similar": 73.25,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 72.19,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          },
+          {
+            "similar": 71.35,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 69.63,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 66.26,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          },
+          {
+            "similar": 64.8,
+            "name": "港股通互联网ETF永赢",
+            "code": "159170.SZ",
+            "scale": 314019792.456
+          },
+          {
+            "similar": 60.07,
+            "name": "恒生科技ETF华夏",
+            "code": "513180.SH",
+            "scale": 39452546003.5
+          },
+          {
+            "similar": 59.42,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          },
+          {
+            "similar": 59.15,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 56.48,
+            "name": "中概互联网ETF易方达",
+            "code": "513050.SH",
+            "scale": 35242008757.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通科技30ETF工银",
+        "securityCode": "159636.SZ",
+        "scale": 10479398096.97,
+        "trackingIndex": "港股通科技",
+        "trackIndex": "987008.CNI",
+        "similarFunds": [
+          {
+            "similar": 78.57,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          },
+          {
+            "similar": 74.64,
+            "name": "港股科技ETF景顺",
+            "code": "513980.SH",
+            "scale": 9593487136
+          },
+          {
+            "similar": 72.64,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 66.71,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 65.59,
+            "name": "恒生科技ETF华夏",
+            "code": "513180.SH",
+            "scale": 39452546003.5
+          },
+          {
+            "similar": 59.85,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          },
+          {
+            "similar": 59.15,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 58.64,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 58.01,
+            "name": "港股通互联网ETF永赢",
+            "code": "159170.SZ",
+            "scale": 314019792.456
+          },
+          {
+            "similar": 57.43,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          },
+          {
+            "similar": 50.99,
+            "name": "中概互联网ETF易方达",
+            "code": "513050.SH",
+            "scale": 35242008757.8
+          },
+          {
+            "similar": 50.97,
+            "name": "香港大盘30ETF华宝",
+            "code": "520560.SH",
+            "scale": 481683267
+          },
+          {
+            "similar": 50.58,
+            "name": "恒生50ETF景顺",
+            "code": "159109.SZ",
+            "scale": 444856591.638
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通科技ETF广发",
+        "securityCode": "159262.SZ",
+        "scale": 4514216474.79,
+        "trackingIndex": "恒生港股通科技主题指数",
+        "trackIndex": "HSSCITI.HI",
+        "similarFunds": [
+          {
+            "similar": 91.45,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 72.64,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 71.35,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 68.99,
+            "name": "恒生科技ETF华夏",
+            "code": "513180.SH",
+            "scale": 39452546003.5
+          },
+          {
+            "similar": 67.8,
+            "name": "港股通互联网ETF永赢",
+            "code": "159170.SZ",
+            "scale": 314019792.456
+          },
+          {
+            "similar": 67.03,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          },
+          {
+            "similar": 66.99,
+            "name": "港股科技ETF景顺",
+            "code": "513980.SH",
+            "scale": 9593487136
+          },
+          {
+            "similar": 64.34,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          },
+          {
+            "similar": 61.23,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 57.3,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "港股科技ETF银华",
+            "securityCode": "513160.SH",
+            "scale": 2892999291.8,
+            "trackingIndex": "恒生港股通中国科技指数",
+            "trackIndex": "HSSCT.HI",
+            "similar": 91.45
+          }
+        ]
+      },
+      {
+        "securityName": "港股通信息技术ETF华宝",
+        "securityCode": "159131.SZ",
+        "scale": 2055961503.96,
+        "trackingIndex": "港股通信息C",
+        "trackIndex": "930967.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股科技50ETF招商",
+        "securityCode": "159750.SZ",
+        "scale": 1048558202.322,
+        "trackingIndex": "港股科技CNY",
+        "trackIndex": "931574CNY00.CSI",
+        "similarFunds": [
+          {
+            "similar": 82.74,
+            "name": "港股科技ETF景顺",
+            "code": "513980.SH",
+            "scale": 9593487136
+          },
+          {
+            "similar": 78.57,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 75.02,
+            "name": "恒生科技ETF华夏",
+            "code": "513180.SH",
+            "scale": 39452546003.5
+          },
+          {
+            "similar": 64.34,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 63.35,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          },
+          {
+            "similar": 59.42,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 57.18,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 56.8,
+            "name": "中概互联ETF招商",
+            "code": "513220.SH",
+            "scale": 472687366
+          },
+          {
+            "similar": 50.21,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中概互联ETF招商",
+        "securityCode": "513220.SH",
+        "scale": 472687366,
+        "trackingIndex": "全球中国互联网",
+        "trackIndex": "930796.CSI",
+        "similarFunds": [
+          {
+            "similar": 87.61,
+            "name": "中概互联ETF广发",
+            "code": "159605.SZ",
+            "scale": 3272318671.63
+          },
+          {
+            "similar": 69.75,
+            "name": "中概互联网ETF易方达",
+            "code": "513050.SH",
+            "scale": 35242008757.8
+          },
+          {
+            "similar": 66.26,
+            "name": "恒生互联网ETF华夏",
+            "code": "513330.SH",
+            "scale": 25945668080
+          },
+          {
+            "similar": 60.39,
+            "name": "港股通互联网ETF富国",
+            "code": "159792.SZ",
+            "scale": 33444281827.98
+          },
+          {
+            "similar": 57.43,
+            "name": "港股通科技30ETF工银",
+            "code": "159636.SZ",
+            "scale": 10479398096.97
+          },
+          {
+            "similar": 57.3,
+            "name": "港股通科技ETF广发",
+            "code": "159262.SZ",
+            "scale": 4514216474.79
+          },
+          {
+            "similar": 56.8,
+            "name": "港股科技50ETF招商",
+            "code": "159750.SZ",
+            "scale": 1048558202.322
+          },
+          {
+            "similar": 54.83,
+            "name": "恒生科技ETF华夏",
+            "code": "513180.SH",
+            "scale": 39452546003.5
+          },
+          {
+            "similar": 52.13,
+            "name": "港股通互联网ETF永赢",
+            "code": "159170.SZ",
+            "scale": 314019792.456
+          },
+          {
+            "similar": 51.9,
+            "name": "港股科技ETF银华",
+            "code": "513160.SH",
+            "scale": 2892999291.8
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "港股消费金融",
+    "lists": [
+      {
+        "securityName": "香港证券ETF易方达",
+        "securityCode": "513090.SH",
+        "scale": 17921616412,
+        "trackingIndex": "香港证券",
+        "trackIndex": "930709.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通非银ETF广发",
+        "securityCode": "513750.SH",
+        "scale": 11842495056,
+        "trackingIndex": "港股通非银",
+        "trackIndex": "931024.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通金融ETF华夏",
+        "securityCode": "513190.SH",
+        "scale": 1995526176,
+        "trackingIndex": "港股通内地金融",
+        "trackIndex": "h11146.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通消费ETF易方达",
+        "securityCode": "513070.SH",
+        "scale": 1355100580.8,
+        "trackingIndex": "港股通消费",
+        "trackIndex": "931454.CSI",
+        "similarFunds": [
+          {
+            "similar": 84.94,
+            "name": "恒生消费ETF景顺",
+            "code": "513970.SH",
+            "scale": 1081881570
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "恒生消费ETF景顺",
+            "securityCode": "513970.SH",
+            "scale": 1081881570,
+            "trackingIndex": "恒生消费指数",
+            "trackIndex": "HSCGSI.HI",
+            "similar": 84.94
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "海外",
+    "lists": [
+      {
+        "securityName": "纳指ETF广发",
+        "securityCode": "159941.SZ",
+        "scale": 38303723055.192,
+        "trackingIndex": "纳斯达克100",
+        "trackIndex": "NDX.GI",
+        "similarFunds": [
+          {
+            "similar": 66.17,
+            "name": "纳指科技ETF景顺",
+            "code": "159509.SZ",
+            "scale": 19360968968.088
+          },
+          {
+            "similar": 56.56,
+            "name": "美国50ETF易方达",
+            "code": "513850.SH",
+            "scale": 2451555839.8
+          },
+          {
+            "similar": 54.59,
+            "name": "标普500ETF博时",
+            "code": "513500.SH",
+            "scale": 27595459641
+          },
+          {
+            "similar": 54.39,
+            "name": "标普500ETF南方",
+            "code": "513650.SH",
+            "scale": 8907100020
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "标普500ETF博时",
+        "securityCode": "513500.SH",
+        "scale": 27595459641,
+        "trackingIndex": "标普500净总回报",
+        "trackIndex": "SPTR500N.SPI",
+        "similarFunds": [
+          {
+            "similar": 94.98,
+            "name": "标普500ETF南方",
+            "code": "513650.SH",
+            "scale": 8907100020
+          },
+          {
+            "similar": 63.58,
+            "name": "美国50ETF易方达",
+            "code": "513850.SH",
+            "scale": 2451555839.8
+          },
+          {
+            "similar": 54.59,
+            "name": "纳指ETF广发",
+            "code": "159941.SZ",
+            "scale": 38303723055.192
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "标普500ETF南方",
+            "securityCode": "513650.SH",
+            "scale": 8907100020,
+            "trackingIndex": "标普500",
+            "trackIndex": "SPX.GI",
+            "similar": 94.98
+          }
+        ]
+      },
+      {
+        "securityName": "纳指科技ETF景顺",
+        "securityCode": "159509.SZ",
+        "scale": 19360968968.088,
+        "trackingIndex": "纳斯达克科技市值加权",
+        "trackIndex": "NDXTMC.GI",
+        "similarFunds": [
+          {
+            "similar": 66.17,
+            "name": "纳指ETF广发",
+            "code": "159941.SZ",
+            "scale": 38303723055.192
+          },
+          {
+            "similar": 59.35,
+            "name": "美国50ETF易方达",
+            "code": "513850.SH",
+            "scale": 2451555839.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "道琼斯ETF鹏华",
+        "securityCode": "513400.SH",
+        "scale": 3925585344,
+        "trackingIndex": "道琼斯工业平均",
+        "trackIndex": "DJI.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "亚太精选ETF南方",
+        "securityCode": "159687.SZ",
+        "scale": 3083996731.932,
+        "trackingIndex": "富时亚太低碳精选指数",
+        "trackIndex": "GPCSP006.FI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "日经225ETF华安",
+        "securityCode": "513880.SH",
+        "scale": 2817686250,
+        "trackingIndex": "日经225",
+        "trackIndex": "N225.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "美国50ETF易方达",
+        "securityCode": "513850.SH",
+        "scale": 2451555839.8,
+        "trackingIndex": "MSCI美国50指数",
+        "trackIndex": "750108.MI",
+        "similarFunds": [
+          {
+            "similar": 63.58,
+            "name": "标普500ETF博时",
+            "code": "513500.SH",
+            "scale": 27595459641
+          },
+          {
+            "similar": 63.26,
+            "name": "标普500ETF南方",
+            "code": "513650.SH",
+            "scale": 8907100020
+          },
+          {
+            "similar": 59.35,
+            "name": "纳指科技ETF景顺",
+            "code": "159509.SZ",
+            "scale": 19360968968.088
+          },
+          {
+            "similar": 56.56,
+            "name": "纳指ETF广发",
+            "code": "159941.SZ",
+            "scale": 38303723055.192
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "标普油气ETF嘉实",
+        "securityCode": "159518.SZ",
+        "scale": 2138405797.689,
+        "trackingIndex": "标普石油天然气勘探及生产精选行业",
+        "trackIndex": "SPSIOP.SPI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "日本东证指数ETF南方",
+        "securityCode": "513800.SH",
+        "scale": 1962646893.6,
+        "trackingIndex": "东证指数",
+        "trackIndex": "TPX.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "德国ETF华安",
+        "securityCode": "513030.SH",
+        "scale": 1892733802,
+        "trackingIndex": "德国DAX",
+        "trackIndex": "GDAXI.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "纳指生物科技ETF汇添富",
+        "securityCode": "513290.SH",
+        "scale": 1872900607.6,
+        "trackingIndex": "纳斯达克生物技术",
+        "trackIndex": "NBI.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "标普生物科技ETF嘉实",
+        "securityCode": "159502.SZ",
+        "scale": 1813571538.324,
+        "trackingIndex": "标普生物技术精选行业",
+        "trackIndex": "SPSIBI.SPI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "法国ETF华安",
+        "securityCode": "513080.SH",
+        "scale": 1178275916,
+        "trackingIndex": "法国CAC40",
+        "trackIndex": "FCHI.GI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "沙特ETF南方",
+        "securityCode": "159329.SZ",
+        "scale": 1021254566.508,
+        "trackingIndex": "富时沙特阿拉伯(里亚尔)(净总回报)",
+        "trackIndex": "WISAUNT.FI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "标普消费ETF景顺",
+        "securityCode": "159529.SZ",
+        "scale": 1020913283.078,
+        "trackingIndex": "标普500消费精选",
+        "trackIndex": "SP5CSSUP.SPI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "东南亚科技ETF华泰柏瑞",
+        "securityCode": "513730.SH",
+        "scale": 857607660,
+        "trackingIndex": "新交所泛东南亚科技指数",
+        "trackIndex": "ASIATECP.SG",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "巴西ETF易方达",
+        "securityCode": "520870.SH",
+        "scale": 599176574.8,
+        "trackingIndex": "巴西IBOVESPA指数",
+        "trackIndex": "IBOVESPA.GI",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "科创/创业板指",
+    "lists": [
+      {
+        "securityName": "科创50ETF华夏",
+        "securityCode": "588000.SH",
+        "scale": 96953613340.8,
+        "trackingIndex": "科创50",
+        "trackIndex": "000688.SH",
+        "similarFunds": [
+          {
+            "similar": 87.22,
+            "name": "科创信息ETF摩根",
+            "code": "588770.SH",
+            "scale": 576766232.1
+          },
+          {
+            "similar": 78.5,
+            "name": "科创芯片ETF嘉实",
+            "code": "588200.SH",
+            "scale": 50805658211.2
+          },
+          {
+            "similar": 62.79,
+            "name": "芯片ETF华夏",
+            "code": "159995.SZ",
+            "scale": 27896977165.824
+          },
+          {
+            "similar": 58.81,
+            "name": "芯片ETF国泰",
+            "code": "512760.SH",
+            "scale": 10944390050
+          },
+          {
+            "similar": 55.94,
+            "name": "芯片ETF易方达",
+            "code": "516350.SH",
+            "scale": 2213114600.2
+          },
+          {
+            "similar": 52.5,
+            "name": "半导体ETF南方",
+            "code": "159325.SZ",
+            "scale": 1137332003.584
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板ETF易方达",
+        "securityCode": "159915.SZ",
+        "scale": 67804587687.976,
+        "trackingIndex": "创业板指",
+        "trackIndex": "399006.SZ",
+        "similarFunds": [
+          {
+            "similar": 78.95,
+            "name": "创业板50ETF华安",
+            "code": "159949.SZ",
+            "scale": 25312088123.201
+          },
+          {
+            "similar": 77.01,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          },
+          {
+            "similar": 66.58,
+            "name": "创业板成长ETF易方达",
+            "code": "159597.SZ",
+            "scale": 868840166.778
+          },
+          {
+            "similar": 62.12,
+            "name": "创业板成长ETF华夏",
+            "code": "159967.SZ",
+            "scale": 5871714013.934
+          },
+          {
+            "similar": 52.38,
+            "name": "创业板价值ETF华夏",
+            "code": "159966.SZ",
+            "scale": 338738152.357
+          },
+          {
+            "similar": 51.79,
+            "name": "科创创业ETF易方达",
+            "code": "159781.SZ",
+            "scale": 16960883188.711
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板50ETF华安",
+        "securityCode": "159949.SZ",
+        "scale": 25312088123.201,
+        "trackingIndex": "创业板50",
+        "trackIndex": "399673.SZ",
+        "similarFunds": [
+          {
+            "similar": 81.44,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          },
+          {
+            "similar": 78.95,
+            "name": "创业板ETF易方达",
+            "code": "159915.SZ",
+            "scale": 67804587687.976
+          },
+          {
+            "similar": 68.03,
+            "name": "创业板成长ETF易方达",
+            "code": "159597.SZ",
+            "scale": 868840166.778
+          },
+          {
+            "similar": 57.33,
+            "name": "创业板成长ETF华夏",
+            "code": "159967.SZ",
+            "scale": 5871714013.934
+          },
+          {
+            "similar": 57.1,
+            "name": "科创创业ETF易方达",
+            "code": "159781.SZ",
+            "scale": 16960883188.711
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "创业大盘ETF西部利得",
+            "securityCode": "159814.SZ",
+            "scale": 366253550.08,
+            "trackingIndex": "创业大盘",
+            "trackIndex": "399293.SZ",
+            "similar": 81.44
+          }
+        ]
+      },
+      {
+        "securityName": "科创创业ETF易方达",
+        "securityCode": "159781.SZ",
+        "scale": 16960883188.711,
+        "trackingIndex": "科创创业50",
+        "trackIndex": "931643.CSI",
+        "similarFunds": [
+          {
+            "similar": 57.1,
+            "name": "创业板50ETF华安",
+            "code": "159949.SZ",
+            "scale": 25312088123.201
+          },
+          {
+            "similar": 55.09,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          },
+          {
+            "similar": 51.79,
+            "name": "创业板ETF易方达",
+            "code": "159915.SZ",
+            "scale": 67804587687.976
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创100ETF鹏华",
+        "securityCode": "588220.SH",
+        "scale": 6652158522.1,
+        "trackingIndex": "科创100",
+        "trackIndex": "000698.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板成长ETF华夏",
+        "securityCode": "159967.SZ",
+        "scale": 5871714013.934,
+        "trackingIndex": "创成长",
+        "trackIndex": "399296.SZ",
+        "similarFunds": [
+          {
+            "similar": 62.67,
+            "name": "创业板成长ETF易方达",
+            "code": "159597.SZ",
+            "scale": 868840166.778
+          },
+          {
+            "similar": 62.12,
+            "name": "创业板ETF易方达",
+            "code": "159915.SZ",
+            "scale": 67804587687.976
+          },
+          {
+            "similar": 60.08,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          },
+          {
+            "similar": 57.33,
+            "name": "创业板50ETF华安",
+            "code": "159949.SZ",
+            "scale": 25312088123.201
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "科创综指ETF鹏华",
+        "securityCode": "589680.SH",
+        "scale": 2186854198.8,
+        "trackingIndex": "科创综指",
+        "trackIndex": "000680.SH",
+        "similarFunds": [
+          {
+            "similar": 90.69,
+            "name": "科创综指ETF富国",
+            "code": "589600.SH",
+            "scale": 353413345
+          }
+        ],
+        "dropped": [
+          {
+            "securityName": "科创综指ETF富国",
+            "securityCode": "589600.SH",
+            "scale": 353413345,
+            "trackingIndex": "科创价格",
+            "trackIndex": "000681.SH",
+            "similar": 90.69
+          }
+        ]
+      },
+      {
+        "securityName": "科创成长ETF易方达",
+        "securityCode": "588020.SH",
+        "scale": 1954118835,
+        "trackingIndex": "科创成长",
+        "trackIndex": "000690.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "科创200ETF华泰柏瑞",
+        "securityCode": "588230.SH",
+        "scale": 1277086577,
+        "trackingIndex": "科创200",
+        "trackIndex": "000699.SH",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板成长ETF易方达",
+        "securityCode": "159597.SZ",
+        "scale": 868840166.778,
+        "trackingIndex": "创业成长",
+        "trackIndex": "399667.SZ",
+        "similarFunds": [
+          {
+            "similar": 68.03,
+            "name": "创业板50ETF华安",
+            "code": "159949.SZ",
+            "scale": 25312088123.201
+          },
+          {
+            "similar": 66.58,
+            "name": "创业板ETF易方达",
+            "code": "159915.SZ",
+            "scale": 67804587687.976
+          },
+          {
+            "similar": 65.72,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          },
+          {
+            "similar": 62.67,
+            "name": "创业板成长ETF华夏",
+            "code": "159967.SZ",
+            "scale": 5871714013.934
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "创业板价值ETF华夏",
+        "securityCode": "159966.SZ",
+        "scale": 338738152.357,
+        "trackingIndex": "创价值",
+        "trackIndex": "399295.SZ",
+        "similarFunds": [
+          {
+            "similar": 52.38,
+            "name": "创业板ETF易方达",
+            "code": "159915.SZ",
+            "scale": 67804587687.976
+          },
+          {
+            "similar": 50.17,
+            "name": "创业大盘ETF西部利得",
+            "code": "159814.SZ",
+            "scale": 366253550.08
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "央企/国企",
+    "lists": [
+      {
+        "securityName": "央企改革ETF华夏",
+        "securityCode": "512950.SH",
+        "scale": 6088081806,
+        "trackingIndex": "结构调整",
+        "trackIndex": "000860.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.49,
+            "name": "央企创新ETF博时",
+            "code": "515900.SH",
+            "scale": 3657159339
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "上海国企ETF汇添富",
+        "securityCode": "510810.SH",
+        "scale": 4825290708,
+        "trackingIndex": "上海国企",
+        "trackIndex": "950096.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通央企红利ETF华安",
+        "securityCode": "513920.SH",
+        "scale": 3804791284,
+        "trackingIndex": "恒生港股通中国央企红利指数",
+        "trackIndex": "HSSCSOY.HI",
+        "similarFunds": [
+          {
+            "similar": 62.04,
+            "name": "港股通央企红利ETF华夏",
+            "code": "513910.SH",
+            "scale": 3055934700
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "央企创新ETF博时",
+        "securityCode": "515900.SH",
+        "scale": 3657159339,
+        "trackingIndex": "央企创新",
+        "trackIndex": "000861.CSI",
+        "similarFunds": [
+          {
+            "similar": 65.49,
+            "name": "央企改革ETF华夏",
+            "code": "512950.SH",
+            "scale": 6088081806
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "港股央企红利ETF景顺",
+        "securityCode": "520990.SH",
+        "scale": 3228838149,
+        "trackingIndex": "国新港股通央企红利",
+        "trackIndex": "931722.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "港股通央企红利ETF华夏",
+        "securityCode": "513910.SH",
+        "scale": 3055934700,
+        "trackingIndex": "港股通央企红利",
+        "trackIndex": "931233.CSI",
+        "similarFunds": [
+          {
+            "similar": 62.04,
+            "name": "港股通央企红利ETF华安",
+            "code": "513920.SH",
+            "scale": 3804791284
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "央企红利ETF华泰柏瑞",
+        "securityCode": "561580.SH",
+        "scale": 2486713375,
+        "trackingIndex": "央企红利",
+        "trackIndex": "000825.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.57,
+            "name": "央企红利ETF广发",
+            "code": "560700.SH",
+            "scale": 552407944.2
+          },
+          {
+            "similar": 59.84,
+            "name": "央企红利ETF融通",
+            "code": "159336.SZ",
+            "scale": 392724209.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利国企ETF国泰",
+        "securityCode": "510720.SH",
+        "scale": 1832006044,
+        "trackingIndex": "上国红利",
+        "trackIndex": "000151.SH",
+        "similarFunds": [
+          {
+            "similar": 61.26,
+            "name": "红利ETF华泰柏瑞",
+            "code": "510880.SH",
+            "scale": 18885970662.3
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "央企红利ETF广发",
+        "securityCode": "560700.SH",
+        "scale": 552407944.2,
+        "trackingIndex": "央企股东回报",
+        "trackIndex": "932039.CSI",
+        "similarFunds": [
+          {
+            "similar": 72.57,
+            "name": "央企红利ETF华泰柏瑞",
+            "code": "561580.SH",
+            "scale": 2486713375
+          },
+          {
+            "similar": 67.59,
+            "name": "央企红利ETF融通",
+            "code": "159336.SZ",
+            "scale": 392724209.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "央企科技ETF南方",
+        "securityCode": "560170.SH",
+        "scale": 500967357,
+        "trackingIndex": "央企科技引领",
+        "trackIndex": "932038.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "央企红利ETF融通",
+        "securityCode": "159336.SZ",
+        "scale": 392724209.8,
+        "trackingIndex": "诚通央企红利",
+        "trackIndex": "931132.CSI",
+        "similarFunds": [
+          {
+            "similar": 67.59,
+            "name": "央企红利ETF广发",
+            "code": "560700.SH",
+            "scale": 552407944.2
+          },
+          {
+            "similar": 59.84,
+            "name": "央企红利ETF华泰柏瑞",
+            "code": "561580.SH",
+            "scale": 2486713375
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "商品",
+    "lists": [
+      {
+        "securityName": "黄金ETF华安",
+        "securityCode": "518880.SH",
+        "scale": 108138097267.2,
+        "trackingIndex": "SGE黄金9999",
+        "trackIndex": "Au9999.SGE",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "黄金股ETF永赢",
+        "securityCode": "517520.SH",
+        "scale": 14322488300,
+        "trackingIndex": "SSH黄金股票",
+        "trackIndex": "931238.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "金ETF富国",
+        "securityCode": "518680.SH",
+        "scale": 8106095171.5,
+        "trackingIndex": "上海金",
+        "trackIndex": "SHAU.SGE",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "大宗商品ETF国联安",
+        "securityCode": "510170.SH",
+        "scale": 423060809.6,
+        "trackingIndex": "上证商品",
+        "trackIndex": "000066.SH",
+        "similarFunds": [
+          {
+            "similar": 61.92,
+            "name": "资源ETF博时",
+            "code": "510410.SH",
+            "scale": 840013027.2
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  {
+    "name": "风格/策略",
+    "lists": [
+      {
+        "securityName": "红利低波ETF华泰柏瑞",
+        "securityCode": "512890.SH",
+        "scale": 30919107187.2,
+        "trackingIndex": "红利低波",
+        "trackIndex": "h30269.CSI",
+        "similarFunds": [
+          {
+            "similar": 74.98,
+            "name": "红利价值ETF易方达",
+            "code": "563700.SH",
+            "scale": 374677050
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利低波50ETF南方",
+        "securityCode": "515450.SH",
+        "scale": 20085965650,
+        "trackingIndex": "标普中国A股大盘红利低波50",
+        "trackIndex": "SPCLLHCP.SPI",
+        "similarFunds": [
+          {
+            "similar": 62.48,
+            "name": "300红利低波ETF嘉实",
+            "code": "515300.SH",
+            "scale": 3553411161.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利ETF华泰柏瑞",
+        "securityCode": "510880.SH",
+        "scale": 18885970662.3,
+        "trackingIndex": "红利指数",
+        "trackIndex": "000015.SH",
+        "similarFunds": [
+          {
+            "similar": 61.26,
+            "name": "红利国企ETF国泰",
+            "code": "510720.SH",
+            "scale": 1832006044
+          },
+          {
+            "similar": 60.4,
+            "name": "红利ETF易方达",
+            "code": "515180.SH",
+            "scale": 17771205533
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利ETF易方达",
+        "securityCode": "515180.SH",
+        "scale": 17771205533,
+        "trackingIndex": "中证红利",
+        "trackIndex": "000922.CSI",
+        "similarFunds": [
+          {
+            "similar": 60.4,
+            "name": "红利ETF华泰柏瑞",
+            "code": "510880.SH",
+            "scale": 18885970662.3
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "自由现金流ETF华夏",
+        "securityCode": "159201.SZ",
+        "scale": 15371699744.874,
+        "trackingIndex": "自由现金流",
+        "trackIndex": "980092.CNI",
+        "similarFunds": [
+          {
+            "similar": 65.04,
+            "name": "现金流ETF国泰",
+            "code": "159399.SZ",
+            "scale": 4191574691.815
+          },
+          {
+            "similar": 63.39,
+            "name": "现金流ETF800鹏华",
+            "code": "516460.SH",
+            "scale": 499014977
+          },
+          {
+            "similar": 53.86,
+            "name": "全指现金流ETF华泰柏瑞",
+            "code": "563390.SH",
+            "scale": 2516285856
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "成长ETF易方达",
+        "securityCode": "159259.SZ",
+        "scale": 9558529696.573,
+        "trackingIndex": "成长100",
+        "trackIndex": "980080.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "价值ETF易方达",
+        "securityCode": "159263.SZ",
+        "scale": 8530476107.758,
+        "trackingIndex": "价值100",
+        "trackIndex": "980081.CNI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "红利低波100ETF博时",
+        "securityCode": "159307.SZ",
+        "scale": 6833127166.208,
+        "trackingIndex": "红利低波100",
+        "trackIndex": "930955.CSI",
+        "similarFunds": [
+          {
+            "similar": 53.83,
+            "name": "红利低波ETF万家",
+            "code": "158023.SZ",
+            "scale": 533949577.165
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "价值ETF富国",
+        "securityCode": "512040.SH",
+        "scale": 5569555500.5,
+        "trackingIndex": "国信价值",
+        "trackIndex": "931052.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "现金流ETF国泰",
+        "securityCode": "159399.SZ",
+        "scale": 4191574691.815,
+        "trackingIndex": "富时中国A股自由现金流聚焦指数",
+        "trackIndex": "888888.FI",
+        "similarFunds": [
+          {
+            "similar": 65.04,
+            "name": "自由现金流ETF华夏",
+            "code": "159201.SZ",
+            "scale": 15371699744.874
+          },
+          {
+            "similar": 60.26,
+            "name": "现金流ETF800鹏华",
+            "code": "516460.SH",
+            "scale": 499014977
+          },
+          {
+            "similar": 57.62,
+            "name": "全指现金流ETF华泰柏瑞",
+            "code": "563390.SH",
+            "scale": 2516285856
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "300红利低波ETF嘉实",
+        "securityCode": "515300.SH",
+        "scale": 3553411161.6,
+        "trackingIndex": "300红利低波",
+        "trackIndex": "930740.CSI",
+        "similarFunds": [
+          {
+            "similar": 62.48,
+            "name": "红利低波50ETF南方",
+            "code": "515450.SH",
+            "scale": 20085965650
+          },
+          {
+            "similar": 60.36,
+            "name": "A500红利ETF国联安",
+            "code": "560570.SH",
+            "scale": 1176999576.4
+          },
+          {
+            "similar": 50.1,
+            "name": "红利低波ETF万家",
+            "code": "158023.SZ",
+            "scale": 533949577.165
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "标普A股红利ETF华宝",
+        "securityCode": "562060.SH",
+        "scale": 3106753900.8,
+        "trackingIndex": "标普A股红利",
+        "trackIndex": "CSPSADRP.CI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "高股息ETF广发",
+        "securityCode": "159207.SZ",
+        "scale": 2634830113.23,
+        "trackingIndex": "智选高股息",
+        "trackIndex": "932305.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "红利质量ETF招商",
+        "securityCode": "159209.SZ",
+        "scale": 2594843164.519,
+        "trackingIndex": "中证红利质量",
+        "trackIndex": "932315.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "全指现金流ETF华泰柏瑞",
+        "securityCode": "563390.SH",
+        "scale": 2516285856,
+        "trackingIndex": "中证现金流",
+        "trackIndex": "932365.CSI",
+        "similarFunds": [
+          {
+            "similar": 57.62,
+            "name": "现金流ETF国泰",
+            "code": "159399.SZ",
+            "scale": 4191574691.815
+          },
+          {
+            "similar": 53.86,
+            "name": "自由现金流ETF华夏",
+            "code": "159201.SZ",
+            "scale": 15371699744.874
+          },
+          {
+            "similar": 51.85,
+            "name": "现金流ETF800鹏华",
+            "code": "516460.SH",
+            "scale": 499014977
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利ETF工银",
+        "securityCode": "159905.SZ",
+        "scale": 1588131713.943,
+        "trackingIndex": "深证红利",
+        "trackIndex": "399324.SZ",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "红利质量ETF华夏",
+        "securityCode": "159758.SZ",
+        "scale": 1400445563.923,
+        "trackingIndex": "红利质量",
+        "trackIndex": "931468.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "A500红利ETF国联安",
+        "securityCode": "560570.SH",
+        "scale": 1176999576.4,
+        "trackingIndex": "A500红利低波",
+        "trackIndex": "932422.CSI",
+        "similarFunds": [
+          {
+            "similar": 60.36,
+            "name": "300红利低波ETF嘉实",
+            "code": "515300.SH",
+            "scale": 3553411161.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "300现金流ETF汇添富",
+        "securityCode": "561420.SH",
+        "scale": 1067617457,
+        "trackingIndex": "300现金流",
+        "trackIndex": "932366.CSI",
+        "similarFunds": [
+          {
+            "similar": 55.71,
+            "name": "现金流ETF800鹏华",
+            "code": "516460.SH",
+            "scale": 499014977
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "中证500现金流ETF华夏",
+        "securityCode": "560120.SH",
+        "scale": 675651154,
+        "trackingIndex": "500现金流",
+        "trackIndex": "932367.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "中证500成长ETF易方达",
+        "securityCode": "159606.SZ",
+        "scale": 561900831.3,
+        "trackingIndex": "500质量成长",
+        "trackIndex": "930939.CSI",
+        "similarFunds": [],
+        "dropped": []
+      },
+      {
+        "securityName": "红利低波ETF万家",
+        "securityCode": "158023.SZ",
+        "scale": 533949577.165,
+        "trackingIndex": "800红利低波",
+        "trackIndex": "931848.CSI",
+        "similarFunds": [
+          {
+            "similar": 53.83,
+            "name": "红利低波100ETF博时",
+            "code": "159307.SZ",
+            "scale": 6833127166.208
+          },
+          {
+            "similar": 50.1,
+            "name": "300红利低波ETF嘉实",
+            "code": "515300.SH",
+            "scale": 3553411161.6
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "现金流ETF800鹏华",
+        "securityCode": "516460.SH",
+        "scale": 499014977,
+        "trackingIndex": "800现金流",
+        "trackIndex": "932368.CSI",
+        "similarFunds": [
+          {
+            "similar": 63.39,
+            "name": "自由现金流ETF华夏",
+            "code": "159201.SZ",
+            "scale": 15371699744.874
+          },
+          {
+            "similar": 60.26,
+            "name": "现金流ETF国泰",
+            "code": "159399.SZ",
+            "scale": 4191574691.815
+          },
+          {
+            "similar": 55.71,
+            "name": "300现金流ETF汇添富",
+            "code": "561420.SH",
+            "scale": 1067617457
+          },
+          {
+            "similar": 51.85,
+            "name": "全指现金流ETF华泰柏瑞",
+            "code": "563390.SH",
+            "scale": 2516285856
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "沪深300成长ETF银华",
+        "securityCode": "562310.SH",
+        "scale": 434901481.2,
+        "trackingIndex": "300成长",
+        "trackIndex": "000918.CSI",
+        "similarFunds": [
+          {
+            "similar": 54.8,
+            "name": "A100ETF华宝",
+            "code": "562000.SH",
+            "scale": 348529885.2
+          },
+          {
+            "similar": 51.86,
+            "name": "中国A50ETF汇添富",
+            "code": "560050.SH",
+            "scale": 2304729676.8
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "红利价值ETF易方达",
+        "securityCode": "563700.SH",
+        "scale": 374677050,
+        "trackingIndex": "红利价值",
+        "trackIndex": "h30270.CSI",
+        "similarFunds": [
+          {
+            "similar": 74.98,
+            "name": "红利低波ETF华泰柏瑞",
+            "code": "512890.SH",
+            "scale": 30919107187.2
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "securityName": "300质量ETF兴全",
+        "securityCode": "563960.SH",
+        "scale": 327845208,
+        "trackingIndex": "300质量",
+        "trackIndex": "932431.CSI",
+        "similarFunds": [],
+        "dropped": []
+      }
+    ]
+  }
+]
